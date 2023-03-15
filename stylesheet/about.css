@@ -1,0 +1,24 @@
+.about_quote {
+	color: black;
+	background-color: #e8e8e8;
+	font-size: 14px;
+	line-height: 1em;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 0;
+}
+
+.about_quote figcaption,
+.about_quote blockquote {
+	margin: 10px;
+}
+
+.about_description {
+	color: black;
+	font-size: 18px;
+	line-height: 1.2em;
+	text-align: justify;
+	border-left: 3px solid black;
+	padding-left: 5px;
+	margin-bottom: 20px;
+}

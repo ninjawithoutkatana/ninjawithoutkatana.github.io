@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script language="javascript">
+		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
+			window.location.replace("component/notsupported.html");
+		}
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+	<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" href="stylesheet/main.css">
+	<link rel="icon" type="image/svg" href="visual/icon/icon_edufile.svg">
+	<title>edufile. Басты бетше</title>
+</head>
+
+<body>
+
+	<header class="page_header">
+		<div class="page_container">
+			<nav class="page_navigate">
+				<a class="page_navigate_logotype" href="index.html">
+					<img class="page_navigate_logotype_icon" src="visual/icon/icon_edufile.svg" alt="logotype_icon">
+				</a>
+				<ul class="page_navigate_menu">
+					<li class="page_navigate_menu_item">
+						<a class="page_navigate_menu_link" href="fragment/content.html">Бөлімдер</a>
+					</li>
+					<li class="page_navigate_menu_item">
+						<a class="page_navigate_menu_link" href="fragment/about.html">Жоба туралы</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="page_section">
+		<div class="page_container">
+			<div class="home_welcome">
+				<div class="home_welcome_column">
+					<h1 class="home_welcome_title">Қош келдіңіз!</h1>
+					<h3 class="home_welcome_subtitle">edufile. жобасы</h3>
+					<p class="home_welcome_description">Біліктілік дағдыларын арттыру үшін пайдаланғысы келетін Қазақстанның жалпы білім беретін мектептерінің мұғалімдеріне арналған.<br><b>Жобаның басты мақсаты:</b> Сабақта цифрлық технологияларды қолдануды оңайлату жолдарын үйрету.</p>
+					<a class="home_welcome_tocontent_link" href="fragment/content.html">Бөлімдер бетшесіне өту <i class="fas fa-arrow-right"></i></a>
+				</div>
+				<div class="home_welcome_column">
+					<div class="swiffy-slider slider-nav-arrow slider-nav-sm slider-nav-autoplay slider-indicators-dark slider-indicators-outside slider-indicators-highlight" data-slider-nav-autoplay-interval="2600">
+						<ul class="slider-container">
+							<li><img src="visual/decor/decor_home(1).svg" style="max-width: 100%;height: auto;"></li>
+							<li><img src="visual/decor/decor_home(2).svg" style="max-width: 100%;height: auto;"></li>
+							<li><img src="visual/decor/decor_home(3).svg" style="max-width: 100%;height: auto;"></li>
+							<li><img src="visual/decor/decor_home(4).svg" style="max-width: 100%;height: auto;"></li>
+							<li><img src="visual/decor/decor_home(5).svg" style="max-width: 100%;height: auto;"></li>
+							<li><img src="visual/decor/decor_home(6).svg" style="max-width: 100%;height: auto;"></li>
+						</ul>
+						<div class="slider-indicators">
+								<button class="active"></button>
+								<button></button>
+								<button></button>
+								<button></button>
+								<button></button>
+								<button></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="page_footer">
+		<div class="page_container">
+			<div class="page_footnote">
+				<div class="page_footnote_tag">
+					<a class="page_footnote_title" href="#"><b>edufile.</b></a>
+					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі дамуына үлкен үлес қосасыз!</p>
+				</div>
+
+				<div class="page_footnote_social">
+					<a class="page_footnote_social_link" href="https://www.youtube.com/channel/UCgsBtFRV--wrICXphD-H3Sg?sub_confirmation=1">
+						<img class="page_footnote_social_icon" src="visual/icon/icon_youtube.svg" alt="social_icon"><span>YouTube</span>
+					</a>
+					<a class="page_footnote_social_link" href="https://t.me/edufilebot">
+						<img class="page_footnote_social_icon" src="visual/icon/icon_telegram.svg" alt="social_icon"><span>Telegram-бот</span>
+					</a>
+				</div>
+
+				<div class="page_footnote_social">
+					<a class="page_footnote_social_link" href="tel:77789517778">
+						<img class="page_footnote_social_icon" src="visual/icon/icon_whatsapp.svg" alt="social_icon"><span>+7 (778) 951-77-78</span>
+					</a>
+					<a class="page_footnote_social_link" href="mailto:diplomatpanda@protonmail.com">
+						<img class="page_footnote_social_icon" src="visual/icon/icon_mail.svg" alt="social_icon"><span>diplomatpanda@protonmail.com</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="page_footnote_bottom">
+				<p class="page_footnote_copy">v3.0<i>(build#0223)</i> &copy;2023 <a class="page_footnote_copy_link" href="component/developer.html">ninjawithoutkatana</a></p>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

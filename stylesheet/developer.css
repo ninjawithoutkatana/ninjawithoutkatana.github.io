@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400;500;600;700&display=swap");
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-size: 300%;
+	background-image: linear-gradient(45deg, #00c9ff, #92fe9d);
+	animation: background 25s infinite;
+	font-family: "Rubik", sans-serif;
+}
+
+.page {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.main-title {
+	color: black;
+	font-size: 15vmin;
+	font-weight: 700;
+}
+
+.second-title {
+	font-size: 3vmin;
+	font-weight: 500;
+}
+
+.blob {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: #e4f3ff;
+	width: 50vmax;
+	z-index: -1;
+	animation: move 10s ease-in-out infinite;
+	transform-origin: 50% 50%;
+}
+
+.link li {
+	font-size: 2vmin;
+	font-weight: 700;
+	display: inline-block;
+}
+
+.link li a {
+	color: black;
+	text-decoration: none;
+	padding-right: 10px;
+}
+
+.link li a:hover {
+	color: blue;
+}
+
+@keyframes background {
+	0% {
+		background-position: left;
+	}
+	50% {
+		background-position: right;
+	}
+	100% {
+		background-position: left;
+	}
+}
+
+@keyframes move {
+	0% {
+		transform: scale(1) translate(-200px, -30px);
+	}
+	28% {
+		transform: scale(0.8, 1) translate(80vw, 30vh) rotate(100deg);
+	}
+	30% {
+		transform: scale(0.8, 1) translate(80vw, 30vh) rotate(100deg);
+	}
+	48% {
+		transform: scale(1.3) translate(0vw, 50vh) rotate(160deg);
+	}
+	50% {
+		transform: scale(1.3) translate(0vw, 50vh) rotate(160deg);
+	}
+	78% {
+		transform: scale(1.5) translate(200px, 30px) rotate(240deg);
+	}
+	80% {
+		transform: scale(1.5) translate(200px, 30px) rotate(240deg);
+	}
+	100% {
+		transform: scale(1) translate(-200px, -30px);
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.main-title {
+		font-size: 8vmin;
+	}
+
+	.second-title {
+		top: -20px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.main-title {
+		font-size: 8vmin;
+		padding: 10px;
+	}
+
+	.second-title {
+		top: -20px;
+	}
+
+	.link {
+		padding-left: 0;
+		position: relative;
+		right: 28px;
+	}
+}
