@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400;500;600;700&display=swap");
+@font-face{
+	font-family: San Francisco Pro Display;
+	src: url(/visual/font/SFProDisplay.ttf)
+}
 
 body {
 	margin: 0;
@@ -12,7 +15,7 @@ body {
 	background-size: 300%;
 	background-image: linear-gradient(45deg, #00c9ff, #92fe9d);
 	animation: background 25s infinite;
-	font-family: "Rubik", sans-serif;
+	font-family: "San Francisco Pro Display";
 }
 
 .page {

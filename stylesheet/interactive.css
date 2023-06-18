@@ -51,6 +51,45 @@ a {
 	align-items: center;
 }
 
+
+
+
+
+
+
+
+
+.second {
+	background-color: white;
+	position: relative;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+
+.box-1 .second {
+	opacity: 0;
+	backface-visibility: hidden;
+	display: none;
+}
+
+.box-1:hover .second {
+	opacity: 1;
+	transition: opacity 0.8s;
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .carousel {
 	max-width: 1100px;
 	margin: 0 auto;

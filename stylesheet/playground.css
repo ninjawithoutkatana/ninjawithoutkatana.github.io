@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.interactive_cover {
+	width: 600px;
+	height: 200px;
+	border-radius: 20px;
+	
+	object-fit: cover;
+}
+
+.interactive_main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.play_title {
+	font-family: "Pacifico", cursive;
+	font-size: 34px;
+}

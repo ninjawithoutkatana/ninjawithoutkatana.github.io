@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400;500;600;700&display=swap");
+@font-face{
+	font-family: San Francisco Pro Display;
+	src: url(/visual/font/SFProDisplay.ttf)
+}
 
 /*Общие значение*/
 body {
-	font-family: "Rubik", sans-serif;
+	font-family: "San Francisco Pro Display";
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1em;
