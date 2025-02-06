@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheet/main.css">
+    <link rel="stylesheet" href="/stylesheet/application.css">
+    
+    <link rel="stylesheet" href="./edufile.quizmaker.css">
+
+    <link rel="icon" type="image/svg" href="/visual/icon/icon_quiz.svg">
+    <title>edufile.quizmaker</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a class="navigationmenu-link" href="/fragment/instrument.html"><i class="fas fa-sign-out-alt"></i> Шығу</a>
+            <div class="title">
+                <h1 class="application-name">Викторина құру</h1>
+                <p class="application-version">application?edufile.quizmaker/v0.1beta(#edufile6.0.0125)</p>
+            </div>
+            <a class="logotype" href="">
+                <p class="logotype-title">Applications</p>
+                <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
+            </a>
+        </nav>
+    </header>
+
+    <section class="page" style="justify-items: center;">
+        <div class="container">
+
+            <section id="create-quiz">
+                <h2>Викторина құрастыру өрісі</h2>
+                <p><strong>Назар аударыңыз!</strong><br>Ең алдымен барлық өрістерді толтырғаныңызға көз жеткізгеннен соң <strong>[Сұрақты қосу]</strong> батырмасы арқылы викторина жасалады. Сұрақтарыңызды қосып болғаннан соң <strong>[Викторинаны бастау]</strong> батырмасы арқылы Сұрақтар бетшесіне өтесіз.<br><br><i class="fas fa-exclamation-triangle" style="color: #ff0000;"></i> Ешқашан бұл бетшені жаңартпаңыз! Енгізілген деректер сақталмайтынын ескертеміз!</p>
+                <form id="quiz-form">
+                    <div class="form-group">
+                        <h1 for="question" style="margin-top: 25px;">Сұрақты енгізіңіз</h1>
+                        <input type="text" id="question" name="question" style="width:100%; font-family:inherit; font-size: 18px; font-weight: bold; border-radius: 10px;" required>
+                    </div>
+                    <div class="form-group">
+                        <h1 for="option1">Бірінші нұсқа</h1>
+                        <input type="text" id="option1" name="option1" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
+                    </div>
+                    <div class="form-group">
+                        <h1 for="option2">Екінші нұсқа</h1>
+                        <input type="text" id="option2" name="option2" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
+                    </div>
+                    <div class="form-group">
+                        <h1 for="option3">Үшінші нұсқа</h1>
+                        <input type="text" id="option3" name="option3" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
+                    </div>
+                    <div class="form-group">
+                        <h1 for="option4">Төртінші нұсқа</h1>
+                        <input type="text" id="option4" name="option4" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
+                    </div>
+                    <div class="form-group">
+                        <h1 for="correct-answer">Дұрыс жауап нұсқасы</h1>
+                        <input type="number" id="correct-answer" name="correct-answer" min="1" max="4" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;" required>
+                    </div>
+                    <button class="home_welcome_tocontent_button" type="submit">Сұрақты қосу</button>
+                </form>
+                <button class="home_welcome_tocontent_button" id="start-quiz">Викторинаны бастау</button>
+            </section>
+            <section id="take-quiz" class="hidden">
+                <h2>Викторинадан өтіңіз</h2>
+                <div id="quiz-questions" style="margin: 20px 0 20px;"></div>
+                <button class="home_welcome_tocontent_button" id="submit-quiz">Жауаптарды жіберу</button>
+            </section>
+            <section id="quiz-result" class="hidden">
+                <h2>Сіздің ұпайыңыз</h2>
+                <p id="score"></p>
+                <button class="home_welcome_tocontent_button" id="new-game">Жаңа викторина</button>
+            </section>
+
+        </div>
+    </section>
+
+    <script src="./edufile.quizmaker.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 .about_quote {
 	color: black;
-	background-color: #e8e8e8;
+	background: rgba(200, 200, 200, 0.9);
 	font-size: 14px;
 	line-height: 1em;
 	border-radius: 20px;
@@ -21,4 +21,29 @@
 	border-left: 3px solid black;
 	padding-left: 5px;
 	margin-bottom: 20px;
+}
+
+.agreement_preview {
+  width: 250px;
+  height: 250px;
+}
+
+.agreement_description {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+
+.agreement_description p {
+  font-size: 30px;
+}
+
+.agreement_description a {
+  font-weight: 800;
+}
+
+.agreement_description a:hover {
+  color: blue;
 }

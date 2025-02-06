@@ -24,7 +24,7 @@
 	color: black;
 	font-weight: 700;
 	font-size: 40px;
-	line-height: 0.5em;
+	line-height: 1em;
 }
 
 .content_linktree {
@@ -68,7 +68,7 @@
 	color: black;
 	font-weight: 700;
 	font-size: 16px;
-	line-height: 0.5em;
+	line-height: 1em;
 	letter-spacing: 0.1em;
 	margin-bottom: 20px;
 	display: inline-block;
@@ -107,11 +107,20 @@
 	border-radius: 10px;
 }
 
+.content_status_b {
+	color: rebeccapurple;
+	font-weight: 700;
+	font-size: 12px;
+	padding: 4px;
+	border: 2px dashed rebeccapurple;
+	border-radius: 10px;
+}
+
 .content_a_title {
 	color: black;
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 0.5em;
+	line-height: 1em;
 }
 
 .content_a_subtitle {
@@ -138,7 +147,7 @@
 	color: black;
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 0.5em;
+	line-height: 1em;
 }
 
 .content_b_subtitle {
@@ -149,6 +158,16 @@
 }
 
 /*Баннер контента*/
+.content_banner_1 {
+	background-color: #CDC2FA;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 20px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
 .content_banner_a {
 	background-color: #F4F2E8;
 	display: flex;
@@ -163,7 +182,7 @@
 	color: black;
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 0.5em;
+	line-height: 1em;
 }
 
 .banner_a_subtitle {
@@ -177,7 +196,7 @@
 	color: black;
 	font-weight: 700;
 	font-size: 16px;
-	line-height: 0.5em;
+	line-height: 1em;
 	letter-spacing: 0.1em;
 	margin-bottom: 20px;
 	display: inline-block;
@@ -203,7 +222,7 @@
 	color: white;
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 0.5em;
+	line-height: 1em;
 }
 
 .banner_b_subtitle {
@@ -217,7 +236,7 @@
 	color: white;
 	font-weight: 700;
 	font-size: 16px;
-	line-height: 0.5em;
+	line-height: 1em;
 	letter-spacing: 0.1em;
 	margin-bottom: 20px;
 	display: inline-block;
@@ -243,7 +262,7 @@
 	color: white;
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 0.5em;
+	line-height: 1em;
 }
 
 .banner_c_subtitle {
@@ -257,7 +276,7 @@
 	color: white;
 	font-weight: 700;
 	font-size: 16px;
-	line-height: 0.5em;
+	line-height: 1em;
 	letter-spacing: 0.1em;
 	margin-bottom: 20px;
 	display: inline-block;

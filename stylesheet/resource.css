@@ -1,5 +1,5 @@
 .resources_container {
-	background-color: #e8e8e8;
+	background-color: aliceblue;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -37,7 +37,7 @@
 	color: black;
 	max-width: 400px;
 	font-size: 14px;
-	line-height: 0.5em;
+	line-height: 1em;
 }
 
 .resources_author span {
@@ -124,7 +124,7 @@
 	color: black;
 	font-weight: 700;
 	font-size: 18px;
-	line-height: 0.5em;
+	line-height: 1em;
 	letter-spacing: 0.1em;
 }
 

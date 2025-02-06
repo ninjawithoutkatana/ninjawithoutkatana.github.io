@@ -49,12 +49,12 @@ main.table {
 	background-color: transparent;
 	border: none;
 	outline: none;
-	font-family: "Rubik", sans-serif;
+	font-family: "YandexSans";
 	font-weight: 700;
 }
 
 input::placeholder {
-	font-family: "Rubik", sans-serif;
+	font-family: "YandexSans";
 	font-weight: 300;
 	font-style: italic;
 	opacity: 0.5;
