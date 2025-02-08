@@ -8,7 +8,7 @@
 
 	<script language="javascript">
 		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
-			window.location.replace("/component/notsupported.html");
+			window.location.replace("/component/notsupported");
 		}
 	</script>
 
@@ -25,15 +25,15 @@
 	<header class="page_header">
 		<div class="page_container">
 			<nav class="page_navigate">
-				<a class="page_navigate_logotype" href="/index.html">
+				<a class="page_navigate_logotype" href="/index">
 					<img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg" alt="logotype_icon">
 				</a>
 				<ul class="page_navigate_menu">
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/content.html">Бөлімдер</a>
+						<a class="page_navigate_menu_link" href="/fragment/content">Бөлімдер</a>
 					</li>
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/about.html">Жоба туралы</a>
+						<a class="page_navigate_menu_link" href="/fragment/about">Жоба туралы</a>
 					</li>
 				</ul>
 			</nav>
@@ -42,7 +42,7 @@
 
 	<section class="page_section">
 		<div class="page_container">
-			<a class="content_tohome_link" href="/fragment/content.html"><i class="fas fa-arrow-left"></i> Артқа</a>
+			<a class="content_tohome_link" href="/fragment/content"><i class="fas fa-arrow-left"></i> Артқа</a>
 			<h1 class="content_title">Digital Instruments</h1>
 			<p class="content_linktree">басты бетше / Бөлімдер / <b>Digital Instruments</b></p>
 			<h3 class="content_subtitle">Көмекші құралдар көптеген мұғалімдердің жұмысын жеңілдететін цифрлық немесе жасанды интеллект құралдары.</h3>
@@ -62,7 +62,7 @@
 							<h1 class="content_subtitle">QR коды (Quick Response Code) — әртүрлі ақпаратты, мысалы, сілтемелер, мәтіндер, телефон нөмірлерін және басқа деректерді сақтау үшін қолданылады. QR кодын генерациялау — бұл кодты жасау процессі, оны пайдаланып, ақпаратты жылдам және оңай оқуға болады.</h1>
 							<p>QR кодының ерекшеліктері:<br><b>Жылдамдық:</b> QR кодтары мәліметтерді тез оқу мүмкіндігін береді.<br><b>Қолайлылық:</b> Қарапайым мобильді құрылғымен сканерлеу арқылы ақпаратқа қол жеткізу.<br><b>Қауіпсіздік:</b> QR кодтары ақпаратты қауіпсіз тасымалдауға мүмкіндік береді, бірақ оларды сенімсіз көздерден алған жағдайда қауіпсіздік мәселелеріне назар аудару керек.<br><br>QR кодын генерациялау — ақпарат алмасудың тиімді және оңай тәсілдерінің бірі.</p>
 							<form class="toinstrument_button_container">
-								<button class="toinstrument_button" formaction="/instrument/edufile.qr_generator.html"><i class="fas fa-sign-out-alt"></i> Қолдану</button>
+								<button class="toinstrument_button" formaction="/instrument/edufile.qr_generator"><i class="fas fa-sign-out-alt"></i> Қолдану</button>
 							</form>
 						</div>
 					</div>
@@ -82,7 +82,7 @@
 							<h1 class="content_subtitle">Оқушыларды топқа бөлу құралы – бұл мұғалімдерге сабақ барысында оқушыларды жылдам әрі тиімді түрде топтарға бөлуге көмектесетін құрал. Бұл құралдың негізгі мақсаты – оқыту процесін ұйымдастыруды жеңілдету және оқушылардың бірлесіп жұмыс істеу қабілеттерін дамыту.</h1>
 							<p>Топқа бөлу критерийі:<br><b>Кездейсоқ.</b> Топтар кездейсоқ яғни рандомайзер арқылы құрылады. <i>Оқушылардың деңгейі есепке алынбайды</i></p>
 							<form class="toinstrument_button_container">
-								<button class="toinstrument_button" formaction="/instrument/edufile.team_randomizer.html"><i class="fas fa-sign-out-alt"></i> Қолдану</button>
+								<button class="toinstrument_button" formaction="/instrument/edufile.team_randomizer"><i class="fas fa-sign-out-alt"></i> Қолдану</button>
 							</form>
 						</div>
 					</div>
@@ -102,7 +102,7 @@
 							<h1 class="content_subtitle">Дөңгелекті айналдыру қолданбасы – бұл интерактивті құрал, ол дөңгелекті визуалды түрде айналдырып, кездейсоқ шешім қабылдауға немесе опцияларды таңдап алуға мүмкіндік береді.</h1>
 							<p><b>Кездейсоқ таңдау жасау үшін:</b><br>Қолданушы дөңгелекке бірнеше нұсқаларды енгізе алады <i>(оқушылардың есімдері, тапсырмалар, сыйлықтар, т.б.)</i>, содан кейін дөңгелекті айналдырып, кездейсоқ бірін таңдайды.<br><b>Жоспарлау және ұйымдастыру:</b><br>Командалық тапсырмаларды бөлу, жаңа идеяларды таңдау немесе әрекеттер тізімін анықтау кезінде көмектеседі.<br><b>Оқу және оқыту процесінде:</b><br>Мұғалімдер оқушылардың назарын аударып, оқыту процесін қызықты ету үшін қолдана алады <i>(мысалы, сұраққа жауап берушіні таңдау)</i>.</p>
 							<form class="toinstrument_button_container">
-								<button class="toinstrument_button" formaction="/instrument/edufile.wheelofnames.html"><i class="fas fa-sign-out-alt"></i> Қолдану</button>
+								<button class="toinstrument_button" formaction="/instrument/edufile.wheelofnames"><i class="fas fa-sign-out-alt"></i> Қолдану</button>
 							</form>
 						</div>
 					</div>
@@ -121,7 +121,7 @@
 							<h1 class="content_subtitle">Викторина құру қолданбасы – қолданушыларға тест, сұрақ-жауап және интерактивті викториналар жасауға арналған. Оның көмегімен білім тексеру, аудиториямен өзара әрекеттесу оңай әрі ыңғайлы болады.</h1>
 							<p>Қолдануға оңай интерфейс – күрделі бағдарламалау дағдыларын қажет етпейді, викторина құру өте оңай.</p>
 							<form class="toinstrument_button_container">
-								<button class="toinstrument_button" formaction="/instrument/edufile.quizmaker.html"><i class="fas fa-sign-out-alt"></i> Қолдану</button>
+								<button class="toinstrument_button" formaction="/instrument/edufile.quizmaker"><i class="fas fa-sign-out-alt"></i> Қолдану</button>
 							</form>
 						</div>
 					</div>
@@ -137,7 +137,7 @@
 		<div class="page_container">
 			<div class="page_footnote">
 				<div class="page_footnote_tag">
-					<a class="page_footnote_title" href="/index.html"><b>edufile.</b></a>
+					<a class="page_footnote_title" href="/index"><b>edufile.</b></a>
 					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі
 						дамуына үлкен үлес қосасыз!</p>
 				</div>
@@ -168,8 +168,8 @@
 
 			<div class="page_footnote_bottom">
 				<p class="page_footnote_copy">v6.0<i>(build#0125)</i> &copy;2023-2025 <a class="page_footnote_copy_link"
-						href="/component/developer.html">ninjawithoutkatana</a> - <a class="page_footnote_copy_link"
-						href="/index.html">«edufile.»</a> - repository of Educational Files and Platforms</p>
+						href="/component/developer">ninjawithoutkatana</a> - <a class="page_footnote_copy_link"
+						href="/index">«edufile.»</a> - repository of Educational Files and Platforms</p>
 			</div>
 		</div>
 	</footer>
