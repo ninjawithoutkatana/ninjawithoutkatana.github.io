@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheet/main.css">
+    <link rel="stylesheet" href="/stylesheet/application.css">
+	<link rel="stylesheet" href="/stylesheet/table.css">
+
+    <link rel="icon" type="image/svg" href="/visual/icon/icon_stopwatch.svg">
+    <title>edufile. Секундомер</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+            <div class="title">
+                <h1 class="application-name">Секундомер</h1>
+                <p class="application-version">APPLICATION?edufile.stopwatch/v0.1(#edufile6.2.prerelease.0325)</p>
+            </div>
+            <a class="logotype" href="">
+                <p class="logotype-title">Applications</p>
+                <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
+            </a>
+        </nav>
+    </header>
+
+    <section class="page">
+        <div class="container">
+
+            <div class="time_container" style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+                <div class="time" style="font-size: 10rem; font-weight: bold; display: flex; justify-content: center; font-family: monospace;">
+                    <span id="min" style="display: inline-block; min-width: 12rem; text-align: center;">00:</span>
+                    <span id="sec" style="display: inline-block; min-width: 12rem; text-align: center;">00:</span>
+                    <span id="msec" style="display: inline-block; min-width: 12rem; text-align: center;">00</span>
+                </div>
+            </div>
+
+
+            <br>
+
+            <div>
+                <div style="display: flex; justify-content: center; padding: 1em;">
+                    <button class="button" onclick="startStopWatch()" id="stopBtn" style="margin-right: 20px;">Бастау <i class="fas fa-play-circle"></i></button>
+                    <button class="button" disabled onclick="pauseStopWatch()" id="pauseBtn" style="margin-right: 20px;">Кідіру <i class="fas fa-pause-circle"></i></button>
+                    <button class="button" id="lapBtn" onclick="showLap()" disabled style="margin-right: 20px;">Айналым <i class="fas fa-flag-checkered"></i></button>
+                    <button class="button_red" disabled onclick="reset()" id="stopReset">Жою <i class="fas fa-minus-circle"></i></button>
+                </div>
+
+                <main class="table">
+                    <section class="table_header">
+                        <div class="table_title">
+                            <p class="table_name"><i class="fas fa-flag-checkered"></i> Айналымдар тізбегі</p>
+                        </div>
+                    </section>
+
+                    <section class="table_body">
+                        <table class="table container" id="my-table">
+                            <thead id="tHead">
+                                <tr>
+                                    <th scope="col">Реттіксан</th>
+                                    <th scope="col">Минут</th>
+                                    <th scope="col">Секунд</th>
+                                    <th scope="col">Миллисекунд</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </section>
+                </main>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="/script/table.js"></script>
+    <script src="/script/application/stopwatch.js"></script>
+</body>
+
+</html>

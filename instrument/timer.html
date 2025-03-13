@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheet/main.css">
+    <link rel="stylesheet" href="/stylesheet/application.css">
+
+    <link rel="icon" type="image/svg" href="/visual/icon/icon_timer.svg">
+    <title>edufile. Таймер</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+            <div class="title">
+                <h1 class="application-name">Таймер</h1>
+                <p class="application-version">APPLICATION?edufile.timer/v0.1(#edufile6.2.prerelease.0325)</p>
+            </div>
+            <a class="logotype" href="">
+                <p class="logotype-title">Applications</p>
+                <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
+            </a>
+        </nav>
+    </header>
+
+    <section class="page">
+        <div class="container">
+
+            <div class="time_container" style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+                <div class="time" style="font-size: 10rem; font-weight: bold; display: flex; justify-content: center; font-family: monospace;">
+                    <span id="tspan" style="display: inline-block; min-width: 12rem; text-align: center;"></span>
+                </div>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: center; padding: 1em;">
+                <input id="timerInput" type="number" value="5" min="1" max="59" step="1" placeholder="мин" style="resize: none; width:3em; height:1em; font-family:inherit; font-size: 20px; font-weight: bold; margin-right: 25px; border: dotted; border-radius: 10px;" required />
+                <button class="button" id="tstart" onclick="startTimer()" style="margin-right: 20px;">Бастау</button>
+                <button class="button_red" id="tend" disabled onclick="resetTimer()">Жою</button>
+            </div>
+
+            <div id="tIns"></div>
+
+            <audio id="beep" preload="auto">
+                <source src="/audio/beep.mp3" type="audio/mpeg">              
+            </audio>
+
+        </div>
+    </section>
+
+    <script src="/script/application/timer.js"></script>
+</body>
+
+</html>

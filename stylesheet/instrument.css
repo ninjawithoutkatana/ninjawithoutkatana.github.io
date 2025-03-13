@@ -1,0 +1,189 @@
+.instrument_section {
+    display: contents;
+    flex-wrap: wrap;
+}
+
+.instrument_content ul {
+    margin-bottom: 28px;
+}
+
+.instrument_case {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: #E1E1E1;
+    border-radius: 20px;
+}
+
+.instrument_case_banner {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: #88b7d1;
+    border-radius: 20px;
+}
+
+.instrument_intro_banner {
+    position: relative;
+    padding: 21px 35px 21px 35px;
+}
+
+.instrument_headline {
+    object-fit: cover;
+    width: 100%;
+    max-height: 268px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.instrument_subtitle_banner {
+	color: black;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 1em;
+	padding-bottom: 10px;
+}
+
+.instrument_case_banner h4 {
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 0;
+}
+
+.instrument_case_banner p {
+    color: black;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.instrument_case_banner span {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 0;
+}
+
+.toinstrument_button_banner {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    height: 43px;
+    padding: 5px 5px;
+    font-family: "GoodPro";
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+  
+.toinstrument_button_banner:hover {
+    background-color: blue;
+    color: white;
+}
+
+.instrument_intro {
+    position: relative;
+    padding: 21px 56px 21px 35px;
+    cursor: pointer;
+}
+
+.instrument_intro::before {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border-left: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    transform: rotate(315deg) translateY(-50%);
+    transform-origin: center;
+    margin-top: -8px;
+    transition: all 0.4s;
+}
+
+.instrument_case_active .instrument_intro::before {
+    transform: rotate(135deg) translateY(-50%);
+    right: 45px;
+    margin-top: -12px;
+}
+
+.instrument_page {
+    padding: 0 35px 0px 98px;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+    color: #f1f1f1;
+    opacity: 0;
+}
+
+.instrument_case h4 {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 0;
+}
+
+.instrument_case p {
+    color: #151515;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.instrument_case span {
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 0;
+}
+
+.toinstrument_button {
+    font-family: "GoodPro";
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+    height: 43px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+  
+.toinstrument_button:hover {
+    background-color: blue;
+}
+
+.instrument_case_active .instrument_page {
+    padding: 0 35px 35px 98px;
+    opacity: 1;
+    max-height: max-content !important;
+    POSITION: RELATIVE;
+    TOP: -14px;
+}
+
+.instrument_intro .instrument_icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}

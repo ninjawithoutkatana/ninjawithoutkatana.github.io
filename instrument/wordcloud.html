@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+     <link rel="stylesheet" href="/stylesheet/main.css">
+     <link rel="stylesheet" href="/stylesheet/application.css">
+     <link rel="stylesheet" href="/stylesheet/style-application.css">
+
+     <link rel="icon" type="image/svg" href="/visual/icon/icon_wordcloud.svg">
+     <title>edufile. Сөздер бұлты</title>
+</head>
+
+<body>
+     <header class="header">
+          <nav class="navigation">
+               <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+               <div class="title" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <h1 class="application-name">Сөздер бұлты</h1>
+                    <p class="application-version">APPLICATION?edufile.wordcloud/v0.1(#edufile6.2.prerelease.0325)<a
+                              href="http://www.jasondavies.com/"> &copy;Jason Davies</a></p>
+               </div>
+               <a class="logotype" href="">
+                    <p class="logotype-title">Applications</p>
+                    <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
+               </a>
+          </nav>
+     </header>
+
+     <section class="page">
+          <div class="container">
+
+               <div id="vis"></div>
+
+               <form id="form">
+
+                    <p style="position: absolute; right: 0; top: 0" id="status"></p>
+
+                    <div style="text-align: center">
+                         <div id="presets"></div>
+                         <div id="custom-area">
+                              <label for="text" style="font-size: 20px; font-weight: bold;">Мәтінді төмендегі өріске енгізіңіз</label>
+                              <p>
+                              <textarea id="text" style="resize: none; width:100%; height:10em; font-family:inherit; font-size: 18px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;">
+Сөздер бұлты – мәтіндегі ең жиі кездесетін сөздерді графикалық түрде бейнелейтін визуалды құрал. Бұл әдіс мәтіндік ақпаратты талдауға және оның мазмұнын көрнекі түрде көрсетуге көмектеседі. Сөздер бұлтының негізгі ерекшелігі – мәтінде жиі кездесетін сөздер үлкенірек, ал сирек кездесетіндері ұсақтау өлшемде көрсетіледі.
+
+Сөздер бұлтының негізгі ерекшеліктері
+Көрнекілік – мәтіндегі басты сөздер мен тақырыптарды бірден аңғаруға мүмкіндік береді.
+Ақпаратты ықшамдау – үлкен мәтіндерден маңызды сөздерді бөліп көрсету арқылы ақпаратты қысқа әрі нұсқа түрде ұсынуға көмектеседі.
+Стильдің өзгергіштігі – сөздердің өлшемі, түсі, қаріп түрі және орналасу реті әртүрлі болып келеді, бұл оны визуалды түрде тартымды етеді.
+Автоматтандырылған талдау – белгілі бір тақырыпта жазылған мәтіндерден негізгі терминдерді автоматты түрде анықтауға мүмкіндік береді.
+                         
+Қорытынды
+Сөздер бұлты – үлкен мәтіндерден негізгі мағынаны көрнекі түрде ұсынатын пайдалы құрал. Ол мәтіндік ақпаратты талдауда уақытты үнемдеуге, маңызды сөздерді анықтауға және ақпаратты визуалды түрде қабылдауды жеңілдетуге мүмкіндік береді.</textarea>
+                              <button class="home_welcome_tocontent_button" id="go" type="submit">Генерациялау</button>
+                         </div>
+                    </div>
+
+                    <hr>
+
+                    <div style="float: right; text-align: right">
+                         <p>
+                         <label for="max">Сөздер саны</label> <input type="number" value="3000" min="1" id="max" style="width: 5em; resize: none;  font-family:inherit; font-size: 14px; font-weight: normal; border-radius: 10px;">
+                         <p>
+                         <label for="per-line"><input type="checkbox" id="per-line"> Әр жолға бір сөз</label>
+                         <!--<p><label for="colours">Colours:</label> <a href="#" id="random-palette">get random palette</a>-->
+                         <p>
+                         <label>Жүктеу</label>
+                         <a id="download-svg" href="#svg" style="font-size: 16px; font-weight: bold;"><i class="fas fa-download"></i> SVG</a>
+                         <!--<button id="download-svg">SVG</button>-->
+                    </div>
+
+                    <div style="float: left">
+                         <p>
+                         <label>Спиральдылық</label>
+                         <label for="archimedean"><input type="radio" name="spiral" id="archimedean" value="archimedean" checked="checked"> Жазық қисық</label>
+                         <label for="rectangular"><input type="radio" name="spiral" id="rectangular" value="rectangular"> Тікбұрышты</label>
+                         <p>
+                         <label for="scale">Шкаласы</label>
+                         <label for="scale-log"><input type="radio" name="scale" id="scale-log" value="log" checked="checked"> log n</label>
+                         <label for="scale-sqrt"><input type="radio" name="scale" id="scale-sqrt" value="sqrt"> √n</label>
+                         <label for="scale-linear"><input type="radio" name="scale" id="scale-linear" value="linear"> n</label>
+                         <p>
+                         <label for="font">Қаріп</label> <input type="text" id="font" value="Arial" style="resize: none; font-family:inherit; font-size: 14px; font-weight: normal; border-radius: 10px;">
+                    </div>
+
+                    <div id="angles">
+                         <p>
+                         <input type="number" id="angle-count" value="5" min="1" style="width: 5em; resize: none; font-family:inherit; font-size: 14px; font-weight: normal; border-radius: 10px;"> <label for="angle-count">бағдарлар</label>
+                         <label for="angle-from"></label> <input type="number" id="angle-from" value="90" min="-90" max="90" style="width: 5em; resize: none; font-family:inherit; font-size: 14px; font-weight: normal; border-radius: 10px;"> ° бастап
+                         <label for="angle-to"></label> <input type="number" id="angle-to" value="-90" min="-90" max="90" style="width: 5em; resize: none; font-family:inherit; font-size: 14px; font-weight: normal; border-radius: 10px;"> ° дейін
+                    </div>
+
+               </form>
+
+          </div>
+     </section>
+
+     <script src="/script/application/wordcloud.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+/*Баннер платформы*/
+.platform_child_preview {
+	width: 250px;
+	height: auto;
+	border-radius: 20px;
+}
+
+.platform_container_child_a {
+	background-color: #ffde01;
+	float: left;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	width: 50%;
+	border-radius: 20px;
+	padding: 10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+.platform_container_child_b {
+	background-color: #46178f;
+	float: left;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	width: 50%;
+	border-radius: 20px;
+	padding: 10px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+.platform_container_child_c {
+	background-color: #e1cdde;
+	float: left;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	width: 50%;
+	border-radius: 20px;
+	padding: 10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+.platform_container_child_d {
+	background-color: #2995fb;
+	float: left;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	width: 50%;
+	border-radius: 20px;
+	padding: 10px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+.platform_container_child_e {
+  background-color: #2b80bf;
+  float: left;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  width: 50%;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.platform_container_child_f {
+  background-color: #6fb318;
+  float: left;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  width: 50%;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}

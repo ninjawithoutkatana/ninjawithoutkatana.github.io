@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script language="javascript">
+		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
+			window.location.replace("/component/notsupported");
+		}
+	</script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" href="/stylesheet/main.css">
+	<link rel="stylesheet" href="/stylesheet/denied.css">
+	<link rel="icon" type="image/svg" href="/visual/icon/icon_edufile.svg">
+	<title>edufile. Қателік</title>
+</head>
+
+<body>
+
+	<header class="page_header">
+		<div class="page_container">
+			<nav class="page_navigate">
+				<a class="page_navigate_logotype" href="/index">
+					<img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg" alt="logotype_icon">
+				</a>
+				<ul class="page_navigate_menu">
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="page_section">
+		<div class="page_container">
+			<div class="page_unavailable_container">
+				<div class="error_list">
+					<p class="error_title">Бұл бетшеге кіруге рұқсатыңыз жоқ.</p>
+					<p class="error_subtitle">Сізде қажетті рұқсаттар жоқ. Пайдаланушы рөліне негізделген шектеулі мазмұн.</p>
+					<p class="error_subtitle">Тіркелмеген пайдаланушыға кіруге тыйым салынды. Жүйеге кіру арқылы шектеулі мазмұнға қол жеткізе аласыз.</p>
+					<a class="error_link" href="/sign"><i class="fa-solid fa-users-line"></i> Жүйеге кіру</a>
+				</div>
+				<img class="error_preview" src="/visual/decor/decor_denied.svg" alt="error_preview">
+			</div>
+		</div>
+	</section>
+
+	<footer class="page_footer">
+		<div class="page_container">
+			<div class="page_footnote_bottom">
+				<p class="page_footnote_copy_1">v6.2-prerelease <i>(build#0325)</i> &copy;2023-2025 <a class="page_footnote_copy_link_1" href="/component/developer">ninjawithoutkatana</a> - <a class="page_footnote_copy_link_1" href="/index">«edufile.»</a> - repository of Educational Files and Platforms</p>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

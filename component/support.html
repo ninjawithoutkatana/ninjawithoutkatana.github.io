@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/main.css">
+	<link rel="stylesheet" href="/stylesheet/content.css">
+    <link rel="icon" type="image/svg" href="/visual/icon/icon_support.svg">
+    <title>Қолдау қызметі</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.snow.css">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    
+    <style>
+        h2 { color: #2c3e50; text-align: center; }
+        label { font-weight: bold; margin-top: 20px; margin-bottom: 10px; display: block; }
+        input { font-family: inherit; width: 100%; padding: 8px; margin-top: 5px; border: 1px solid gray; border-radius: 10px; box-sizing: border-box; }
+        .editor-container { border: 1px solid #ccc; border-radius: 4px; margin-top: 5px; }
+        .submit-btn { font-family: inherit; width: 100%; padding: 10px; background: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        .submit-btn:hover { background: #2980b9; }
+        .error { color: red; font-size: 14px; display: none; }
+        #successMessage { display: none; background: #2ecc71; color: white; padding: 10px; margin-top: 10px; text-align: center; border-radius: 4px; }
+    </style>
+</head>
+
+
+
+<body>
+
+	<header class="page_header">
+		<div class="page_container">
+			<nav class="page_navigate">
+				<a class="page_navigate_logotype" href="/index">
+					<img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg" alt="logotype_icon">
+				</a>
+				<ul class="page_navigate_menu">
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="page_section">
+		<div class="page_container">
+
+            <a class="content_tohome_link" href="/index"><i class="fas fa-home"></i> Басты бетшеге оралу</a>
+			<h1 class="content_title">Маған көмек керек!</h1>
+			<h3 class="content_subtitle">Қолдау қызметіне хабарласу үшін: электрондық поштаңызды және ұйым атауын жазыңыз. Сұранысты толтырыңыз. Болғаннан соң "жіберу" батырмасын басыңыз.</h3>
+
+
+
+            <div class="container">
+                <form id="supportForm">
+                    <label for="email">📧 Электрондық пошта (міндетті)</label>
+                    <input type="email" id="email" placeholder="Email енгізіңіз" required>
+                    <span class="error" id="emailError">❌ Электрондық поштаны енгізіңіз!</span>
+            
+                    <label for="organization">🏫 Ұйымның атауы</label>
+                    <input type="text" id="organization" placeholder="Ұйым атауын енгізіңіз" required>
+            
+                    <label for="date">📅 Құрылған күні</label>
+                    <input type="text" id="date" readonly>
+            
+                    <label for="description">📝 Сипаттама</label>
+                    <div id="editor" class="editor-container"></div>
+            
+                    <br>
+                    <button type="submit" class="home_welcome_tocontent_button">Жіберу</button>
+                    
+                </form>
+            
+                <div id="successMessage">
+                    Сұраныс сәтті жіберілді! <br> 
+                    <a id="downloadLink" href="#" download="request"><i class="fas fa-download"></i> Мәліметті жүктеу</a>
+                </div>
+            </div>
+
+            
+		</div>
+	</section>
+
+	<footer class="page_footer">
+		<div class="page_container">
+			<div class="page_footnote_bottom">
+				<p class="page_footnote_copy">v6.2-prerelease <i>(build#0325)</i> &copy;2023-2025 <a class="page_footnote_copy_link" href="/component/developer">ninjawithoutkatana</a> - <a class="page_footnote_copy_link" href="/index">«edufile.»</a> - repository of Educational Files and Platforms</p>
+			</div>
+		</div>
+	</footer>
+
+<script>
+    function getCurrentDateTime() {
+        let now = new Date();
+        return now.toLocaleString("kk-KZ");
+    }
+    document.getElementById("date").value = getCurrentDateTime();
+
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        placeholder: 'Сұранысты сипаттаңыз...',
+        modules: {
+            toolbar: [
+                [{ header: [1, 2, false] }],
+                ['bold', 'italic', 'underline'],
+                ['blockquote', 'code-block'],
+                [{ list: 'ordered' }, { list: 'bullet' }],
+                ['link'],
+                ['clean']
+            ]
+        }
+    });
+
+    document.getElementById("supportForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let email = document.getElementById("email").value.trim();
+        let organization = document.getElementById("organization").value.trim();
+        let description = quill.root.innerHTML;
+        let date = document.getElementById("date").value;
+        let emailError = document.getElementById("emailError");
+
+        if (!email) {
+            emailError.style.display = "block";
+            return;
+        } else {
+            emailError.style.display = "none";
+        }
+
+        if (!organization || description.length < 10) {
+            alert("Барлық міндетті өрістерді толтырыңыз!");
+            return;
+        }
+
+        let formData = `
+            <h3>Қолдау қызметіне сұраныс</h3>
+            <p>📅 Құрылған күні: ${date}</p>
+            <p><strong>📧 Email:</strong> ${email}</p>
+            <p><strong>🏫 Ұйым:</strong> ${organization}</p>
+            <h4>📝 Сипаттама:</h4>
+            ${description}
+        `;
+
+        let mailtoLink = `mailto:diplomatpanda@protonmail.com?subject=Сұраныс&body=${encodeURIComponent(description)}`;
+        window.location.href = mailtoLink;
+
+        let blob = new Blob([formData], { type: "text/html" });
+        let link = document.getElementById("downloadLink");
+        link.href = URL.createObjectURL(blob);
+        link.style.display = "inline-block";
+
+        document.getElementById("successMessage").style.display = "block";
+
+        setTimeout(() => {
+            document.getElementById("supportForm").reset();
+            document.getElementById("date").value = getCurrentDateTime();
+            quill.root.innerHTML = "";
+        }, 1000);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+     <link rel="stylesheet" href="/stylesheet/main.css">
+     <link rel="stylesheet" href="/stylesheet/application.css">
+
+     <link rel="icon" type="image/svg" href="/visual/icon/icon_score.svg">
+     <title>edufile. Бағалау журналы</title>
+     <style>
+          .timer {
+               font-weight: bold;
+               font-size: 25px;
+               margin-bottom: 10px;
+          }
+
+          .clock {
+               position: absolute;
+               top: 20px;
+               right: 20px;
+               font-size: 45px;
+               font-weight: bold;
+               background: black;
+               color: white;
+               padding: 20px 20px;
+               border-radius: 10px;
+          }
+
+          table {
+               font-family: inherit;
+               margin: 5px auto;
+               border-collapse: collapse;
+               width: 20%;
+               background: white;
+               border-radius: 10px;
+               overflow: hidden;
+          }
+
+          th,
+          td {
+               border: 1px solid #ddd;
+               padding: 2px;
+               text-align: center;
+          }
+
+          th {
+               background-color: #333;
+               color: white;
+          }
+
+          button {
+               min-width: 35px;
+               font-family: inherit;
+               margin: 5px;
+               padding: 8px 12px;
+               border: none;
+               cursor: pointer;
+               background: #333;
+               color: white;
+               border-radius: 5px;
+          }
+
+          button:hover {
+               background: blue;
+               transition: 0.2s all;
+          }
+
+          button:disabled {
+               background: #aaa;
+               cursor: not-allowed;
+               opacity: 0.6;
+          }
+
+          .content_link {
+               cursor: pointer;
+               color: black;
+               font-weight: 700;
+               font-size: 16px;
+               line-height: inherit;
+               margin-top: 20px;
+               display: inline-block;
+          }
+
+          .content_link:hover {
+               color: blue;
+               transition: all 0.5s;
+          }
+
+          input,
+          textarea {
+               font-family: inherit;
+               margin: 5px;
+               padding: 8px;
+               border: 1px solid #ddd;
+               border-radius: 5px;
+          }
+
+          .compact-table {
+               width: 100%;
+          }
+
+          .red {
+               background-color: #ff6666;
+          }
+
+          .orange {
+               background-color: #faa43c;
+          }
+
+          .green {
+               background-color: #c2d13b;
+          }
+     </style>
+</head>
+
+<body>
+     <header class="header">
+          <nav class="navigation">
+               <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+               <div class="title">
+
+                    <h1 class="application-name">Бағалау журналы</h1>
+                    <p class="application-version">APPLICATION?edufile.scorekeeper/v0.1(#edufile6.2.prerelease.0325)</p>
+               </div>
+               <a class="logotype" href="">
+                    <p class="logotype-title">Applications</p>
+                    <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
+               </a>
+          </nav>
+     </header>
+
+     <section class="page">
+          <div class="container">
+
+               <div class="timer"><i class="fas fa-stopwatch"></i> <span id="time">00:00</span></div>
+
+               <button id="startBtn" onclick="startTimer()"><i class="fas fa-play"></i></button>
+               <button id="pauseBtn" onclick="pauseTimer()" disabled><i class="fas fa-pause"></i></button>
+               <button onclick="resetTimer()"><i class="fas fa-undo"></i></button>
+
+               <div id="clock" class="clock"></div>
+
+               <h2>Тапсырмалар және олардың дескрипторы</h2>
+               <table class="compact-table" id="tasksTable" style="display: none;">
+                    <thead>
+                         <tr>
+                              <th>Тапсырма</th>
+                              <th>Дескриптор</th>
+                              <th>Ұпай саны</th>
+                              <th style="width: 10%;">Орындау</th>
+                              <th style="width: 20%;">Әрекеттер</th>
+                         </tr>
+                    </thead>
+                    <tbody id="tasks"></tbody>
+               </table>
+
+
+               <button id="taskToggleBtn" onclick="toggleTaskFields()"><i class="fas fa-plus"></i> Тапсырма
+                    қосу</button>
+               <div id="taskFields" style="display: none;">
+                    <input type="text" id="taskName" placeholder="Тапсырма атауы" oninput="checkTaskFields()"
+                         style="width: 30%;">
+                    <input type="text" id="taskCriteria" placeholder="Дескриптор" oninput="checkTaskFields()"
+                         style="width: 30%;">
+                    <input type="number" id="taskMark" placeholder="Ұпай" min="1" max="10" step=1
+                         onKeyDown="return false" oninput="checkTaskFields()" style="width: 10%;">
+                    <input type="time" id="taskTime" oninput="checkTaskFields()" style="width: 10%;">
+                    <button id="taskAddBtn" onclick="addTask()"><i class="fas fa-plus"></i></button>
+               </div>
+
+               <h2>Оқушылар және ұпайлар</h2>
+               <table class="compact-table" id="playersTable" style="display: none;">
+                    <thead>
+                         <tr>
+                              <th>Оқушылардың аты-жөні</th>
+                              <th>Ұпай</th>
+                              <th style="width: 20%;">Әрекеттер</th>
+                         </tr>
+                    </thead>
+                    <tbody id="players"></tbody>
+               </table>
+
+
+               <button id="playerToggleBtn" onclick="togglePlayerFields()"><i class="fas fa-plus"></i> Оқушы
+                    қосу</button>
+               <div id="playerFields" style="display: none;">
+                    <input type="text" id="playerName" placeholder="Оқушының аты-жөні" oninput="checkPlayerFields()"
+                         style="width: 92%;">
+                    <button id="playerAddBtn" onclick="addPlayer()"><i class="fas fa-plus"></i></button>
+               </div>
+               <br>
+               <p class="content_link" onclick="javascript:window.open('https://login.kundelik.kz/')">kundelik.kz
+                    өту <i class="fas fa-external-link-alt"></i></p>
+          </div>
+     </section>
+
+     <script src="/script/application/scorekeeper.js"></script>
+
+</body>
+
+</html>

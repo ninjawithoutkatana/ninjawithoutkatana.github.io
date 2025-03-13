@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link rel="stylesheet" href="/stylesheet/main.css">
+     <link rel="stylesheet" href="/stylesheet/style-application-1.css">
+
+     <link rel="icon" type="image/svg" href="/visual/icon/icon_oiqor_1.svg">
+     <title>edufile. OiQor</title>
+</head>
+
+<body>
+     <header class="page_header">
+          <div class="page_container">
+               <nav class="page_navigate">
+                    <a class="page_navigate_logotype" href="/index">
+                         <img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg"
+                              alt="logotype_icon">
+                    </a>
+                    <ul class="page_navigate_menu">
+                    </ul>
+               </nav>
+          </div>
+     </header>
+
+     <header class="header">
+          <a class="goback_link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+          <!--<h1 class="title">Сізді осы жерден көргеніме қуаныштымын!</h1>-->
+          <p class="subtitle">OiQor Сізге қалай көмектесе алады?</p>
+
+          <p class="suggestion-title">Ұсыныс сұрақтар тізбегі</p>
+          <ul class="suggestion-list">
+               <li class="suggestion">
+                    <h4 class="text">Қазақ хандығы қай жылы құрылды?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Белгілі бір тақырып бойынша ең жақсы оқулықтар қандай?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Онлайн курстар немесе тегін білім платформалары бар ма?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Ғылыми мақалаларды қайдан табуға болады?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Математика есептерін қалай шығару керек?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Эссені дұрыс жазу жолдары қандай?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Физика/химия/биология заңдары мен формулалары туралы түсіндіріп бересіз бе?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Қай салада жақсы жұмыс табуға болады?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">IT мамандығына қалай оқуға болады?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Грантқа қалай түсуге болады?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Ағылшын тілін үйренудің ең тиімді жолдары қандай?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Жаңа сөздерді тез жаттау үшін қандай әдістер бар?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Грамматика мен сөйлеу дағдыларын қалай жақсартуға болады?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Қандай қосымшалар мен сайттар оқу үшін пайдалы?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Ақпаратты тиімді жазып алу әдістері қандай?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+               <li class="suggestion">
+                    <h4 class="text">Уақытты дұрыс басқару үшін қандай құралдар бар?</h4>
+                    <span class="icon material-symbols-rounded">question_mark</span>
+               </li>
+          </ul>
+     </header>
+
+     <div class="chat-list"></div>
+
+     <div class="typing-area">
+          <form action="#" class="typing-form">
+               <div class="input-wrapper">
+                    <input type="text" placeholder="Сұрағыңызды енгізіңіз" class="typing-input" required />
+                    <button id="send-message-button" class="icon material-symbols-rounded">send</button>
+               </div>
+               <div class="action-buttons">
+                    <span id="delete-chat-button" class="icon material-symbols-rounded">delete</span>
+               </div>
+          </form>
+          <!--<p class="disclaimer-text">OiQor жасанды интеллект чаты Gemini көмегімен жұмыс атқарады</p>-->
+          <p class="disclaimer-text">APPLICATION?edufile.oiqor/v1.1beta(#edufile6.2.prerelease.0325)</p>
+     </div>
+
+     <script src="/script/application/oiqor.js"></script>
+</body>
+
+</html>

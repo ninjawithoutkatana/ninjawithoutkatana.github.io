@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheet/main.css">
+    <link rel="stylesheet" href="/stylesheet/application.css">
+
+    <link rel="icon" type="image/svg" href="/visual/icon/icon_wheel.svg">
+    <title>edufile. Атаулар дөңгелегі</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+            <div class="title">
+                <h1 class="application-name">Атаулар дөңгелегі</h1>
+                <p class="application-version">APPLICATION?edufile.wheelofnames/v0.1(#edufile6.2.prerelease.0325)</p>
+            </div>
+            <a class="logotype" href="">
+                <p class="logotype-title">Applications</p>
+                <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
+            </a>
+        </nav>
+    </header>
+
+    <section class="page">
+        <div class="container">
+            <div class="navigation">
+                <div>
+                    <h1 style="font-size: 16px;">Оқушылардың аты-жөнін жолаққа енгізіңіз (Келесі
+                        оқушының есімі үтірмен жалғасқан):</h1>
+                    <textarea type="text" id="namesInput" placeholder="Келесі оқушының есімі үтірмен" rows="10"
+                        cols="50"
+                        style="resize: none; width:90%; height:10em; font-family:inherit; font-size: 14px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;" required>Айбек Нұрланұлы, Аяжан Ерланқызы, Нұрсұлтан Темірұлы, Жансая Берікқызы, Әмина Қайратқызы, Ержан Мұратұлы, Дана Сағынқызы, Аружан Әсетқызы, Мәди Арманұлы, Іңкәр Жанболатқызы</textarea>
+                    <br>
+                </div>
+
+                <div>
+                    <canvas id="wheelCanvas" width="500" height="500"></canvas>
+                    
+                    <br>
+
+                </div>
+            </div>
+            <div class="result" id="result" style="margin-top: 20px; margin-bottom: 20px; color: red; font-size: 20px; text-align: center;"></div>
+            <button class="home_welcome_tocontent_button" id="spinButton">Дөңгелекті айналдыру</button>
+
+
+        </div>
+    </section>
+
+    <script src="/script/application/wheelofnames.js"></script>
+</body>
+
+</html>

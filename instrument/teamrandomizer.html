@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheet/main.css">
+    <link rel="stylesheet" href="/stylesheet/application.css">
+
+    <link rel="icon" type="image/svg" href="/visual/icon/icon_team.svg">
+    <title>edufile. Командалық рандомизатор</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+            <div class="title">
+                <h1 class="application-name">Командалық рандомизатор</h1>
+                <p class="application-version">APPLICATION?edufile.teamrandomizer/v0.2(#edufile6.2.prerelease.0325)</p>
+            </div>
+            <a class="logotype" href="">
+                <p class="logotype-title">Applications</p>
+                <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
+            </a>
+        </nav>
+    </header>
+
+    <section class="page">
+        <div class="container">
+
+            <div>
+                <h1 for="numberTeams">Топтар санын енгізіңіз:</h1>
+                <input type="number" name="numberTeams" id="numberTeams" value="4" min="1" max="10" step="1" style="width:100%; height:1em; font-family:inherit; font-size: 25px; font-weight: bold; margin-bottom: 25px; border-radius: 10px;" required>
+            </div>
+            <div>
+                <h1 for="volunteers">Оқушылардың аты-жөндерін енгізіңіз (әр жолға бір есім немесе үтірмен бөлінген):</h1>
+                <textarea name="volunteers" id="volunteers" rows="10" cols="50" style="resize: none; width:100%; height:10em; font-family:inherit; font-size: 18px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;" required>Айбек Нұрланұлы, Аяжан Ерланқызы, Нұрсұлтан Темірұлы, Жансая Берікқызы, Әмина Қайратқызы, Ержан Мұратұлы, Дана Сағынқызы, Аружан Әсетқызы, Мәди Арманұлы, Іңкәр Жанболатқызы</textarea>
+            </div>
+            <button class="home_welcome_tocontent_button" id="formTeams">Топтарды генерациялау</button>
+            <div id="formedTeams">
+                <h3>Нұсқаулар:</h3>
+                <ol>
+                    <li>Бөлгіңіз келетін топтар санын енгізіңіз.</li>
+                    <li>Топтарға бөлу үшін оқушылардың есімдерін енгізіңіз.</li>
+                    <li>Топтарға бөлуді бастау үшін жоғарыдағы "Топтарды генерациялау" түймесін басыңыз.</li>
+                    <li>Қолданбаның шешімін күтіңіз.</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="/script/application/teamrandomizer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.about_quote {
+	color: black;
+	background: rgba(200, 200, 200, 0.9);
+	font-size: 14px;
+	line-height: 1em;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 0;
+}
+
+.about_quote figcaption,
+.about_quote blockquote {
+	margin: 10px;
+}
+
+.about_description {
+	color: black;
+	font-size: 18px;
+	line-height: 1.2em;
+	text-align: justify;
+	border-left: 3px solid black;
+	padding-left: 5px;
+	margin-bottom: 20px;
+}
+
+.agreement_preview {
+  width: 250px;
+  height: 250px;
+}
+
+.agreement_description {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+
+.agreement_description p {
+  font-size: 30px;
+}
+
+.agreement_description a {
+  font-weight: 800;
+}
+
+.agreement_description a:hover {
+  color: blue;
+}
