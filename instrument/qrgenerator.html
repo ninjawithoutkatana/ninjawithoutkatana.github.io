@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="/stylesheet/main.css">
     <link rel="stylesheet" href="/stylesheet/application.css">
+    <link rel="stylesheet" href="/stylesheet/rating.css">
 
     <link rel="icon" type="image/svg" href="/visual/icon/icon_qr.svg">
     <title>edufile. QR код генераторы</title>
@@ -18,8 +19,22 @@
             <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
             <div class="title">
                 <h1 class="application-name">QR код генераторы</h1>
-                <p class="application-version">APPLICATION?edufile.qrgenerator/v0.2(#edufile6.2.prerelease.0325)<a href="http://www.nayuki.io/"> &copy;Project Nayuki</a></p>
+                <p class="application-version">APPLICATION?edufile.qrgenerator/v0.2(#edufile6.3.0525)<a href="http://www.nayuki.io/"> &copy;Project Nayuki</a></p>
             </div>
+            <div class="title">
+                <p class="summary_title">Қолданбаны бағалаңыз</p>
+                <div class="block" data-id="app1_">
+                    <form class="stars">
+                      <input type="radio" id="app1_5" name="app1_" value="5"><label for="app1_5">★</label>
+                      <input type="radio" id="app1_4" name="app1_" value="4"><label for="app1_4">★</label>
+                      <input type="radio" id="app1_3" name="app1_" value="3"><label for="app1_3">★</label>
+                      <input type="radio" id="app1_2" name="app1_" value="2"><label for="app1_2">★</label>
+                      <input type="radio" id="app1_1" name="app1_" value="1"><label for="app1_1">★</label>
+                    </form>
+                    <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                  </div>
+            </div>
+            
             <a class="logotype" href="">
                 <p class="logotype-title">Applications</p>
                 <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
@@ -129,6 +144,7 @@
     </section>
 
     <script src="/script/application/qrgenerator.js"></script>
+    <script src="/script/rating.js"></script>
 </body>
 
 </html>

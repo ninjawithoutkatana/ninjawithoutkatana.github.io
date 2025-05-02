@@ -1,4 +1,4 @@
-/* APPLICATION?edufile.qrgenerator/v0.2(#edufile6.2.prerelease.0325) */
+//APPLICATION?edufile.qrgenerator/v0.2(#edufile6.3.0525)
 "use strict";
 
 var qrcodegen = new function () {

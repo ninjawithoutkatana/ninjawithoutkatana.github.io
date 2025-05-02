@@ -8,7 +8,7 @@ header {
     margin-bottom: 20px;
 }
 
-form {
+.form-main {
     margin-bottom: 20px;
 }
 
@@ -16,13 +16,8 @@ form {
     margin-bottom: 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"] {
+.input_quiz[type="text"],
+.input_quiz[type="number"] {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -58,3 +53,510 @@ a.active { text-decoration: none; color: #000; font-weight: bold; cursor: text; 
 #angles path.drag { fill: #666; cursor: move; }
 #angles { text-align: center; margin: 0 auto; width: 350px; }
 #angles input, #max { width: 42px; }
+
+/*application_oiqor*/
+.application_welcome {
+    text-align: center;
+    align-items: center;
+}
+
+.welcome_title {
+    font-size: 30px;
+    padding: 10px 0;
+    color: black;
+
+    background-clip: text;
+    background: linear-gradient(to right, #8c52ff, #ff914d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.application_suggestion {
+    margin: 20px 0;
+}
+
+.suggestion_title {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    align-items: center;
+}
+
+.suggestion_list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.suggestion_card {
+    margin: 2px;
+    cursor: pointer;
+    padding: 20px;
+    width: 190px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 20px;
+    justify-content: space-between;
+    background: #cdcdcd;
+    transition: 0.2s ease;
+}
+
+.suggestion_card:hover {
+    background: white;
+    outline: 0.5px solid black;
+}
+
+.suggestion_text {
+    font-size: 16px;
+    color: black;
+}
+
+.suggestion_icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+    align-self: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    color: black;
+    background: white;
+}
+
+.application_chat {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin: 30px 0;
+    overflow-y: auto;
+}
+
+.application_chat .message.incoming {
+    margin-top: 0;
+}
+
+.application_chat .message .message-content {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.application_chat .message .text {
+    color: black;
+    white-space: pre-wrap;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.application_chat .message.error .text {
+    color: red;
+}
+
+.application_chat .message.loading .text {
+    display: none;
+}
+
+.application_chat .message .avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+    align-self: flex-start;
+    padding-top: 8px;
+}
+
+.application_chat .message .application_texticon {
+    color: black;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    font-size: 20px;
+    margin-left: 3.5rem;
+    margin-bottom: 30px;
+    visibility: hidden;
+}
+
+.application_chat .message .application_texticon.hide {
+    visibility: hidden;
+}
+
+.application_chat .message:not(.loading, .error):hover .application_texticon:not(.hide) {
+    visibility: visible;
+}
+
+.application_chat .message .application_texticon:hover {
+    background: #cdcdcd;
+}
+
+.application_chat .message .loading-indicator {
+    display: none;
+    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.application_chat .message.loading .loading-indicator {
+    display: flex;
+}
+
+.application_chat .message .loading-indicator .loading-bar {
+    height: 10px;
+    width: 100%;
+    border-radius: 2px;
+    background-position: -800px 0;
+    background: linear-gradient(to right, #f4f4f4, white, #dddddd);
+    animation: application_loading 3s linear infinite;
+}
+
+.application_chat .message .loading-indicator .loading-bar:last-child {
+    width: 70%;
+}
+
+.application_inputarea {
+    position: fixed;
+    width: 96%;
+    left: 0;
+    bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.application_inputarea :where(.application_inputform, .application_actionbutton) {
+    display: flex;
+    gap: 18px;
+}
+
+.application_inputwrapper {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.application_typinginput {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+    font-family: inherit;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    background: #cdcdcd;
+}
+
+.application_typinginput:focus {
+    outline: black solid 1px;
+    background: #cdcdcd;
+}
+
+.application_typinginput::placeholder {
+    color: black;
+}
+
+.application_inputicon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    font-size: 20px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    background: #cdcdcd;
+    transition: 0.2s ease;
+}
+
+.application_inputicon:hover {
+    color: white;
+    background: black;
+}
+
+.application_inputform #application_sendinput {
+    position: absolute;
+    right: 0;
+    outline: none;
+    border: none;
+    transform: scale(0);
+    background: transparent;
+    transition: transform 0.2s ease;
+}
+
+.application_inputform .application_typinginput:valid~#application_sendinput {
+    transform: scale(1);
+}
+
+.application_disclaimer {
+    text-align: center;
+    font-size: 9px;
+    color: black;
+}
+
+@keyframes application_loading {
+    0% {
+        background-position: -800px 0;
+    }
+
+    100% {
+        background-position: 800px 0;
+    }
+}
+
+/*application_imagegenerator*/
+.flex-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: calc(100vh - 10vh);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.example-label {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.example-label::after {
+    content: '';
+    flex-grow: 1;
+    height: 0.1px;
+    background-color: black;
+}
+
+.example-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.example-chip {
+    display: inline-block;
+    padding: 3px 5px;
+    background-color: #cdcdcd;
+    border-radius: 6px;
+    font-size: 12px;
+    color: black;
+    border: 1px solid #cdcdcd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.example-chip:hover {
+    background-color: white;
+    border-color: black;
+}
+
+.example-chip:active {
+    background-color: black;
+    color: white;
+}
+
+.prompt-highlight {
+    animation: highlight-pulse 0.6s ease;
+}
+
+@keyframes highlight-pulse {
+    0% {
+        background-color: #f0f0f0;
+    }
+
+    50% {
+        background-color: #cdcdcd;
+    }
+
+    100% {
+        background-color: #f0f0f0;
+    }
+}
+
+.settings-container {
+    width: 100%;
+}
+
+.select-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.select-item {
+    flex: 1;
+    min-width: 150px;
+}
+
+.form-label {
+    color: black;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-select {
+    color: black;
+    width: 100%;
+    padding: 10px;
+    background-color: #cdcdcd;
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: black;
+    background-color: #cdcdcd;
+}
+
+.images {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.loader {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #cdcdcd;
+    border-top-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.error-container {
+    background-color: #ff6060;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.error-message {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.output {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-container {
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cdcdcd;
+    transition: all 0.3s ease;
+}
+
+.image-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.generated-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.download-link {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .download-link {
+    opacity: 1;
+}
+
+.download-link i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+.download-link i:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
+}

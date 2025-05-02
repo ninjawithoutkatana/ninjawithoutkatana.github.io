@@ -58,27 +58,98 @@
 }
 
 .platform_container_child_e {
-  background-color: #2b80bf;
-  float: left;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  width: 50%;
-  border-radius: 20px;
-  padding: 10px;
-  margin-left: 5px;
-  margin-bottom: 10px;
+	background-color: #2b80bf;
+	float: left;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	width: 50%;
+	border-radius: 20px;
+	padding: 10px;
+	margin-left: 5px;
+	margin-bottom: 10px;
 }
 
 .platform_container_child_f {
-  background-color: #6fb318;
-  float: left;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  width: 50%;
-  border-radius: 20px;
-  padding: 10px;
-  margin-left: 5px;
-  margin-bottom: 10px;
+	background-color: #6fb318;
+	float: left;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	width: 50%;
+	border-radius: 20px;
+	padding: 10px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+
+
+.card {
+	--blur: 12px;
+	--size: clamp(300px, 50vmin, 600px);
+	width: var(--size);
+	aspect-ratio: 6 / 4;
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+	color: #000;
+	transform: translateZ(0);
+	margin: 5px;
+}
+
+.card__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * 0deg));
+	transition: transform 0.2s;
+}
+
+.card__footer {
+	padding: 0 1rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: red;
+	display: grid;
+	gap: 0.5ch;
+	background: hsl(0 0% 100% / 0.5);
+	backdrop-filter: blur(var(--blur));
+	height: 30%;
+	align-content: center;
+}
+
+.card__action {
+	position: absolute;
+	aspect-ratio: 1;
+	width: calc(var(--size) * 0.15);
+	bottom: 30%;
+	right: 10px;
+	transform: translateY(50%) translateY(calc((var(--size) * 0.4))) translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+	background: purple;
+	display: grid;
+	place-items: center;
+	border-radius: 0.5rem;
+	background: hsl(0 0% 100% / 0.5);
+	backdrop-filter: blur(calc(var(--blur) * 0.5));
+	transition: transform 0.2s;
+}
+
+.card__action svg {
+	aspect-ratio: 1;
+	width: 50%;
+}
+
+.card__footer span:nth-of-type(1) {
+	font-size: calc(var(--size) * 0.065);
+}
+
+.card__footer span:nth-of-type(2) {
+	font-size: calc(var(--size) * 0.035);
+}
+
+.card:is(:hover, :focus-visible) {
+	--hover: 1;
 }

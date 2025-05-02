@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/stylesheet/main.css">
     <link rel="stylesheet" href="/stylesheet/application.css">
     <link rel="stylesheet" href="/stylesheet/style-application.css">
+    <link rel="stylesheet" href="/stylesheet/rating.css">
 
     <link rel="icon" type="image/svg" href="/visual/icon/icon_quiz.svg">
     <title>edufile. Викторина жасаушы</title>
@@ -19,8 +20,22 @@
             <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
             <div class="title">
                 <h1 class="application-name">Викторина жасаушы</h1>
-                <p class="application-version">APPLICATION?edufile.quizmaker/v0.1beta(#edufile6.2.prerelease.0325)</p>
+                <p class="application-version">APPLICATION?edufile.quizmaker/v0.1(#edufile6.3.0525)</p>
             </div>
+            <div class="title">
+                <p class="summary_title">Қолданбаны бағалаңыз</p>
+                <div class="block" data-id="app2_">
+                    <form class="stars">
+                      <input type="radio" id="app2_5" name="app2_" value="5"><label for="app2_5">★</label>
+                      <input type="radio" id="app2_4" name="app2_" value="4"><label for="app2_4">★</label>
+                      <input type="radio" id="app2_3" name="app2_" value="3"><label for="app2_3">★</label>
+                      <input type="radio" id="app2_2" name="app2_" value="2"><label for="app2_2">★</label>
+                      <input type="radio" id="app2_1" name="app2_" value="1"><label for="app2_1">★</label>
+                    </form>
+                    <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                  </div>
+            </div>
+
             <a class="logotype" href="">
                 <p class="logotype-title">Applications</p>
                 <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
@@ -34,30 +49,30 @@
             <section id="create-quiz">
                 <h2>Викторина құрастыру өрісі</h2>
                 <p><strong>Назар аударыңыз!</strong><br>Ең алдымен барлық өрістерді толтырғаныңызға көз жеткізгеннен соң <strong>[Сұрақты қосу]</strong> батырмасы арқылы викторина жасалады. Сұрақтарыңызды қосып болғаннан соң <strong>[Викторинаны бастау]</strong> батырмасы арқылы Сұрақтар бетшесіне өтесіз.<br><br><i class="fas fa-exclamation-triangle" style="color: #ff0000;"></i> Ешқашан бұл бетшені жаңартпаңыз! Енгізілген деректер сақталмайтынын ескертеміз!</p>
-                <form id="quiz-form">
+                <form class="form-main" id="quiz-form">
                     <div class="form-group">
                         <h1 for="question" style="margin-top: 25px;">Сұрақты енгізіңіз</h1>
-                        <input type="text" id="question" name="question" style="width:100%; font-family:inherit; font-size: 18px; font-weight: bold; border-radius: 10px;" required>
+                        <input class="input_quiz" type="text" id="question" name="question" style="width:100%; font-family:inherit; font-size: 18px; font-weight: bold; border-radius: 10px;" required>
                     </div>
                     <div class="form-group">
                         <h1 for="option1">Бірінші нұсқа</h1>
-                        <input type="text" id="option1" name="option1" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
+                        <input class="input_quiz" type="text" id="option1" name="option1" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
                     </div>
                     <div class="form-group">
                         <h1 for="option2">Екінші нұсқа</h1>
-                        <input type="text" id="option2" name="option2" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
+                        <input class="input_quiz" type="text" id="option2" name="option2" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
                     </div>
                     <div class="form-group">
                         <h1 for="option3">Үшінші нұсқа</h1>
-                        <input type="text" id="option3" name="option3" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
+                        <input class="input_quiz" type="text" id="option3" name="option3" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
                     </div>
                     <div class="form-group">
                         <h1 for="option4">Төртінші нұсқа</h1>
-                        <input type="text" id="option4" name="option4" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
+                        <input class="input_quiz" type="text" id="option4" name="option4" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; border-radius: 10px;" required>
                     </div>
                     <div class="form-group">
                         <h1 for="correct-answer">Дұрыс жауап нұсқасы</h1>
-                        <input type="number" id="correct-answer" name="correct-answer" min="1" max="4" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;" placeholder="Дұрыс жауап нұсқасына сәйкесті 1-4 аралығындағы санды енгізіңіз." required>
+                        <input class="input_quiz" type="number" id="correct-answer" name="correct-answer" min="1" max="4" onKeyDown="return false" style="width:100%; font-family:inherit; font-size: 18px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;" placeholder="Дұрыс жауап нұсқасына сәйкесті 1-4 аралығындағы санды енгізіңіз." required>
                     </div>
                     <button class="home_welcome_tocontent_button" type="submit">Сұрақты қосу</button>
                 </form>
@@ -78,6 +93,7 @@
     </section>
 
     <script src="/script/application/quizmaker.js"></script>
+    <script src="/script/rating.js"></script>
 </body>
 
 </html>

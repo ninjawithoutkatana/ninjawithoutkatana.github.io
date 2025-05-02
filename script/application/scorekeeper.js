@@ -1,4 +1,4 @@
-//APPLICATION?edufile.scorekeeper/v0.1(#edufile6.2.prerelease.0325)
+//APPLICATION?edufile.scorekeeper/v0.1(#edufile6.3.0525)
 let time = 0,
      interval;
 
@@ -90,11 +90,13 @@ function editTask(id, button) {
           cells[0].contentEditable = "true";
           cells[1].contentEditable = "true";
           cells[2].contentEditable = "true";
+          cells[3].contentEditable = "true";
           button.innerHTML = '<i class="fas fa-save"></i>';
      } else {
           cells[0].contentEditable = "false";
           cells[1].contentEditable = "false";
           cells[2].contentEditable = "false";
+          cells[3].contentEditable = "false";
           button.innerHTML = '<i class="fas fa-edit"></i>';
           saveTasksToLocalStorage();
      }

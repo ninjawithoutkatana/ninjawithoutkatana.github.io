@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheet/main.css">
+    <link rel="stylesheet" href="/stylesheet/application.css">
+    <link rel="stylesheet" href="/stylesheet/style-application.css">
+    <link rel="stylesheet" href="/stylesheet/rating.css">
+
+    <link rel="icon" type="image/svg" href="/visual/icon/icon_imagegenerator.svg">
+    <title>edufile. Сурет генераторы</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+            <div class="title">
+                <h1 class="application-name">Сурет генераторы</h1>
+                <p class="application-version">APPLICATION?edufile.imagegenerator/v1.0beta(#edufile6.3.0525)</p>
+            </div>
+            <div class="title">
+                <p class="summary_title">Қолданбаны бағалаңыз</p>
+                <div class="block" data-id="app10_">
+                        <form class="stars">
+                            <input type="radio" id="app10_5" name="app10_" value="5"><label for="app10_5">★</label>
+                            <input type="radio" id="app10_4" name="app10_" value="4"><label for="app10_4">★</label>
+                            <input type="radio" id="app10_3" name="app10_" value="3"><label for="app10_3">★</label>
+                            <input type="radio" id="app10_2" name="app10_" value="2"><label for="app10_2">★</label>
+                            <input type="radio" id="app10_1" name="app10_" value="1"><label for="app10_1">★</label>
+                        </form>
+                        <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                    </div>
+               </div>
+               <a class="logotype" href="">
+                    <p class="logotype-title">Applications</p>
+                    <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="icon_application">
+            </a>
+        </nav>
+    </header>
+
+
+    <section class="page">
+            <div class="container">
+
+                <div class="flex-container">
+                    <div class="controls">
+                        <h1 style="font-size: 16px;">Сурет генерациялау</h1>
+                        
+                        <textarea name="" type="text" id="promptInput" placeholder="Суретке арналған сұранысты енгізіңіз" style="resize: none; width:100%; height:8em; font-family:inherit; font-size: 14px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;" required></textarea>
+
+                        <div class="example-prompts">
+                            <p class="example-label">Ұсыныс сұраныстар тізбегі</p>
+                            <div class="example-chips">
+                                <span class="example-chip" onclick="useExamplePrompt('Ғарыш кеңістігіндегі алыстағы планета: үш айы бар, алып сақиналы, жанында ғарыш кемелері қалықтап жүр. Ғарыш фантастикасы стилінде.')">Ғарыш пейзажы</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Түнгі уақытта жарқыраған саңырауқұлақтар мен сиқырлы ағаштары бар ертегідегі орман. Жұмсақ жарық, мистикалық атмосфера.')">Ертегі орманы</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Болашақ технологиялармен жабдықталған киіз үйлер, дрондармен басқарылатын мал шаруашылығы, кең далада күн батар шақ. Кибер-этно стиль.')">Қазақ даласы болашақта</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Әйнек күмбездердің астында орналасқан, су астындағы футуристік қала. Айналасында балықтар, маржандар және жарық шамдар.')">Су астындағы қала</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Тау басында алып айдаһармен бетпе-бет келген қазақ батыры. Эпикалық атмосфера, фэнтези стилінде.')">Айдаһар мен батыр</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Көк күмбезді медреселері мен мозаикалық қабырғалары бар көне Отырар қаласы. Күннің сәулесімен жарқырап тұрған сәт.')">Тарихи Отырар</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Аспанмен жүзетін теңіз кемесі: желкендерінде күн батар жарығы, аспандағы бұлттар мен құстар арасында жүзіп барады.')">Қиял-ғажайып кеме</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Болашақтағы бақта жұмыс істеп жүрген түрлі пішіндегі достық роботтар: олар гүл отырғызып, су құйып жатыр. Балаларға арналған мультфильм стилінде.')">Роботтар бақшасы</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Заманауи технологиямен жабдықталған болашақ мектебі: интерактивті тақталар, дрондармен бақылау, қазақы ою-өрнекпен безендірілген сынып бөлмесі.')">Болашақтағы қазақ мектебі</span>
+                                <span class="example-chip" onclick="useExamplePrompt('Қазақтың ұлттық киімдерін киген оқушылар мектеп алдында. Көктем мезгілі, жылы атмосфера.')">Ұлттық киім киген оқушылар</span>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="settings-container">
+                            <p class="example-label">Параметрлер</p>
+                            <div class="select-group">
+                                <div class="select-item">
+                                    <div class="form-label">Бейне өлшемі</div>
+                                    <select id="aspectRatio" class="form-select">
+                                        <option value="1:1">1:1 (Шаршы)</option>
+                                        <option value="16:9">16:9 (Кең экран)</option>
+                                        <option value="4:3">4:3 (Классикалық)</option>
+                                        <option value="9:16">9:16 (Портрет)</option>
+                                    </select>
+                                </div>
+
+                                <div class="select-item">
+                                    <div class="form-label">Сурет саны</div>
+                                    <select id="imageCount" class="form-select">
+                                        <option value="1">1 (Бір сурет)</option>
+                                        <option value="2">2 (Екі сурет)</option>
+                                        <option value="3">3 (Үш сурет)</option>
+                                        <option value="4">4 (Төрт сурет)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button class="home_welcome_tocontent_button" onclick="generateImages()">Суретті генерациялау</button>
+
+                            <div class="error-container hidden" id="errorContainer">
+                                <p class="error-message" id="errorMessage"></p>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="images">
+                        <div class="loader hidden" id="loader">
+                            <div class="spinner"></div>
+                            <p>Сурет генерациялануда...</p>
+                        </div>
+
+                        <div class="output hidden" id="output">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="application_disclaimer">Сурет жасанды интеллект генераторы қолданбасы Gemini көмегімен жұмыс атқарады. Суретті алған кезде қателіктер болмауын қадағалаңыз.</p>
+            </div>
+    </section>
+   
+        <script src="/script/application/imagegenerator.js"></script>
+        <script src="/script/rating.js"></script>
+    </body>
+   
+    </html>

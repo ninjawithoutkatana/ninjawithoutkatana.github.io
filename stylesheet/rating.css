@@ -1,0 +1,44 @@
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 16px;
+    color: lightgray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.stars label:hover,
+.stars label:hover~label {
+    color: gold;
+}
+
+.stars input:checked+label,
+.stars input:checked+label~label {
+    color: gold;
+}
+
+.summary {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.summary_title {
+    margin: 0;
+    font-size: 10px;
+}

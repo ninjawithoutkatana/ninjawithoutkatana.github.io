@@ -7,6 +7,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
      <link rel="stylesheet" href="/stylesheet/main.css">
      <link rel="stylesheet" href="/stylesheet/application.css">
+     <link rel="stylesheet" href="/stylesheet/rating.css">
 
      <link rel="icon" type="image/svg" href="/visual/icon/icon_score.svg">
      <title>edufile. Бағалау журналы</title>
@@ -123,8 +124,21 @@
                <div class="title">
 
                     <h1 class="application-name">Бағалау журналы</h1>
-                    <p class="application-version">APPLICATION?edufile.scorekeeper/v0.1(#edufile6.2.prerelease.0325)</p>
+                    <p class="application-version">APPLICATION?edufile.scorekeeper/v0.1(#edufile6.3.0525)</p>
                </div>
+               <div class="title">
+                    <p class="summary_title">Қолданбаны бағалаңыз</p>
+                    <div class="block" data-id="app3_">
+                        <form class="stars">
+                          <input type="radio" id="app3_5" name="app3_" value="5"><label for="app3_5">★</label>
+                          <input type="radio" id="app3_4" name="app3_" value="4"><label for="app3_4">★</label>
+                          <input type="radio" id="app3_3" name="app3_" value="3"><label for="app3_3">★</label>
+                          <input type="radio" id="app3_2" name="app3_" value="2"><label for="app3_2">★</label>
+                          <input type="radio" id="app3_1" name="app3_" value="1"><label for="app3_1">★</label>
+                        </form>
+                        <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                      </div>
+                </div>
                <a class="logotype" href="">
                     <p class="logotype-title">Applications</p>
                     <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
@@ -161,13 +175,10 @@
                <button id="taskToggleBtn" onclick="toggleTaskFields()"><i class="fas fa-plus"></i> Тапсырма
                     қосу</button>
                <div id="taskFields" style="display: none;">
-                    <input type="text" id="taskName" placeholder="Тапсырма атауы" oninput="checkTaskFields()"
-                         style="width: 30%;">
-                    <input type="text" id="taskCriteria" placeholder="Дескриптор" oninput="checkTaskFields()"
-                         style="width: 30%;">
-                    <input type="number" id="taskMark" placeholder="Ұпай" min="1" max="10" step=1
-                         onKeyDown="return false" oninput="checkTaskFields()" style="width: 10%;">
-                    <input type="time" id="taskTime" oninput="checkTaskFields()" style="width: 10%;">
+                    <input type="text" id="taskName" placeholder="Тапсырма атауы" oninput="checkTaskFields()" style="width: 30%;">
+                    <input type="text" id="taskCriteria" placeholder="Дескриптор" oninput="checkTaskFields()" style="width: 30%;">
+                    <input type="number" id="taskMark" placeholder="Ұпай" min="1" max="10" step=1 onKeyDown="return false" oninput="checkTaskFields()" style="width: 10%;">
+                    <input type="text" id="taskTime" placeholder="Орындау уақыты" oninput="checkTaskFields()" style="width: 10%;">
                     <button id="taskAddBtn" onclick="addTask()"><i class="fas fa-plus"></i></button>
                </div>
 
@@ -198,6 +209,7 @@
      </section>
 
      <script src="/script/application/scorekeeper.js"></script>
+     <script src="/script/rating.js"></script>
 
 </body>
 

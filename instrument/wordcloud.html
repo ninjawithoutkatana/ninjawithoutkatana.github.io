@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="/stylesheet/main.css">
      <link rel="stylesheet" href="/stylesheet/application.css">
      <link rel="stylesheet" href="/stylesheet/style-application.css">
+     <link rel="stylesheet" href="/stylesheet/rating.css">
 
      <link rel="icon" type="image/svg" href="/visual/icon/icon_wordcloud.svg">
      <title>edufile. Сөздер бұлты</title>
@@ -19,9 +20,22 @@
                <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
                <div class="title" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                     <h1 class="application-name">Сөздер бұлты</h1>
-                    <p class="application-version">APPLICATION?edufile.wordcloud/v0.1(#edufile6.2.prerelease.0325)<a
+                    <p class="application-version">APPLICATION?edufile.wordcloud/v0.1(#edufile6.3.0525)<a
                               href="http://www.jasondavies.com/"> &copy;Jason Davies</a></p>
                </div>
+               <div class="title">
+                    <p class="summary_title">Қолданбаны бағалаңыз</p>
+                    <div class="block" data-id="app8_">
+                        <form class="stars">
+                          <input type="radio" id="app8_5" name="app8_" value="5"><label for="app8_5">★</label>
+                          <input type="radio" id="app8_4" name="app8_" value="4"><label for="app8_4">★</label>
+                          <input type="radio" id="app8_3" name="app8_" value="3"><label for="app8_3">★</label>
+                          <input type="radio" id="app8_2" name="app8_" value="2"><label for="app8_2">★</label>
+                          <input type="radio" id="app8_1" name="app8_" value="1"><label for="app8_1">★</label>
+                        </form>
+                        <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                      </div>
+                </div>
                <a class="logotype" href="">
                     <p class="logotype-title">Applications</p>
                     <img class="logotype-icon" src="/visual/icon/icon_application.svg" alt="">
@@ -99,6 +113,7 @@
      </section>
 
      <script src="/script/application/wordcloud.js"></script>
+     <script src="/script/rating.js"></script>
 </body>
 
 </html>

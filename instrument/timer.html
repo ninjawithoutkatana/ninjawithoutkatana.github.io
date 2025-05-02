@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="/stylesheet/main.css">
     <link rel="stylesheet" href="/stylesheet/application.css">
-
+    <link rel="stylesheet" href="/stylesheet/rating.css">
+    
     <link rel="icon" type="image/svg" href="/visual/icon/icon_timer.svg">
     <title>edufile. Таймер</title>
 </head>
@@ -18,7 +19,20 @@
             <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
             <div class="title">
                 <h1 class="application-name">Таймер</h1>
-                <p class="application-version">APPLICATION?edufile.timer/v0.1(#edufile6.2.prerelease.0325)</p>
+                <p class="application-version">APPLICATION?edufile.timer/v0.1(#edufile6.3.0525)</p>
+            </div>
+            <div class="title">
+                <p class="summary_title">Қолданбаны бағалаңыз</p>
+                <div class="block" data-id="app6_">
+                    <form class="stars">
+                      <input type="radio" id="app6_5" name="app6_" value="5"><label for="app6_5">★</label>
+                      <input type="radio" id="app6_4" name="app6_" value="4"><label for="app6_4">★</label>
+                      <input type="radio" id="app6_3" name="app6_" value="3"><label for="app6_3">★</label>
+                      <input type="radio" id="app6_2" name="app6_" value="2"><label for="app6_2">★</label>
+                      <input type="radio" id="app6_1" name="app6_" value="1"><label for="app6_1">★</label>
+                    </form>
+                    <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                  </div>
             </div>
             <a class="logotype" href="">
                 <p class="logotype-title">Applications</p>
@@ -37,7 +51,7 @@
             </div>
             <br>
             <div style="display: flex; justify-content: center; padding: 1em;">
-                <input id="timerInput" type="number" value="5" min="1" max="59" step="1" placeholder="мин" style="resize: none; width:3em; height:1em; font-family:inherit; font-size: 20px; font-weight: bold; margin-right: 25px; border: dotted; border-radius: 10px;" required />
+                <input id="timerInput" type="number" value="5" min="1" max="59" step="1" placeholder="мин" onKeyDown="return false" style="resize: none; width:3em; height:1em; font-family:inherit; font-size: 20px; font-weight: bold; margin-right: 25px; border: dotted; border-radius: 10px;" required />
                 <button class="button" id="tstart" onclick="startTimer()" style="margin-right: 20px;">Бастау</button>
                 <button class="button_red" id="tend" disabled onclick="resetTimer()">Жою</button>
             </div>
@@ -52,6 +66,7 @@
     </section>
 
     <script src="/script/application/timer.js"></script>
+    <script src="/script/rating.js"></script>
 </body>
 
 </html>

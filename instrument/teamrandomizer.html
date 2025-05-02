@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="/stylesheet/main.css">
     <link rel="stylesheet" href="/stylesheet/application.css">
+    <link rel="stylesheet" href="/stylesheet/rating.css">
 
     <link rel="icon" type="image/svg" href="/visual/icon/icon_team.svg">
     <title>edufile. Командалық рандомизатор</title>
@@ -18,7 +19,20 @@
             <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
             <div class="title">
                 <h1 class="application-name">Командалық рандомизатор</h1>
-                <p class="application-version">APPLICATION?edufile.teamrandomizer/v0.2(#edufile6.2.prerelease.0325)</p>
+                <p class="application-version">APPLICATION?edufile.teamrandomizer/v0.2(#edufile6.3.0525)</p>
+            </div>
+            <div class="title">
+                <p class="summary_title">Қолданбаны бағалаңыз</p>
+                <div class="block" data-id="app5_">
+                    <form class="stars">
+                      <input type="radio" id="app5_5" name="app5_" value="5"><label for="app5_5">★</label>
+                      <input type="radio" id="app5_4" name="app5_" value="4"><label for="app5_4">★</label>
+                      <input type="radio" id="app5_3" name="app5_" value="3"><label for="app5_3">★</label>
+                      <input type="radio" id="app5_2" name="app5_" value="2"><label for="app5_2">★</label>
+                      <input type="radio" id="app5_1" name="app5_" value="1"><label for="app5_1">★</label>
+                    </form>
+                    <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                  </div>
             </div>
             <a class="logotype" href="">
                 <p class="logotype-title">Applications</p>
@@ -32,7 +46,7 @@
 
             <div>
                 <h1 for="numberTeams">Топтар санын енгізіңіз:</h1>
-                <input type="number" name="numberTeams" id="numberTeams" value="4" min="1" max="10" step="1" style="width:100%; height:1em; font-family:inherit; font-size: 25px; font-weight: bold; margin-bottom: 25px; border-radius: 10px;" required>
+                <input type="number" name="numberTeams" id="numberTeams" value="4" min="1" max="10" step="1" onKeyDown="return false" style="width:100%; height:1em; font-family:inherit; font-size: 25px; font-weight: bold; margin-bottom: 25px; border-radius: 10px;" required>
             </div>
             <div>
                 <h1 for="volunteers">Оқушылардың аты-жөндерін енгізіңіз (әр жолға бір есім немесе үтірмен бөлінген):</h1>
@@ -53,6 +67,7 @@
     </section>
 
     <script src="/script/application/teamrandomizer.js"></script>
+    <script src="/script/rating.js"></script>
 </body>
 
 </html>

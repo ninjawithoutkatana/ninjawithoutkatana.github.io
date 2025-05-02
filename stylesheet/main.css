@@ -1,31 +1,15 @@
 @font-face {
-	font-family: 'GoodPro';
-	src: url('../visual/font/GoodPro-Medium.woff') format('woff');
+	font-family: 'PlumbKaz';
+	src: url('../visual/font/PlumbKaz-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'GoodPro';
-	src: url('../visual/font/GoodPro-Medium-Italic.woff') format('woff');
-	font-weight: normal;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'GoodPro';
-	src: url('../visual/font/GoodPro-Bold.woff') format('woff');
+	font-family: 'PlumbKaz';
+	src: url('../visual/font/PlumbKaz-Bold.woff') format('woff');
 	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'GoodPro';
-	src: url('../visual/font/GoodPro-Light.woff') format('woff');
-	font-weight: lighter;
 	font-style: normal;
 	font-display: swap;
 }
@@ -36,7 +20,7 @@
 
 /*Общие значение*/
 body {
-	font-family: "GoodPro";
+	font-family: "PlumbKaz";
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1em;
@@ -162,7 +146,7 @@ ul {
 }
 
 .home_welcome_tocontent_button {
-	font-family: "GoodPro";
+	font-family: "PlumbKaz";
 	font-weight: 600;
 	display: inline-block;
 	width: 100%;

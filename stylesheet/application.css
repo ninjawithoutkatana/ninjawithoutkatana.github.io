@@ -1,5 +1,5 @@
 body {
-	font-family: "GoodPro";
+	font-family: "PlumbKaz";
 	background: rgba(200, 200, 200, 0.9);
 	font-weight: 400;
 	font-size: 14px;
@@ -87,7 +87,7 @@ body {
 
 .button {
 	min-width: 5em;
-	font-family: "GoodPro";
+	font-family: "PlumbKaz";
 	font-weight: bold;
 	display: inline-block;
 	background-color: black;
@@ -105,7 +105,7 @@ body {
 
 .button_red {
 	min-width: 5em;
-	font-family: "GoodPro";
+	font-family: "PlumbKaz";
 	font-weight: bold;
 	display: inline-block;
 	background-color: red;

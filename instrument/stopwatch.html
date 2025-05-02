@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/stylesheet/main.css">
     <link rel="stylesheet" href="/stylesheet/application.css">
 	<link rel="stylesheet" href="/stylesheet/table.css">
+    <link rel="stylesheet" href="/stylesheet/rating.css">
 
     <link rel="icon" type="image/svg" href="/visual/icon/icon_stopwatch.svg">
     <title>edufile. Секундомер</title>
@@ -19,7 +20,20 @@
             <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
             <div class="title">
                 <h1 class="application-name">Секундомер</h1>
-                <p class="application-version">APPLICATION?edufile.stopwatch/v0.1(#edufile6.2.prerelease.0325)</p>
+                <p class="application-version">APPLICATION?edufile.stopwatch/v0.1(#edufile6.3.0525)</p>
+            </div>
+            <div class="title">
+                <p class="summary_title">Қолданбаны бағалаңыз</p>
+                <div class="block" data-id="app4_">
+                    <form class="stars">
+                      <input type="radio" id="app4_5" name="app4_" value="5"><label for="app4_5">★</label>
+                      <input type="radio" id="app4_4" name="app4_" value="4"><label for="app4_4">★</label>
+                      <input type="radio" id="app4_3" name="app4_" value="3"><label for="app4_3">★</label>
+                      <input type="radio" id="app4_2" name="app4_" value="2"><label for="app4_2">★</label>
+                      <input type="radio" id="app4_1" name="app4_" value="1"><label for="app4_1">★</label>
+                    </form>
+                    <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                  </div>
             </div>
             <a class="logotype" href="">
                 <p class="logotype-title">Applications</p>
@@ -44,10 +58,10 @@
 
             <div>
                 <div style="display: flex; justify-content: center; padding: 1em;">
-                    <button class="button" onclick="startStopWatch()" id="stopBtn" style="margin-right: 20px;">Бастау <i class="fas fa-play-circle"></i></button>
-                    <button class="button" disabled onclick="pauseStopWatch()" id="pauseBtn" style="margin-right: 20px;">Кідіру <i class="fas fa-pause-circle"></i></button>
-                    <button class="button" id="lapBtn" onclick="showLap()" disabled style="margin-right: 20px;">Айналым <i class="fas fa-flag-checkered"></i></button>
-                    <button class="button_red" disabled onclick="reset()" id="stopReset">Жою <i class="fas fa-minus-circle"></i></button>
+                    <button class="button" onclick="startStopWatch()" id="stopBtn" style="margin-right: 20px;">Бастау</button>
+                    <button class="button" disabled onclick="pauseStopWatch()" id="pauseBtn" style="margin-right: 20px;">Кідіру</button>
+                    <button class="button" id="lapBtn" onclick="showLap()" disabled style="margin-right: 20px;">Айналым</button>
+                    <button class="button_red" disabled onclick="reset()" id="stopReset">Жою</button>
                 </div>
 
                 <main class="table">
@@ -78,6 +92,7 @@
 
     <script src="/script/table.js"></script>
     <script src="/script/application/stopwatch.js"></script>
+    <script src="/script/rating.js"></script>
 </body>
 
 </html>

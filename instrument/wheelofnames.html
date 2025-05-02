@@ -7,9 +7,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="/stylesheet/main.css">
     <link rel="stylesheet" href="/stylesheet/application.css">
+    <link rel="stylesheet" href="/stylesheet/table.css">
+    <link rel="stylesheet" href="/stylesheet/rating.css">
+    <audio id="tickSound" src="/audio/tick.mp3" preload="auto"></audio>
+    <audio id="winnerSound" src="/audio/winner.mp3" preload="auto"></audio>
 
     <link rel="icon" type="image/svg" href="/visual/icon/icon_wheel.svg">
     <title>edufile. Атаулар дөңгелегі</title>
+
+    <style>
+        .remotebutton {
+            background-color: #e3e3e3;
+            transition: 0.3s;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .remotebutton:disabled {
+            cursor: not-allowed;
+        }
+
+        .remotebutton:hover:enabled {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +44,20 @@
             <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
             <div class="title">
                 <h1 class="application-name">Атаулар дөңгелегі</h1>
-                <p class="application-version">APPLICATION?edufile.wheelofnames/v0.1(#edufile6.2.prerelease.0325)</p>
+                <p class="application-version">APPLICATION?edufile.wheelofnames/v3.4(#edufile6.3.0525)</p>
+            </div>
+            <div class="title">
+                <p class="summary_title">Қолданбаны бағалаңыз</p>
+                <div class="block" data-id="app7_">
+                    <form class="stars">
+                        <input type="radio" id="app7_5" name="app7_" value="5"><label for="app7_5">★</label>
+                        <input type="radio" id="app7_4" name="app7_" value="4"><label for="app7_4">★</label>
+                        <input type="radio" id="app7_3" name="app7_" value="3"><label for="app7_3">★</label>
+                        <input type="radio" id="app7_2" name="app7_" value="2"><label for="app7_2">★</label>
+                        <input type="radio" id="app7_1" name="app7_" value="1"><label for="app7_1">★</label>
+                    </form>
+                    <div class="summary"><i style="font-size: 14px;" class="fas fa-sync-alt"></i></div>
+                </div>
             </div>
             <a class="logotype" href="">
                 <p class="logotype-title">Applications</p>
@@ -31,29 +70,48 @@
         <div class="container">
             <div class="navigation">
                 <div>
+                    <button id="toggleSoundButton" class="remotebutton" style="margin-bottom: 20px;"><i class="fa-solid fa-volume-high"></i> Дыбыс
+                        қосулы</button>
                     <h1 style="font-size: 16px;">Оқушылардың аты-жөнін жолаққа енгізіңіз (Келесі
                         оқушының есімі үтірмен жалғасқан):</h1>
                     <textarea type="text" id="namesInput" placeholder="Келесі оқушының есімі үтірмен" rows="10"
                         cols="50"
-                        style="resize: none; width:90%; height:10em; font-family:inherit; font-size: 14px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;" required>Айбек Нұрланұлы, Аяжан Ерланқызы, Нұрсұлтан Темірұлы, Жансая Берікқызы, Әмина Қайратқызы, Ержан Мұратұлы, Дана Сағынқызы, Аружан Әсетқызы, Мәди Арманұлы, Іңкәр Жанболатқызы</textarea>
+                        style="resize: none; width:90%; height:10em; font-family:inherit; font-size: 14px; font-weight: normal; margin-bottom: 25px; border-radius: 10px;"
+                        required>Айбек Нұрланұлы, Аяжан Ерланқызы, Нұрсұлтан Темірұлы, Жансая Берікқызы, Әмина Қайратқызы, Ержан Мұратұлы, Дана Сағынқызы, Аружан Әсетқызы, Мәди Арманұлы, Іңкәр Жанболатқызы</textarea>
                     <br>
+                    <p>Жеңімпаз:</p>
+                    <div id="result">
+                        <h1 style="font-size: 26.5px"><i class="fas fa-minus"></i></h1>
+                    </div>
+                    <button id="removeWinnerButton" class="remotebutton" disabled>Тізімнен жою</button>
                 </div>
 
                 <div>
                     <canvas id="wheelCanvas" width="500" height="500"></canvas>
-                    
+
                     <br>
 
                 </div>
             </div>
-            <div class="result" id="result" style="margin-top: 20px; margin-bottom: 20px; color: red; font-size: 20px; text-align: center;"></div>
+            <div class="result" id="result"
+                style="margin-top: 20px; margin-bottom: 20px; color: red; font-size: 20px; text-align: center;"></div>
             <button class="home_welcome_tocontent_button" id="spinButton">Дөңгелекті айналдыру</button>
 
+
+            <button class="remotebutton" id="toggleWinnersBtn" style="margin-top: 20px; display: none;">
+                <i class="fa-solid fa-angle-down"></i> Жеңімпаздар тізімін көрсету
+            </button>
+
+            <div id="winnersSection" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; margin-top: 10px;">
+                <h2>Жеңімпаздар тізімі</h2>
+                <ol id="winnersList" style="font-size: 20px; padding-left: 20px; text-align: left; display: inline-block; line-height: 1em"></ol>
+            </div>
 
         </div>
     </section>
 
     <script src="/script/application/wheelofnames.js"></script>
+    <script src="/script/rating.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-/* APPLICATION?edufile.quizmaker/v0.1(#edufile6.2.prerelease.0325) */
+//APPLICATION?edufile.quizmaker/v0.1(#edufile6.3.0525)
 document.addEventListener('DOMContentLoaded', () => {
     const quizForm = document.getElementById('quiz-form');
     const quizQuestionsDiv = document.getElementById('quiz-questions');
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             question.options.forEach((option, optionIndex) => {
                 const optionLabel = document.createElement('label');
                 optionLabel.textContent = option;
-                optionLabel.style = `font-size: 20px;`;
+                optionLabel.style = `font-size: 20px; display: block; margin-bottom: 5px;`;
 
                 const optionInput = document.createElement('input');
                 optionInput.type = 'radio';

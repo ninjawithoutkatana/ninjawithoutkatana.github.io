@@ -76,7 +76,7 @@
     top: 20px;
     height: 43px;
     padding: 5px 5px;
-    font-family: "GoodPro";
+    font-family: "PlumbKaz";
     font-weight: 600;
     background-color: white;
     color: black;
@@ -156,7 +156,7 @@
 }
 
 .toinstrument_button {
-    font-family: "GoodPro";
+    font-family: "PlumbKaz";
     font-weight: 600;
     display: inline-block;
     width: 100%;

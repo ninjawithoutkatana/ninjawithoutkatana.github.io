@@ -1,8 +1,8 @@
-/* APPLICATION?edufile.oiqor/v1.1beta(#edufile6.2.prerelease.0325) */
-const typingForm = document.querySelector(".typing-form");
-const chatContainer = document.querySelector(".chat-list");
-const suggestions = document.querySelectorAll(".suggestion");
-const deleteChatButton = document.querySelector("#delete-chat-button");
+//APPLICATION?edufile.oiqor/v3.0(#edufile6.3.0525)
+const typingForm = document.querySelector(".application_inputform");
+const chatContainer = document.querySelector(".application_chat");
+const suggestions = document.querySelectorAll(".suggestion_card");
+const deleteChatButton = document.querySelector("#application_clearinput");
 
 let userMessage = null;
 let isResponseGenerating = false;
@@ -15,7 +15,7 @@ const loadDataFromLocalstorage = () => {
 
      chatContainer.innerHTML = savedChats || "";
      document.body.classList.toggle("hide-header", savedChats);
-     chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to the bottom
+     chatContainer.scrollTo(0, chatContainer.scrollHeight);
 };
 
 const createMessageElement = (content, ...classes) => {
@@ -30,12 +30,12 @@ const showTypingEffect = (text, textElement, incomingMessageDiv) => {
      let currentWordIndex = 0;
      const typingInterval = setInterval(() => {
           textElement.innerText += (currentWordIndex === 0 ? "" : " ") + words[currentWordIndex++];
-          incomingMessageDiv.querySelector(".icon").classList.add("hide");
+          incomingMessageDiv.querySelector(".application_texticon").classList.add("hide");
 
           if (currentWordIndex === words.length) {
                clearInterval(typingInterval);
                isResponseGenerating = false;
-               incomingMessageDiv.querySelector(".icon").classList.remove("hide");
+               incomingMessageDiv.querySelector(".application_texticon").classList.remove("hide");
                localStorage.setItem("saved-chats", chatContainer.innerHTML);
           }
           chatContainer.scrollTo(0, chatContainer.scrollHeight);
@@ -74,7 +74,7 @@ const generateAPIResponse = async (incomingMessageDiv) => {
 
 const showLoadingAnimation = () => {
      const html = `<div class="message-content">
-      <img class="avatar" src="/visual/icon/icon_oiqor_1.svg" alt="avatar_oiqor">
+      <img class="avatar" src="/visual/icon/icon_oiqor.svg" alt="avatar_oiqor">
       <p class="text"></p>
       <div class="loading-indicator">
         <div class="loading-bar"></div>
@@ -82,7 +82,7 @@ const showLoadingAnimation = () => {
         <div class="loading-bar"></div>
       </div>
     </div>
-    <span onClick="copyMessage(this)" class="icon material-symbols-rounded">content_copy</span>`;
+    <span onClick="copyMessage(this)" class="application_texticon"><i class="fas fa-copy"></i></span>`;
      const incomingMessageDiv = createMessageElement(
           html,
           "incoming",
@@ -96,12 +96,12 @@ const showLoadingAnimation = () => {
 const copyMessage = (copyButton) => {
      const messageText = copyButton.parentElement.querySelector(".text").innerText;
      navigator.clipboard.writeText(messageText);
-     copyButton.innerText = "done";
-     setTimeout(() => (copyButton.innerText = "content_copy"), 1000);
+     copyButton.innerHTML = `<i class="fas fa-check"></i>`;
+     setTimeout(() => (copyButton.innerHTML = `<i class="fas fa-copy"></i>`), 1000);
 };
 
 const handleOutgoingChat = () => {
-     userMessage = typingForm.querySelector(".typing-input").value.trim() || userMessage;
+     userMessage = typingForm.querySelector(".application_typinginput").value.trim() || userMessage;
      if (!userMessage || isResponseGenerating) return;
      isResponseGenerating = true;
      const html = `<div class="message-content">
@@ -127,7 +127,7 @@ deleteChatButton.addEventListener("click", () => {
 
 suggestions.forEach((suggestion) => {
      suggestion.addEventListener("click", () => {
-          userMessage = suggestion.querySelector(".text").innerText;
+          userMessage = suggestion.querySelector(".suggestion_text").innerText;
           handleOutgoingChat();
      });
 });
