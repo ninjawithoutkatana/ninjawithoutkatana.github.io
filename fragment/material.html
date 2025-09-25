@@ -7,9 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="referrer" content="no-referrer" />
 
+	<link rel="preload" href="/visual/font/PlumbKaz-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/visual/font/PlumbKaz-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+
 	<script language="javascript">
-		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
-			window.location.replace("/component/notsupported");
+		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(
+				/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
+			window.location.replace("/component/notsupported.html");
 		}
 	</script>
 
@@ -27,15 +31,15 @@
 	<header class="page_header">
 		<div class="page_container">
 			<nav class="page_navigate">
-				<a class="page_navigate_logotype" href="/index">
+				<a class="page_navigate_logotype" href="/index.html">
 					<img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg" alt="logotype_icon">
 				</a>
 				<ul class="page_navigate_menu">
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/content">Бөлімдер</a>
+						<a class="page_navigate_menu_link" href="/fragment/content.html">Бөлімдер</a>
 					</li>
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/about">Жоба туралы</a>
+						<a class="page_navigate_menu_link" href="/fragment/about.html">Жоба туралы</a>
 					</li>
 				</ul>
 			</nav>
@@ -44,16 +48,17 @@
 
 	<section class="page_section">
 		<div class="page_container">
-			<a class="content_tohome_link" href="/fragment/content"><i class="fas fa-arrow-left"></i> Артқа</a>
+			<a class="content_tohome_link" href="/fragment/content.html"><i class="fas fa-arrow-left"></i> Артқа</a>
 			<h1 class="content_title">edufile. Materials</h1>
 			<p class="content_linktree">басты бетше / бөлімдер / <b>Материалдар</b></p>
-			<h3 class="content_subtitle">Ағылшын тілі пәніне арналған ресурстар (Кітаптар, жұмыс дәптерлері, аудиофайлдар, т.б. оқыту материалдары).</h3>
+			<h3 class="content_subtitle">Ағылшын тілі пәніне арналған ресурстар (Кітаптар, жұмыс дәптерлері,
+				аудиофайлдар, т.б. оқыту материалдары).</h3>
 
 			<main class="table">
 				<section class="table_header">
 					<div class="table_title">
-						<p class="table_name">Файлдар тізбегі</p>
-						<p class="table_details"><i class="fa-solid fa-circle-info"></i> Басқа мәліметтерді алу және жүктеу үшін файл атауын басыңыз</p>
+						<p class="table_name">Материалдар тізбегі</p>
+						<p class="table_details"><i class="fa-solid fa-circle-info"></i> Басқа да мәліметтерді алу және жүктеу үшін кестедегі жолақты басыңыз</p>
 					</div>
 					<div class="input-group">
 						<input type="search" placeholder="Тізбектен іздеу...">
@@ -72,92 +77,112 @@
 						</thead>
 
 						<tbody>
-							<tr>
-								<td><label for="open-dialog-1"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 5 Student’s book</b>, Wen Betz, Diana Pye, Oxford University Press</label></td>
+							<tr class="material-row" data-id="1">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 5 Student’s book</b>, Wen Betz, Oxford University Press</td>
 								<td>Оқушы кітабы</td>
 								<td><b>5 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-2"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 5 Teacher’s book</b>, Rónán McGuinness, Lara Storton, Beth Godfrey, Oxford University Press</label></td>
+							<tr class="material-row" data-id="2">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 5 Teacher’s book</b>, Rónán McGuinness, Oxford University Press</td>
 								<td>Мұғалім кітабы</td>
 								<td><b>5 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-3"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 5 Workbook</b>, Janet Hardy-Bould, Oxford University Press</label></td>
+							<tr class="material-row" data-id="3">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 5 Workbook</b>, Janet Hardy-Bould, Oxford University Press</td>
 								<td>Жұмыс дәптері</td>
 								<td><b>5 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-4"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 5 Workbook Answers</b></label></td>
+							<tr class="material-row" data-id="4">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 5 Workbook Answers</b></td>
 								<td>Жауаптар</td>
 								<td><b>5 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-5"><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_icon">English Plus <b>Grade 5 Audiofiles CD</b></label></td>
+							<tr class="material-row" data-id="5">
+								<td><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_icon">English
+									Plus <b>Grade 5 Audiofiles CD</b></td>
 								<td>Аудиофайлдар</td>
 								<td><b>5 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-6"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 6 Student’s book</b>, Wen Betz, Diana Pye, Oxford University Press</label></td>
+							<tr class="material-row" data-id="6">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 6 Student’s book</b>, Wen Betz, Diana Pye, Oxford University Press
+								</td>
 								<td>Оқушы кітабы</td>
 								<td><b>6 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-7"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 6 Teacher’s book</b>, Emma Watkins, Bess Bradfield, Oxford University Press</label></td>
+							<tr class="material-row" data-id="7">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 6 Teacher’s book</b>, Emma Watkins, Bess Bradfield, Oxford University
+									Press</td>
 								<td>Мұғалім кітабы</td>
 								<td><b>6 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-8"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 6 Workbook</b>, Janet Hardy-Gould, Oxford University Press</label></td>
+							<tr class="material-row" data-id="8">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 6 Workbook</b>, Janet Hardy-Gould, Oxford University Press</td>
 								<td>Жұмыс дәптері</td>
 								<td><b>6 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-9"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 6 Workbook Answers</b></label></td>
+							<tr class="material-row" data-id="9">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 6 Workbook Answers</b></td>
 								<td>Жауаптар</td>
 								<td><b>6 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-10"><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_icon">English Plus <b>Grade 6 Audiofiles CD</b></label></td>
+							<tr class="material-row" data-id="10">
+								<td><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_icon">English
+									Plus <b>Grade 6 Audiofiles CD</b></td>
 								<td>Аудиофайлдар</td>
 								<td><b>6 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-11"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 7 Student’s book</b>, Ben Wetz, James Styring, Nicholas Tims, Oxford University Press</label></td>
+							<tr class="material-row" data-id="11">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 7 Student’s book</b>, Ben Wetz, James Styring, Nicholas Tims, Oxford
+									University Press</td>
 								<td>Оқушы кітабы</td>
 								<td><b>7 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-12"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 7 Teacher’s book</b>, Sheila Dignen, Emma Watkins, Peter Redpath, Oxford University Press</label></td>
+							<tr class="material-row" data-id="12">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 7 Teacher’s book</b>, Sheila Dignen, Emma Watkins, Peter Redpath,
+									Oxford University Press</td>
 								<td>Мұғалім кітабы</td>
 								<td><b>7 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-13"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 7 Workbook</b>, Janet Hardy-Gould, Kate Mellersh, Oxford University Press</label></td>
+							<tr class="material-row" data-id="13">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 7 Workbook</b>, Janet Hardy-Gould, Kate Mellersh, Oxford University
+									Press</td>
 								<td>Жұмыс дәптері</td>
 								<td><b>7 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-14"><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English Plus <b>Grade 7 Workbook Answers</b></label></td>
+							<tr class="material-row" data-id="14">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_icon">English
+									Plus <b>Grade 7 Workbook Answers</b></td>
 								<td>Жауаптар</td>
 								<td><b>7 сынып</b></td>
 							</tr>
 
-							<tr>
-								<td><label for="open-dialog-15"><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_icon">English Plus <b>Grade 7 Audiofiles CD</b></label></td>
+							<tr class="material-row" data-id="15">
+								<td><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_icon">English
+									Plus <b>Grade 7 Audiofiles CD</b></td>
 								<td>Аудиофайлдар</td>
 								<td><b>7 сынып</b></td>
 							</tr>
@@ -165,114 +190,267 @@
 
 					</table>
 				</section>
+
+				<div id="pagination" class="pagination-controls"></div>
 			</main>
 
 			<div class="material_container">
-				<input type="checkbox" id="open-dialog-1" class="dialog_toggle"/>
-				<label class="dialog_backstage" for="open-dialog-1"></label>
+				<input type="checkbox" id="open-dialog" class="dialog_toggle" />
+				<label class="dialog_backstage" for="open-dialog"></label>
 				<div class="dialog">
-					<label class="dialog_close" for="open-dialog-1"></label>
+					<label class="dialog_close" for="open-dialog"></label>
 					<div class="dialog_content">
-						<h1 class="dialog_title">Файл туралы мәліметтер</h1>
-						<div class="home_welcome">
-							<img class="material_preview" src="/visual/preview/preview_material(1).png" alt="material_preview"/>
+						<h1 class="dialog_title"></h1>
+						<div class="dialog_home">
+							<img class="material_preview" src="" alt="material_preview" />
 							<div class="material_details_list">
 								<p class="dialog_description"><i class="fa-solid fa-circle-info"></i> <b>Анықтама</b></p>
-								<span class="status green">Оқушы кітабы</span>&nbsp;<span class="status blue">5 сынып</span>
-								<p class="dialog_description">English Plus <b>Grade 5 Student’s book</b>, Wen Betz, Oxford University Press</p>
-								<p class="dialog_description"><b>Автор:</b> Wen Betz, Diana Pye<br><b>Баспа:</b> Oxford University</p>
-								<a class="dialog_link" href="https://mega.nz/file/LAVzyYCS#BEDfjBUjBekF45k_NOi1fnajnO1YorAL1F026cvXC1s">Жүктеу <i class="fas fa-download"></i></a>
+								<span class="status green"></span>&nbsp;<span class="status blue"></span>
+								<p class="dialog_description"></p>
+								<p class="dialog_description format_line"><b>Формат:</b><img class="format_icon" src="" alt="format_icon" /><span class="format_text"></span></p>
+								<p class="dialog_description"><b>Автор:</b> <span class="author"></span><br><b>Баспа:</b> <span class="publisher"></span></p>
+								<a class="dialog_link" href="" target="_blank">Жүктеу <i class="fas fa-download"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="material_container">
-				<input type="checkbox" id="open-dialog-2" class="dialog_toggle"/>
-				<label class="dialog_backstage" for="open-dialog-2"></label>
-				<div class="dialog">
-					<label class="dialog_close" for="open-dialog-2"></label>
-					<div class="dialog_content">
-						<h1 class="dialog_title">Файл туралы мәліметтер</h1>
-						<div class="home_welcome">
-							<img class="material_preview" src="/visual/preview/preview_material(2).png" alt="material_preview"/>
-							<div class="material_details_list">
-								<p class="dialog_description"><i class="fa-solid fa-circle-info"></i> <b>Анықтама</b></p>
-								<span class="status yellow">Мұғалім кітабы</span>&nbsp;<span class="status blue">5 сынып</span>
-								<p class="dialog_description">English Plus <b>Grade 5 Teacher’s book</b>, Oxford University Press</p>
-								<p class="dialog_description"><b>Автор:</b> Rónán McGuinness, Lara Storton, Beth Godfrey<br><b>Баспа:</b> Oxford University</p>
-								<a class="dialog_link" href="https://mega.nz/file/aZt1TaoY#sriyzlg-QdhudNotnv2-vBO44znrR9wvoyRBzHsGe0I">Жүктеу <i class="fas fa-download"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="material_container">
-				<input type="checkbox" id="open-dialog-3" class="dialog_toggle"/>
-				<label class="dialog_backstage" for="open-dialog-3"></label>
-				<div class="dialog">
-					<label class="dialog_close" for="open-dialog-3"></label>
-					<div class="dialog_content">
-						<h1 class="dialog_title">Файл туралы мәліметтер</h1>
-						<div class="home_welcome">
-							<img class="material_preview" src="/visual/preview/preview_material(3).png" alt="material_preview"/>
-							<div class="material_details_list">
-								<p class="dialog_description"><i class="fa-solid fa-circle-info"></i> <b>Анықтама</b></p>
-								<span class="status green">Жұмыс дәптері</span>&nbsp;<span class="status blue">5 сынып</span>
-								<p class="dialog_description">English Plus <b>Grade 5 Workbook</b>, Janet Hardy-Bould, Oxford University Press</p>
-								<p class="dialog_description"><b>Автор:</b> Janet Hardy-Bould<br><b>Баспа:</b> Oxford University</p>
-								<a class="dialog_link" href="https://mega.nz/file/DM1mFSxQ#Z5pxrZ9EL2PvqjdqH_wXYa-QcEu8UPyicpijtWnzoGY">Жүктеу <i class="fas fa-download"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="material_container">
-				<input type="checkbox" id="open-dialog-4" class="dialog_toggle"/>
-				<label class="dialog_backstage" for="open-dialog-4"></label>
-				<div class="dialog">
-					<label class="dialog_close" for="open-dialog-4"></label>
-					<div class="dialog_content">
-						<h1 class="dialog_title">Файл туралы мәліметтер</h1>
-						<div class="home_welcome">
-							<img class="material_preview" src="/visual/preview/preview_material(4).png" alt="material_preview"/>
-							<div class="material_details_list">
-								<p class="dialog_description"><i class="fa-solid fa-circle-info"></i> <b>Анықтама</b></p>
-								<span class="status yellow">Жауаптар</span>&nbsp;<span class="status blue">5 сынып</span>
-								<p class="dialog_description">English Plus <b>Grade 5 Workbook Answers</b></p>
-								<p class="dialog_description"><b>Автор:</b> <i>-</i><br><b>Баспа:</b> Oxford University</p>
-								<a class="dialog_link" href="https://mega.nz/file/zNkVxaQT#wz8J-JJxD9tEC_xCwspVBO_kpMW9jFbLTRjkfFNK6G0">Жүктеу <i class="fas fa-download"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="material_container">
-				<input type="checkbox" id="open-dialog-5" class="dialog_toggle"/>
-				<label class="dialog_backstage" for="open-dialog-5"></label>
-				<div class="dialog">
-					<label class="dialog_close" for="open-dialog-5"></label>
-					<div class="dialog_content">
-						<h1 class="dialog_title">Файл туралы мәліметтер</h1>
-						<div class="home_welcome">
-							<img class="material_preview" src="/visual/preview/preview_material(5).png" alt="material_preview"/>
-							<div class="material_details_list">
-								<p class="dialog_description"><i class="fa-solid fa-circle-info"></i> <b>Анықтама</b></p>
-								<span class="status red">Аудиофайлдар</span>&nbsp;<span class="status blue">5 сынып</span>
-								<p class="dialog_description">English Plus <b>Grade 5 Audiofiles CD</b></p>
-								<p class="dialog_description"><b>Формат:</b> <img class="icon_format" src="/visual/icon/icon_mp3.svg" alt="format_icon"> <i>(архив бумасы)</i></p>
-								<a class="dialog_link" href="#">Жүктеу <i class="fas fa-download"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<script src="/script/table.js"></script>
+
+			<script>
+				const materials = [{
+						id: 1,
+						title: "English Plus Grade 5 Student’s book",
+						type: "Оқушы кітабы",
+						class: "5 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Wen Betz, Diana Pye",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/LAVzyYCS#BEDfjBUjBekF45k_NOi1fnajnO1YorAL1F026cvXC1s",
+						previewImage: "/visual/preview/preview_material(1).png"
+					},
+					{
+						id: 2,
+						title: "English Plus Grade 5 Teacher’s book",
+						type: "Мұғалім кітабы",
+						class: "5 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Rónán McGuinness, Lara Storton, Beth Godfrey",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/LAVzyYCS#BEDfjBUjBekF45k_NOi1fnajnO1YorAL1F026cvXC1s",
+						previewImage: "/visual/preview/preview_material(2).png"
+					},
+					{
+						id: 3,
+						title: "English Plus Grade 5 Workbook",
+						type: "Жұмыс дәптері",
+						class: "5 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Janet Hardy-Bould",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/LAVzyYCS#BEDfjBUjBekF45k_NOi1fnajnO1YorAL1F026cvXC1s",
+						previewImage: "/visual/preview/preview_material(3).png"
+					},
+					{
+						id: 4,
+						title: "English Plus Grade 5 Workbook Answers",
+						type: "Жауаптар",
+						class: "5 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "N/A",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/LAVzyYCS#BEDfjBUjBekF45k_NOi1fnajnO1YorAL1F026cvXC1s",
+						previewImage: "/visual/preview/preview_material(4).png"
+					},
+					{
+						id: 5,
+						title: "English Plus Grade 5 Audiofiles CD",
+						type: "Аудиофайлдар",
+						class: "5 сынып",
+						format: "ZIP",
+						formatIcon: "/visual/icon/icon_zip.svg",
+						author: "N/A",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/EXAMPLE5",
+						previewImage: "/visual/preview/preview_material(5).png"
+					},
+					{
+						id: 6,
+						title: "English Plus Grade 6 Student’s book",
+						type: "Оқушы кітабы",
+						class: "6 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Wen Betz, Diana Pye",
+						publisher: "Oxford University Press",
+						downloadLink: "https://mega.nz/file/EXAMPLE6",
+						previewImage: "/visual/preview/preview_material(6).png"
+					},
+					{
+						id: 7,
+						title: "English Plus Grade 6 Teacher’s book",
+						type: "Мұғалім кітабы",
+						class: "6 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Emma Watkins, Bess Bradfield",
+						publisher: "Oxford University Press",
+						downloadLink: "https://mega.nz/file/EXAMPLE7",
+						previewImage: "/visual/preview/preview_material(7).png"
+					},
+					{
+						id: 8,
+						title: "English Plus Grade 6 Workbook",
+						type: "Жұмыс дәптері",
+						class: "6 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Janet Hardy-Gould",
+						publisher: "Oxford University Press",
+						downloadLink: "https://mega.nz/file/EXAMPLE8",
+						previewImage: "/visual/preview/preview_material(8).png"
+					},
+					{
+						id: 9,
+						title: "English Plus Grade 6 Workbook Answers",
+						type: "Жауаптар",
+						class: "6 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "N/A",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/EXAMPLE9",
+						previewImage: "/visual/preview/preview_material(9).png"
+					},
+					{
+						id: 10,
+						title: "English Plus Grade 6 Audiofiles CD",
+						type: "Аудиофайлдар",
+						class: "6 сынып",
+						format: "ZIP",
+						formatIcon: "/visual/icon/icon_zip.svg",
+						author: "N/A",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/EXAMPLE10",
+						previewImage: "/visual/preview/preview_material(10).png"
+					},
+					{
+						id: 11,
+						title: "English Plus Grade 7 Student’s book",
+						type: "Оқушы кітабы",
+						class: "7 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Ben Wetz, James Styring, Nicholas Tims",
+						publisher: "Oxford University Press",
+						downloadLink: "https://mega.nz/file/EXAMPLE11",
+						previewImage: "/visual/preview/preview_material(11).png"
+					},
+					{
+						id: 12,
+						title: "English Plus Grade 7 Teacher’s book",
+						type: "Мұғалім кітабы",
+						class: "7 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Sheila Dignen, Emma Watkins, Peter Redpath",
+						publisher: "Oxford University Press",
+						downloadLink: "https://mega.nz/file/EXAMPLE12",
+						previewImage: "/visual/preview/preview_material(12).png"
+					},
+					{
+						id: 13,
+						title: "English Plus Grade 7 Workbook",
+						type: "Жұмыс дәптері",
+						class: "7 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "Janet Hardy-Gould, Kate Mellersh",
+						publisher: "Oxford University Press",
+						downloadLink: "https://mega.nz/file/EXAMPLE13",
+						previewImage: "/visual/preview/preview_material(13).png"
+					},
+					{
+						id: 14,
+						title: "English Plus Grade 7 Workbook Answers",
+						type: "Жауаптар",
+						class: "7 сынып",
+						format: "PDF",
+						formatIcon: "/visual/icon/icon_pdf.svg",
+						author: "N/A",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/EXAMPLE14",
+						previewImage: "/visual/preview/preview_material(14).png"
+					},
+					{
+						id: 15,
+						title: "English Plus Grade 7 Audiofiles CD",
+						type: "Аудиофайлдар",
+						class: "7 сынып",
+						format: "ZIP",
+						formatIcon: "/visual/icon/icon_zip.svg",
+						author: "N/A",
+						publisher: "Oxford University",
+						downloadLink: "https://mega.nz/file/EXAMPLE15",
+						previewImage: "/visual/preview/preview_material(15).png"
+					}
+				];
+
+				const rows = document.querySelectorAll('.material-row');
+				const dialogToggle = document.getElementById('open-dialog');
+
+				const dialogContent = {
+					title: document.querySelector('.dialog_title'),
+					type: document.querySelector('.status.green'),
+					grade: document.querySelector('.status.blue'),
+					description: document.querySelectorAll('.dialog_description')[1],
+					author: document.querySelector('.author'),
+					publisher: document.querySelector('.publisher'),
+					downloadLink: document.querySelector('.dialog_link'),
+					preview: document.querySelector('.material_preview'),
+					formatIcon: document.querySelector('.format_icon'),
+					formatText: document.querySelector('.format_text')
+				};
+
+				const typeClassMap = {
+    				"Оқушы кітабы": "green",
+    				"Мұғалім кітабы": "red",
+    				"Жұмыс дәптері": "green",
+    				"Жауаптар": "red",
+    				"Аудиофайлдар": "yellow"
+				};
+
+				rows.forEach(row => {
+					row.addEventListener('click', () => {
+						const id = row.getAttribute('data-id');
+						const material = materials.find(m => m.id == id);
+						if (!material) return;
+
+						dialogContent.title.innerText = 'Материал туралы мәліметтер';
+						dialogContent.type.innerText = material.type;
+						dialogContent.grade.innerText = material.class;
+						dialogContent.description.innerText = material.title;
+						dialogContent.formatText.innerText = material.format;
+						dialogContent.formatIcon.src = material.formatIcon;
+						dialogContent.author.innerText = material.author;
+						dialogContent.publisher.innerText = material.publisher;
+						dialogContent.downloadLink.href = material.downloadLink;
+						dialogContent.preview.src = material.previewImage;
+
+						const typeClass = typeClassMap[material.type] || 'green';
+        				dialogContent.type.className = 'status';
+        				dialogContent.type.classList.add(typeClass);
+
+						dialogToggle.checked = true;
+					});
+				});
+			</script>
 
 		</div>
 	</section>
@@ -281,8 +459,9 @@
 		<div class="page_container">
 			<div class="page_footnote">
 				<div class="page_footnote_tag">
-					<a class="page_footnote_title" href="/index"><b>edufile.</b></a>
-					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі дамуына үлкен
+					<a class="page_footnote_title" href="/index.html"><b>edufile.</b></a>
+					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі
+						дамуына үлкен
 						үлес қосасыз!</p>
 				</div>
 
@@ -300,7 +479,8 @@
 
 				<div class="page_footnote_social">
 					<a class="page_footnote_social_link" href="tel:77789517778">
-						<img class="page_footnote_social_icon" src="/visual/icon/icon_whatsapp.svg" alt="social_icon"><span>+7 (778)
+						<img class="page_footnote_social_icon" src="/visual/icon/icon_whatsapp.svg"
+							alt="social_icon"><span>+7 (778)
 							951-77-78</span>
 					</a>
 					<a class="page_footnote_social_link" href="mailto:diplomatpanda@protonmail.com">
@@ -311,7 +491,7 @@
 			</div>
 
 			<div class="page_footnote_bottom">
-				<p class="page_footnote_copy">v6.3 <i>(build#0525)</i> &copy;2023-2025 <a class="page_footnote_copy_link" href="/component/developer">Қуаныш Қайратұлы</a> - <a class="page_footnote_copy_link" href="/index">«edufile.»</a> - repository of Educational Files and Platforms</p>
+				<p class="page_footnote_copy">v7.0 <i>(build#0525)</i> &copy;2023-2025 <a class="page_footnote_copy_link" href="/component/developer.html">ninjawithoutkatana</a> - <a class="page_footnote_copy_link" href="/index.html">«edufile.»</a> - Open-source educational platform. This project is licensed under the <a class="page_footnote_copy_link" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPL v3</a>.</p>
 			</div>
 		</div>
 	</footer>

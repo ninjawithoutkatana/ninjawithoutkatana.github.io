@@ -1,4 +1,4 @@
-//APPLICATION?edufile.stopwatch/v0.1(#edufile6.3.0525)
+//APPLICATION?edufile.stopwatch/v0.1(#edufile7.0.0525)
 var minutes = 0;
 var seconds = 0;
 var milliSec = 0;

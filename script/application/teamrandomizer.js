@@ -1,4 +1,4 @@
-//APPLICATION?edufile.teamrandomizer/v0.2(#edufile6.3.0525)
+//APPLICATION?edufile.teamrandomizer/v0.2(#edufile7.0.0525)
 console.log("Бұл скрипт файлын жүктеу");
 
 window.addEventListener("DOMContentLoaded", function (event) {

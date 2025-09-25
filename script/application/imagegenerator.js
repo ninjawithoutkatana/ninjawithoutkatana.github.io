@@ -1,5 +1,5 @@
-//APPLICATION?edufile.imagegenerator/v1.0beta(#edufile6.3.0525)
-const API_KEY = "";
+//APPLICATION?edufile.imagegenerator/v2.1(#edufile7.0.0525)
+const API_KEY = "AIzaSyBbYhWT3mPrlokAIUTgraXwEeT9bAY2Aus";
 const ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=${API_KEY}`;
 
 

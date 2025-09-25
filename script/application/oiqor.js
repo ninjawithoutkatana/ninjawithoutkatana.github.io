@@ -1,4 +1,4 @@
-//APPLICATION?edufile.oiqor/v3.0(#edufile6.3.0525)
+//APPLICATION?edufile.oiqor/v3.0(#edufile7.0.0525)
 const typingForm = document.querySelector(".application_inputform");
 const chatContainer = document.querySelector(".application_chat");
 const suggestions = document.querySelectorAll(".suggestion_card");
@@ -7,7 +7,7 @@ const deleteChatButton = document.querySelector("#application_clearinput");
 let userMessage = null;
 let isResponseGenerating = false;
 
-const API_KEY = "";
+const API_KEY = "AIzaSyBbYhWT3mPrlokAIUTgraXwEeT9bAY2Aus";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 const loadDataFromLocalstorage = () => {

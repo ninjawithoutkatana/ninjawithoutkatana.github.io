@@ -1,4 +1,4 @@
-//APPLICATION?edufile.quizmaker/v0.1(#edufile6.3.0525)
+//APPLICATION?edufile.quizmaker/v0.2beta(#edufile7.0.0525)
 document.addEventListener('DOMContentLoaded', () => {
     const quizForm = document.getElementById('quiz-form');
     const quizQuestionsDiv = document.getElementById('quiz-questions');

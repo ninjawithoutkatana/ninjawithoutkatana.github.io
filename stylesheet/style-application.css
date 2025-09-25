@@ -91,7 +91,6 @@ a.active { text-decoration: none; color: #000; font-weight: bold; cursor: text; 
     overflow: hidden;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
 }
 
 .suggestion_card {
@@ -349,13 +348,6 @@ a.active { text-decoration: none; color: #000; font-weight: bold; cursor: text; 
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.example-label::after {
-    content: '';
-    flex-grow: 1;
-    height: 0.1px;
-    background-color: black;
 }
 
 .example-chips {

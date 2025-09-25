@@ -5,6 +5,10 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+     
+	<link rel="preload" href="/visual/font/PlumbKaz-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/visual/font/PlumbKaz-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+
      <link rel="stylesheet" href="/stylesheet/main.css">
      <link rel="stylesheet" href="/stylesheet/application.css">
      <link rel="stylesheet" href="/stylesheet/style-application.css">
@@ -17,10 +21,10 @@
 <body>
      <header class="header">
           <nav class="navigation">
-               <a class="navigationmenu-link" href="/fragment/instrument"><i class="fas fa-door-open"></i> Шығу</a>
+               <a class="navigationmenu-link" href="/fragment/instrument.html"><i class="fas fa-door-open"></i> Шығу</a>
                <div class="title" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                     <h1 class="application-name">Сөздер бұлты</h1>
-                    <p class="application-version">APPLICATION?edufile.wordcloud/v0.1(#edufile6.3.0525)<a
+                    <p class="application-version">APPLICATION?edufile.wordcloud/v0.1(#edufile7.0.0525)<a
                               href="http://www.jasondavies.com/"> &copy;Jason Davies</a></p>
                </div>
                <div class="title">
@@ -97,7 +101,13 @@
                          <label for="scale-sqrt"><input type="radio" name="scale" id="scale-sqrt" value="sqrt"> √n</label>
                          <label for="scale-linear"><input type="radio" name="scale" id="scale-linear" value="linear"> n</label>
                          <p>
-                         <label for="font">Қаріп</label> <input type="text" id="font" value="Arial" style="resize: none; font-family:inherit; font-size: 14px; font-weight: normal; border-radius: 10px;">
+                         <label for="font">Қаріп</label>
+                         <select id="font" style="font-size: 14px; font-family: inherit; border-radius: 10px; padding: 4px;">
+                              <option value="PlumbKaz" style="font-family: 'PlumbKaz';">PlumbKaz</option>
+                              <option value="Arial" style="font-family: Arial;">Arial</option>
+                              <option value="Times New Roman" style="font-family: 'Times New Roman';">Times New Roman</option>
+                              <option value="Courier New" style="font-family: 'Courier New';">Courier New</option>
+                         </select>
                     </div>
 
                     <div id="angles">

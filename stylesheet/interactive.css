@@ -1,47 +1,12 @@
-ul[role="list"],
-ol[role="list"] {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
 img {
 	max-width: 100%;
 	display: block;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-
-.popular_title {
-	padding: 10px 0;
-	font-size: 24px;
-	font-weight: 400;
-  /* Fallback: Set a background color. */
-  background-color: red;
-  
-  /* Create the gradient. */
-  background-image: radial-gradient(circle, #fdf497, #fdf497, #fd5949, #d6249f, #285AEB);
-  
-  /* Set the background size and repeat properties. */
-  background-repeat: repeat;
-
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
 }
 
 .interactive_cover {
 	width: 600px;
 	height: 200px;
 	border-radius: 20px;
-	
 	object-fit: cover;
 }
 
@@ -51,156 +16,113 @@ a {
 	align-items: center;
 }
 
-
-
-
-
-
-
-
-
-.second {
-	background-color: white;
-	position: relative;
-	border-radius: 10px;
-	padding: 10px;
+.popular_title {
+	padding: 10px 0;
+	font-size: 24px;
+	font-weight: 400;
+	background-color: red;
+	background-image: radial-gradient(circle, #fdf497, #fdf497, #fd5949, #d6249f, #285AEB);
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .carousel {
 	max-width: 1100px;
 	margin: 0 auto;
 	padding: 0;
-	
-  overflow-x: scroll;
-
+	overflow-x: scroll;
 }
 
 .carousel::-webkit-scrollbar {
-  height: 6px;
-  background-color: aliceblue;
+	height: 6px;
+	background-color: aliceblue;
 }
 
-/* Add a thumb */
 .carousel::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-  background: gray;
+	background: gray;
 }
 
-.carousel__container {
-  white-space: nowrap;
-  margin: 60px 0px;
-	
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: inline-block;
+.carousel_container {
+	white-space: nowrap;
+	margin: 60px 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
 }
 
-.categories__title {
- color: rgb(77, 55, 102);
-  font-size: 28px;
-  position: absolute;
-  padding-left: 30px;
+.carousel_title {
+	color: rgb(77, 55, 102);
+	font-size: 28px;
+	position: absolute;
+	padding-left: 30px;
 }
 
-.carousel-item {
-  width: 200px;
-  height: 250px;
-  border-radius: 20px;
-  background-color: blueviolet;
-  overflow: hidden;
-  margin-right: 10px;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-transition: 1000ms all;
-  transition: 1000ms all;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
-  position: relative;
+.carousel_item {
+	width: 200px;
+	height: 250px;
+	border-radius: 20px;
+	background-color: blueviolet;
+	overflow: hidden;
+	margin-right: 10px;
+	display: inline-block;
+	cursor: pointer;
+	transition: 1000ms all;
+	transform-origin: center left;
+	position: relative;
 }
 
-.carousel-item:hover ~ .carousel-item {
-  -webkit-transform: translate3d(100px, 0, 0);
-  transform: translate3d(100px, 0, 0);
+.carousel_item:hover~.carousel_item {
+	transform: translate3d(100px, 0, 0);
 }
 
-.carousel__container:hover .carousel-item {
-  opacity: 0.3;
+.carousel_container:hover .carousel_item {
+	opacity: 0.3;
 }
 
-.carousel__container:hover .carousel-item:hover {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-  opacity: 1;
+.carousel_container:hover .carousel_item:hover {
+	transform: scale(1.5);
+	opacity: 1;
 }
 
-.carousel-item__img {
-  width: 200px;
-  height: 250px;
-  -o-object-fit: cover;
-  object-fit: cover;
+.carousel_image {
+	width: 200px;
+	height: 250px;
+	object-fit: cover;
 }
 
-.carousel-item__details {
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(rgba(0, 0, 0, 0.9)),
-    to(rgba(0, 0, 0, 0))
-  );
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  font-size: 14px;
-  opacity: 0;
-  -webkit-transition: 450ms opacity;
-  transition: 450ms opacity;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.carousel_details {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+	font-size: 14px;
+	opacity: 0;
+	transition: 450ms opacity;
+	padding: 10px;
+	position: absolute;
+	inset: 0;
 }
 
-.carousel-item__details:hover {
-  opacity: 1;
+.carousel_details:hover {
+	opacity: 1;
 }
 
-.carousel-item__details span {
-  /* width: 10px;
-  height: 10px; */
-  font-size: 0.9rem;
-  color: white;
-  /* background-color: white; */
+.carousel_details span {
+	font-size: 0.9rem;
+	color: white;
 }
 
-.carousel-item__details .controls {
-  padding-top: 180px;
+.controls {
+	padding-top: 180px;
 }
 
-.carousel-item__details .carousel-item__details--title,
-.carousel-item__details--subtitle {
-  color: white;
-  margin: 5px 0;
+.carousel_title_text,
+.carousel_subtitle_text {
+	color: white;
+	margin: 5px 0;
 }
-
-
-
-
 
 .container {
 	width: min(100% - 2rem, 1100px);
@@ -221,7 +143,7 @@ a {
 }
 
 .card:is(:hover, :focus-within) {
-	box-shadow: 0px 0px 20px rgba(100, 100, 100, 1);
+    outline: 0.5px solid black;
 }
 
 .card_preview_container {
@@ -301,17 +223,47 @@ a {
 }
 
 .card_link {
-	font-weight: 700;
 	position: relative;
 	display: inline-flex;
 	gap: 0.35em;
-	letter-spacing: 1.5px;
-	margin: 10px 0;
-	color: black;
+	letter-spacing: 1px;
+	background-color: white;
 	transition: 0.3s ease;
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	border-radius: 8px;
+	padding: 5px 10px;
 }
 
 .card_link:hover {
-	color: blue;
-	transition: 0.5s all;
+	background-color: blue;
+	color: white;
+	cursor: pointer;
+}
+
+.download_link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+
+	font-family: inherit;
+	cursor: pointer;
+
+	background-color: black;
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+
+	padding: 8px 14px;
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+
+	transition: background-color 0.3s ease;
+}
+
+.download_link:hover {
+	background-color: blue;
 }

@@ -1,4 +1,4 @@
-//APPLICATION?edufile.scorekeeper/v0.1(#edufile6.3.0525)
+//APPLICATION?edufile.scorekeeper/v0.1(#edufile7.0.0525)
 let time = 0,
      interval;
 

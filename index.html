@@ -8,9 +8,12 @@
 
 	<script language="javascript">
 		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
-			window.location.replace("/component/notsupported");
+			window.location.replace("/component/notsupported.html");
 		}
 	</script>
+
+	<link rel="preload" href="/visual/font/PlumbKaz-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/visual/font/PlumbKaz-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
 
 	<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
 	<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -18,6 +21,98 @@
 	<link rel="stylesheet" href="/stylesheet/main.css">
 	<link rel="icon" type="image/svg" href="/visual/icon/icon_edufile.svg">
 	<title>edufile. Басты бетше</title>
+		
+	<style>
+		.banner-promo {
+			position: relative;
+			background-color: #0b0826;
+			border-radius: 12px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px 14px;
+			overflow: hidden;
+		}
+
+		.banner-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('/visual/headline/headline_interactive.png');
+			background-size: cover;
+			background-position: center;
+			filter: blur(10px) brightness(0.9);
+			opacity: 0.9;
+			z-index: 1;
+		}
+
+		.banner-container {
+			position: relative;
+			z-index: 2;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.banner-content {
+			max-width: 60%;
+		}
+
+		.banner-title {
+			font-size: 18px;
+			font-weight: bold;
+			color: white;
+			margin-bottom: 6px;
+		}
+
+		.banner-text {
+			font-size: 14px;
+			color: white;
+			margin-bottom: 14px;
+		}
+
+		.banner-button {
+			display: inline-block;
+			background-color: #7ed957;
+			color: black;
+			padding: 8px 8px;
+			border-radius: 8px;
+			font-weight: bold;
+			font-size: 12px;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+		}
+
+		.banner-button:hover {
+			background-color: #63a946;
+			color: white;
+		}
+
+		.banner-illustration img {
+			max-height: 100px;
+			border-radius: 12px;
+		}
+
+		.banner-promo.hovered .banner-bg {
+			filter: none;
+			background: none;
+			background-color: #7ed957;
+			transition: background-color 0.3s ease;
+		}
+
+		@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+
+		.fade {
+			animation: fadeIn 1s ease-in-out;
+		}
+
+	</style>
+
 </head>
 
 <body>
@@ -26,7 +121,7 @@
 		<div class="page_container">
 			<nav class="page_navigate">
 				<div>
-					<a class="page_navigate_logotype" href="/index">
+					<a class="page_navigate_logotype" href="/index.html">
 						<img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg" alt="logotype_icon">
 					</a>	
 				</div>
@@ -34,10 +129,10 @@
 				<div>
 					<ul class="page_navigate_menu">
 						<li class="page_navigate_menu_item">
-							<a class="page_navigate_menu_link" href="/fragment/content">Бөлімдер</a>
+							<a class="page_navigate_menu_link" href="/fragment/content.html">Бөлімдер</a>
 						</li>
 						<li class="page_navigate_menu_item">
-							<a class="page_navigate_menu_link" href="/fragment/about">Жоба туралы</a>
+							<a class="page_navigate_menu_link" href="/fragment/about.html">Жоба туралы</a>
 						</li>
 					</ul>
 				</div>
@@ -55,28 +150,40 @@
 	<section class="page_section">
 		<div class="page_container">
 
-			<div class="running-text-outer" style="background: rgba(200, 200, 200, 0.9); border-radius: 10px; padding: 10px; margin-bottom: 10px;">
+			<div class="running-text-outer" style="background: rgba(223, 222, 255, 0.9); border-radius: 10px; padding: 10px; margin-bottom: 10px;">
 				<div>
 				    <div class="running-text-loop">
-						
 						<div class="running-text-content">
 							Жаңа технологиялар мен цифрлық платформалар білім беруді қолжетімді, икемді және тиімді етеді. Болашақта бұл технологиялар одан әрі дамып, білім беру жүйесін жаңа деңгейге көтеретіні сөзсіз. Сондықтан білім беру мекемелері мен педагогтер осы жаңашылдықтарды қолдануға бейімделуі қажет.
 						</div>
-
 				    </div>
 				</div>
-			 </div>
+			</div>
+
+			<section class="banner-promo">
+				<div class="banner-bg"></div>
+				<div class="banner-container">
+					<div class="banner-content">
+						<h2 class="banner-title">Ойындар арқылы оқушылардың ойлау қабілетін дамытыңыз!</h2>
+						<p class="banner-text">Интерактивті ойындар – мұғалімдерге арналған тиімді құрал, оқыту процесін қызықты әрі нәтижелі етіңіз! Интерактивті ойындар топтамасы, тақырыптар бойынша бірнеше топтарға бөлініп арнайы сұрыпталған.</p>
+						<a href="/fragment/interactive.html" class="banner-button">Топтамаға өту <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+					<div class="banner-illustration">
+						<img src="/visual/headline/headline_interactive.png" alt="banner-illustration" />
+					</div>
+				</div>
+			</section>
 
 			<div class="home_welcome">
 				<div class="home_welcome_column">
 
-					<h1 class="home_welcome_title">Қош келдіңіз!</h1>
+					<h1 class="home_welcome_title" id="welcomeTitle" style="min-height: 80px; display: flex; align-items: center;">Қош келдіңіз!</h1>
 					<h3 class="home_welcome_subtitle">edufile. жобасы</h3>
 					<p class="home_welcome_description">Біліктілік дағдыларын арттыру үшін пайдаланғысы келетін Қазақстанның жалпы білім беретін мектептерінің мұғалімдеріне арналған.<br><b>Жобаның басты мақсаты:</b> Сабақта цифрлық технологияларды қолдануды оңайлату жолдарын үйрету.</p>
 
           			<form class="home_welcome_tocontent_container">
-            				<button class="home_welcome_tocontent_button" formaction="/fragment/content"><i class="fa-solid fa-school"></i> Бөлімдерге өту</button>
-            				<button class="home_welcome_tocontent_button" formaction="/sign"><i class="fa-solid fa-users-line"></i> Жүйеге кіру</button>
+            				<button class="home_welcome_tocontent_button" formaction="/fragment/content.html"><i class="fa-solid fa-school"></i> Бөлімдерге өту</button>
+            				<button class="home_welcome_tocontent_button" formaction="/sign.html"><i class="fa-solid fa-users-line"></i> Жүйеге кіру</button>
         				</form>
 				</div>
 
@@ -108,7 +215,7 @@
 		<div class="page_container">
 			<div class="page_footnote">
 				<div class="page_footnote_tag">
-					<a class="page_footnote_title" href="/index"><b>edufile.</b></a>
+					<a class="page_footnote_title" href="/index.html"><b>edufile.</b></a>
 					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі дамуына үлкен үлес қосасыз!</p>
 				</div>
 
@@ -132,13 +239,52 @@
 			</div>
 
 			<div class="page_footnote_bottom">
-				<p class="page_footnote_copy">v6.3 <i>(build#0525)</i> &copy;2023-2025 <a class="page_footnote_copy_link" href="/component/developer">Қуаныш Қайратұлы</a> - <a class="page_footnote_copy_link" href="/index">«edufile.»</a> - repository of Educational Files and Platforms</p>
+				<p class="page_footnote_copy">v7.0 <i>(build#0525)</i> &copy;2023-2025 <a class="page_footnote_copy_link" href="/component/developer.html">ninjawithoutkatana</a> - <a class="page_footnote_copy_link" href="/index.html">«edufile.»</a> - Open-source educational platform. This project is licensed under the <a class="page_footnote_copy_link" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPL v3</a>.</p>
 			</div>
 		</div>
 	</footer>
 
 	<script src="/script/line.js"></script>
 	<script src="/script/time.js"></script>
+
+	<script>
+		  const texts = [
+			"Сәлеметсіз бе!",
+			"Қайырлы күн!",
+			"Сізді көргеніме қуаныштымын!",
+    		"Келгеніңізге рахмет!",
+    		"Сіздің келгеніңіз біз үшін маңызды!",
+    		"Жақсы күн болсын!",
+    		"Сізді қарсы алғанымызға қуаныштымыз!",
+    		"Сәттілік!"
+		];
+
+		let index = 0;
+		const title = document.getElementById("welcomeTitle");
+
+		setInterval(() => {
+			title.classList.remove("fade");
+			void title.offsetWidth;
+			title.textContent = texts[index];
+			title.classList.add("fade");
+
+			index = (index + 1) % texts.length;
+		}, 6000);
+		
+		document.addEventListener("DOMContentLoaded", function () {
+			const promoSection = document.querySelector(".banner-promo");
+			const button = document.querySelector(".banner-button");
+
+			button.addEventListener("mouseenter", function () {
+				promoSection.classList.add("hovered");
+			});
+
+			button.addEventListener("mouseleave", function () {
+				promoSection.classList.remove("hovered");
+			});
+		});
+	</script>
+
 </body>
 
 </html>

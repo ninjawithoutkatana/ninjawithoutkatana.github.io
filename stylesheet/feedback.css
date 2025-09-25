@@ -1,0 +1,202 @@
+button[data-like-btn] {
+    font-family: inherit;
+    cursor: pointer;
+    background-color: #ff0055;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    padding: 8px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.3s ease;
+}
+
+button[data-like-btn]:hover {
+    background-color: #ffe2ec;
+    color: red;
+}
+
+button[data-like-btn]:active {
+    background-color: #b52b5a;
+}
+
+@keyframes heartPulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #ff0055);
+    }
+
+    30% {
+        transform: scale(1.4);
+        filter: drop-shadow(0 0 10px #ff3377);
+    }
+
+    60% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 4px #ff0055);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px transparent);
+    }
+}
+
+button[data-like-btn] span[data-like-count] {
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+p[data-item-id] {
+    font-size: 16px;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+p[data-item-id] i.fas.fa-heart {
+    color: #ff4081;
+    font-style: normal;
+    user-select: none;
+}
+
+p[data-item-id] span[data-like-count] {
+    font-weight: 600;
+    color: black;
+    user-select: none;
+}
+
+h1[data-comments-title] {
+    padding-top: 10px;
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+[data-comments-list] {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.comment {
+    padding: 12px 16px;
+    border-left: 2px solid black;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.comment-author {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 4px;
+}
+
+.comment-date {
+    font-size: 0.85em;
+    color: gray;
+    margin-bottom: 8px;
+}
+
+.comment-text {
+    font-size: 1em;
+    line-height: 1.1;
+    color: black;
+}
+
+[data-comment-form] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+    margin-top: 20px;
+    white-space: pre-wrap;
+}
+
+[data-comment-form] input,
+[data-comment-form] textarea {
+    font-family: inherit;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+}
+
+[data-comment-form] button {
+    font-family: inherit;
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+[data-comment-form] button:hover {
+    background-color: blue;
+}
+
+[data-pagination-controls] {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+[data-pagination-controls].visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+[data-pagination-controls] button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 8px 8px;
+    width: 60px;
+    font-size: 12px;
+    font-family: inherit;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+[data-pagination-controls] button:hover:not(:disabled) {
+    background-color: blue;
+}
+
+[data-pagination-controls] button:disabled {
+    background-color: gray;
+    cursor: default;
+}
+
+[data-pagination-controls] span {
+    font-size: 1em;
+    color: black;
+}

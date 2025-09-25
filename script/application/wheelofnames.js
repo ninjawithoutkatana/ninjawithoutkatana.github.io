@@ -1,4 +1,4 @@
-//APPLICATION?edufile.wheelofnames/v3.4(#edufile6.3.0525)
+//APPLICATION?edufile.wheelofnames/v3.4(#edufile7.0.0525)
 const canvas = document.getElementById("wheelCanvas");
 const ctx = canvas.getContext("2d");
 const spinButton = document.getElementById("spinButton");
@@ -42,7 +42,7 @@ function drawWheel() {
     );
     ctx.rotate(angle + arc / 2);
     ctx.fillStyle = "black";
-    ctx.font = "16px Arial";
+    ctx.font = "16px PlumbKaz";
     ctx.fillText(name, -ctx.measureText(name).width / 2, 5);
     ctx.restore();
   });
@@ -117,7 +117,7 @@ function stopRotateWheel() {
 
   removeWinnerButton.disabled = false;
 
-  resultDisplay.innerHTML = `<h1 style="font-size: 34px">${winner} 🎉</h1>`;
+  resultDisplay.innerHTML = `<h1 style="font-size: 34px; line-height: 1em;">${winner} 🎉</h1>`;
 
   if (soundEnabled) {
     try {
@@ -142,10 +142,10 @@ spinButton.addEventListener("click", () => {
     .map(name => name.trim())
     .filter(name => name);
   if (names.length < 2) {
-    resultDisplay.innerHTML = `<h1 style="font-size: 34px; color: red">Кемінде екі оқушы есімін енгізіңіз.</h1>`;
+    resultDisplay.innerHTML = `<h1 style="font-size: 34px; line-height: 1em; color: red">Кемінде екі оқушы есімін енгізіңіз.</h1>`;
     return;
   }
-  resultDisplay.innerHTML = `<h1 style="font-size: 26.5px"><i class="fas fa-sync-alt"></i></h1>`;
+  resultDisplay.innerHTML = `<h1 style="font-size: 34px"><i class="fas fa-sync-alt"></i></h1>`;
   arc = (2 * Math.PI) / names.length;
   spinAngleStart = Math.random() * 10 + 10;
   spinTime = 0;
@@ -161,9 +161,9 @@ removeWinnerButton.addEventListener("click", () => {
     names = names.filter(name => name !== currentWinner);
     namesInput.value = names.join(", ");
     currentWinner = null;
-    resultDisplay.innerHTML = `<h1 style="font-size: 26.5px"><i class="fas fa-minus"></i></h1>`;
+    resultDisplay.innerHTML = `<h1 style="font-size: 34px"><i class="fas fa-minus"></i></h1>`;
     if (names.length < 2) {
-      resultDisplay.innerHTML = `<h1 style="font-size: 34px; color: red">Кемінде екі оқушы қалу керек.</h1>`;
+      resultDisplay.innerHTML = `<h1 style="font-size: 34px; line-height: 1em; color: red">Кемінде екі оқушы қалу керек.</h1>`;
     }
     arc = (2 * Math.PI) / names.length;
     drawWheel();

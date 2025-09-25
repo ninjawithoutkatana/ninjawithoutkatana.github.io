@@ -6,9 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="preload" href="/visual/font/PlumbKaz-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/visual/font/PlumbKaz-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+
 	<script language="javascript">
 		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
-			window.location.replace("/component/notsupported");
+			window.location.replace("/component/notsupported.html");
 		}
 	</script>
 
@@ -18,6 +21,58 @@
 	<link rel="stylesheet" href="/stylesheet/about.css">
 	<link rel="icon" type="image/svg" href="/visual/icon/icon_edufile.svg">
 	<title>edufile. Жоба туралы</title>
+
+	<style>
+		.author-section {
+		  display: flex;
+		  align-items: center;
+		  gap: 20px;
+		  border: 1px solid #ccc;
+		  padding: 15px;
+		  border-radius: 20px;
+		  max-width: 100%;
+		  background-color: #f9f9f9;
+		  font-family: inherit;
+		}
+	
+		.author-avatar {
+		  width: 200px;
+		  height: 200px;
+		  border-radius: 50%;
+		  background-color: #ddd;
+		  background-image: url('/visual/preview/preview_author.jpg');
+		  background-size: cover;
+		  background-position: center;
+		  border: 5px solid #bbb;
+		}
+	
+		.author-info {
+		  flex: 1;
+		}
+	
+		.author-name {
+		  font-size: 30px;
+		  font-weight: bold;
+		  margin-bottom: 15px;
+		}
+
+		.author-nick {
+		  font-size: 18px;
+		  margin-bottom: 10px;
+		}
+	
+		.author-links a {
+		  margin-right: 12px;
+		  color: #333;
+		  font-size: 30px;
+		  text-decoration: none;
+		  transition: color 0.3s;
+		}
+	
+		.author-links a:hover {
+		  color: #007bff;
+		}
+	  </style>
 </head>
 
 <body>
@@ -25,15 +80,15 @@
 	<header class="page_header">
 		<div class="page_container">
 			<nav class="page_navigate">
-				<a class="page_navigate_logotype" href="/index">
+				<a class="page_navigate_logotype" href="/index.html">
 					<img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg" alt="logotype_icon">
 				</a>
 				<ul class="page_navigate_menu">
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/content">Бөлімдер</a>
+						<a class="page_navigate_menu_link" href="/fragment/content.html">Бөлімдер</a>
 					</li>
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link_active" href="/fragment/about">Жоба туралы</a>
+						<a class="page_navigate_menu_link_active" href="/fragment/about.html">Жоба туралы</a>
 					</li>
 				</ul>
 			</nav>
@@ -58,8 +113,90 @@
 					<h3 class="content_subtitle">Білім беру саласында еңбек ететін мұғалімдерге жеке дағдылары мен құзыреттерін дамытуға көмектесетін білім беру қосымшасы.</h3>
 				</div>
 			</div>
-			<h3 class="about_description">Қазіргі білім беру жүйесінің мақсаты - бәсекеге қабілетті маман дайындау. Мектеп – үйрететін орта, оның жүрегі - мұғалім. Ізденімпаз мұғалімнің шығармашылығындағы ерекше тұс - оның сабақты түрлендіріп, тұлғаның жүрегіне жол таба білуі. Ұстаз атана білу, оны қадір тұту, қастерлеу, арындай таза ұстау - әр мұғалімнің борышы. Ол өз кәсібін, өз пәнін, барлық шәкіртін, мектебін шексіз сүйетін адам. Өзгермелі қоғамдағы жаңа формация мұғалімі – педагогикалық құралдардың барлығын меңгерген, тұрақты өзін - өзі жетілдіруге талпынған, рухани дамыған, толысқан шығармашыл тұлға құзыреті. Жаңа формация мұғалімі табысы, біліктері арқылы қалыптасады, дамиды. Нарық жағдайындағы мұғалімге қойылатын талаптар: бәсекеге қабілеттілігі, білім беру сапасының жоғары болуы, кәсіби шеберлігі, әдістемелік жұмыстағы шеберлігі. Нәтижеге бағытталған білім моделі мен басқарудың жаңа парадигмасы аясында жекелеген ұғымдар мен нормаларды және тиімді педагогикалық технологияларды меңгеру үшін педагогтардың кәсіби мәдениетін дамытуға бағытталған оқу қажеттіліктері туындылап отыр. Мұғалімдерге қойылатын талаптардың бірі – оқытудың жаңа технологияларын меңгеру. Осындай аса қажетті технологиялардың бірі – ақпараттық - коммуникациялық технологияларды пайдалану. АКТ - ны игеру қазіргі заманда әрбір жеке тұлға үшін қажетті шартқа айналды. АКТ - ның дамуы кезеңінде осы заманға сай білімді шәкірт тәрбиелеу мұғалімнің басты міндеті болып табылады. Қоғамдағы ақпараттандыру процестерінің қарқынды дамуы жан - жақты, жаңа технологияны меңгерген жеке тұлға қалыптастыруды талап етеді.</h3>
-			<p class="content_linktree">Дереккөз: <a href="https://bilimdiler.kz/ustaz/5559-akparattyk-kommunikaciyalyk-tehnologiyalardy-paydalanu-arkyly-sabaktyn-tiimdiligin-arttyru"><b>bilimdiler.kz</b></a></p>
+			<h3 class="about_description">
+				«edufile.» — бұл білім беру саласында жұмыс істейтін мұғалімдерге арналған инновациялық қосымша. 
+				Ол мұғалімдердің кәсіби дағдыларын жетілдіруге, оқыту процесін оңтайландыруға және білім беру ресурстарын тиімді пайдалануға көмектеседі. 
+				Қосымша заманауи технологияларды қолдана отырып, білім беру сапасын арттыруға бағытталған. 
+				«edufile.» арқылы мұғалімдер өздерінің кәсіби өсуін қамтамасыз етіп, оқушыларға сапалы білім беру мүмкіндігін арттыра алады.
+			</h3>
+
+			<h1 class="content_title" style="margin-top: 2em;">Лицензия (License)</h1>
+
+			<div class="license-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+				<div class="column" style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 5px; border: 1px solid #ccc; border-radius: 20px;">
+				  	<h2>English - Official</h2>
+				  	<p><strong>GNU GENERAL PUBLIC LICENSE</strong><br>
+				  	Version 3, 29 June 2007</p>
+			
+				  	<p>Copyright &copy; 2023–2025 Kuanysh Kairatuly (ninjawithoutkatana)</p>
+			
+				  	<p>
+						This program is free software: you can redistribute it and/or modify
+						it under the terms of the GNU General Public License as published by
+						the Free Software Foundation, either version 3 of the License, or
+						(at your option) any later version.
+				  	</p>
+			
+				  	<p>
+						This program is distributed in the hope that it will be useful,
+						but WITHOUT ANY WARRANTY; without even the implied warranty of
+						MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+						GNU General Public License for more details.
+				  	</p>
+			
+				  	<p>
+						You should have received a copy of the GNU General Public License
+						along with this program.  If not, see <a class="page_footnote_copy_link" href="https://www.gnu.org/licenses/" target="_blank">https://www.gnu.org/licenses/</a>.
+				  	</p>
+				</div>
+			
+				<div class="column" style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 5px; border: 1px solid #ccc; border-radius: 20px;">
+				  	<h2>Қазақша (unofficial translation)</h2>
+				  	<p><strong>GNU ЖАЛПЫ ҚОҒАМДЫҚ ЛИЦЕНЗИЯСЫ</strong><br>
+				  	3-нұсқасы, 2007 жылғы 29 маусым</p>
+			
+				  	<p>Авторлық құқық &copy; 2023–2025 Қуаныш Қайратұлы (ninjawithoutkatana)</p>
+			
+				  	<p>
+						Бұл бағдарлама — еркін бағдарламалық жасақтама: сіз оны қайта тарата аласыз және/немесе
+						Еркін Бағдарламалық Қамтамасыз Ету Қоры (Free Software Foundation) шығарған
+						GNU Жалпы Қоғамдық Лицензиясының 3-нұсқасы немесе (өзіңіз қалағандай) кез келген кейінгі
+						нұсқасы шарттарында өзгерте аласыз.
+				  	</p>
+			
+				  	<p>
+						Бұл бағдарлама пайдалы болады деген үмітпен таратылуда,
+						бірақ КЕПІЛДІКСІЗ; тіпті жанама кепілдерсіз де,
+						яғни САТЫП АЛУҒА ЖАРАМДЫЛЫҒЫ немесе
+						БЕЛГІЛІ БІР МАҚСАТҚА СӘЙКЕСТІГІ секілді кепілдерсіз.
+						Толығырақ ақпарат алу үшін GNU Жалпы Қоғамдық Лицензиясымен танысыңыз.
+				  	</p>
+			
+				  	<p>
+						Бұл бағдарламамен бірге GNU Жалпы Қоғамдық Лицензияның көшірмесі де берілуі тиіс.
+						Егер ол берілмесе, мына сайттан таба аласыз: <a class="page_footnote_copy_link" href="https://www.gnu.org/licenses/" target="_blank">https://www.gnu.org/licenses/</a>.
+				  	</p>
+				</div>
+			</div>
+			  	
+			<h1 class="content_title" style="margin-top: 2em;">Жоба авторы</h1>
+			<div class="author-section">
+				<div class="author-avatar"></div>
+			
+				<div class="author-info">
+				  	<div class="author-name">Қуаныш Қайратұлы</div>
+				  	<div class="author-nick">ninjawithoutkatana</div>
+					<p>Ағылшын тілі пәні мұғалімі / Бағдарламалық жасақтама инженері / Веб-әзірлеуші</p>
+				  	<div class="author-links">
+						<a href="https://instagram.com/06rkh" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="mailto:diplomatpanda@protonmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+				  	</div>
+					<div class="author-manifest">
+						<p class="about_description">Бұл жобаны жасау арқылы мен білім беру саласындағы мұғалімдердің цифрлық құзыреттіліктерін арттыруды мақсат еттім. Барлық мұғалімдер — үздіксіз дамуға лайық.</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</section>
 
@@ -67,7 +204,7 @@
 		<div class="page_container">
 			<div class="page_footnote">
 				<div class="page_footnote_tag">
-					<a class="page_footnote_title" href="/index"><b>edufile.</b></a>
+					<a class="page_footnote_title" href="/index.html"><b>edufile.</b></a>
 					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі дамуына үлкен үлес қосасыз!</p>
 				</div>
 
@@ -91,7 +228,7 @@
 			</div>
 
 			<div class="page_footnote_bottom">
-				<p class="page_footnote_copy">v6.3 <i>(build#0525)</i> &copy;2023-2025 <a class="page_footnote_copy_link" href="/component/developer">Қуаныш Қайратұлы</a> - <a class="page_footnote_copy_link" href="/index">«edufile.»</a> - repository of Educational Files and Platforms</p>
+				<p class="page_footnote_copy">v7.0 <i>(build#0525)</i> &copy;2023-2025 <a class="page_footnote_copy_link" href="/component/developer.html">ninjawithoutkatana</a> - <a class="page_footnote_copy_link" href="/index.html">«edufile.»</a> - Open-source educational platform. This project is licensed under the <a class="page_footnote_copy_link" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPL v3</a>.</p>
 		</div>
 	</footer>
 

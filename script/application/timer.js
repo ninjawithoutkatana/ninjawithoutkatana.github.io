@@ -1,4 +1,4 @@
-//APPLICATION?edufile.timer/v0.1(#edufile6.3.0525)
+//APPLICATION?edufile.timer/v0.1(#edufile7.0.0525)
 var tSpan = document.getElementById("tspan");
 tSpan.innerHTML = `0 : 00`;
 

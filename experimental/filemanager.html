@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Общий доступ Yandex.Disk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+    li {
+      margin: 6px 0;
+    }
+    li.folder > span {
+      font-weight: bold;
+      cursor: pointer;
+      color: #2a5db0;
+    }
+    li.folder > span:hover {
+      text-decoration: underline;
+    }
+    li.file a {
+      color: #000;
+      text-decoration: none;
+    }
+    li.file a:hover {
+      text-decoration: underline;
+    }
+    img.preview {
+      max-width: 150px;
+      margin: 5px 0 0 20px;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      padding: 2px;
+    }
+    iframe.preview {
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Файлы из Yandex.Disk</h1>
+  <div id="content"></div>
+
+  <script>
+    // Вставьте сюда ссылку (на папку или файл)
+    const publicKey = "https://disk.yandex.ru/d/-1sRgY5lYtsZnQ";
+
+    // Получить рабочую ссылку на файл
+    async function getDownloadLink(path) {
+      const res = await fetch(
+        `https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key=${encodeURIComponent(publicKey)}&path=${encodeURIComponent(path)}`
+      );
+      const data = await res.json();
+      return data.href;
+    }
+
+    // Загрузить содержимое папки
+    async function loadFolder(path, container) {
+      const res = await fetch(
+        `https://cloud-api.yandex.net/v1/disk/public/resources?public_key=${encodeURIComponent(publicKey)}&path=${encodeURIComponent(path)}`
+      );
+      const data = await res.json();
+
+      if (data._embedded && data._embedded.items) {
+        for (const item of data._embedded.items) {
+          const li = document.createElement("li");
+
+          if (item.type === "dir") {
+            li.classList.add("folder");
+            const span = document.createElement("span");
+            span.textContent = "📁 " + item.name;
+
+            const sublist = document.createElement("ul");
+            sublist.classList.add("hidden");
+
+            span.addEventListener("click", async () => {
+              if (sublist.childElementCount === 0) {
+                await loadFolder(item.path, sublist);
+              }
+              sublist.classList.toggle("hidden");
+            });
+
+            li.appendChild(span);
+            li.appendChild(sublist);
+          }
+
+          if (item.type === "file") {
+            li.classList.add("file");
+            const link = await getDownloadLink(item.path);
+            const a = document.createElement("a");
+            a.href = link;
+            a.textContent = item.name;
+            a.target = "_blank";
+            li.appendChild(a);
+
+            if (item.media_type === "image") {
+              const img = document.createElement("img");
+              img.src = link;
+              img.alt = item.name;
+              img.className = "preview";
+              li.appendChild(img);
+            }
+            if (item.name.toLowerCase().endsWith(".pdf")) {
+              const iframe = document.createElement("iframe");
+              iframe.src = link;
+              iframe.width = "600";
+              iframe.height = "400";
+              iframe.className = "preview";
+              li.appendChild(iframe);
+            }
+          }
+
+          container.appendChild(li);
+        }
+      }
+    }
+
+    // Загрузить ресурс (определяем — файл или папка)
+    async function loadResource() {
+      const res = await fetch(
+        `https://cloud-api.yandex.net/v1/disk/public/resources?public_key=${encodeURIComponent(publicKey)}`
+      );
+      const data = await res.json();
+      const content = document.getElementById("content");
+
+      if (data.type === "dir") {
+        // это папка
+        const list = document.createElement("ul");
+        content.appendChild(list);
+        await loadFolder("/", list);
+      } else if (data.type === "file") {
+        // это файл
+        const link = await getDownloadLink("/");
+        const a = document.createElement("a");
+        a.href = link;
+        a.textContent = "Скачать " + data.name;
+        a.target = "_blank";
+        content.appendChild(a);
+
+        if (data.media_type === "image") {
+          const img = document.createElement("img");
+          img.src = link;
+          img.alt = data.name;
+          img.style.maxWidth = "400px";
+          img.style.display = "block";
+          img.style.marginTop = "10px";
+          content.appendChild(img);
+        }
+        if (data.name.toLowerCase().endsWith(".pdf")) {
+          const iframe = document.createElement("iframe");
+          iframe.src = link;
+          iframe.width = "600";
+          iframe.height = "400";
+          iframe.className = "preview";
+          content.appendChild(iframe);
+        }
+      } else {
+        content.textContent = "Не удалось загрузить ресурс.";
+      }
+    }
+
+    loadResource();
+  </script>
+</body>
+</html>

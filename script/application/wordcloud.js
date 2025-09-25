@@ -1,4 +1,4 @@
-//APPLICATION?edufile.wordcloud/v0.1(#edufile6.3.0525)
+//APPLICATION?edufile.wordcloud/v0.1(#edufile7.0.0525)
 ! function () {
      function n(n, t) {
           return t > n ? -1 : n > t ? 1 : n >= t ? 0 : 0 / 0

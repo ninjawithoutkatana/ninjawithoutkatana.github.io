@@ -96,13 +96,28 @@
 }
 
 /*Pic материал*/
-.material_preview {
-	max-width: 100%;
-	width: 240px;
-	height: 300px;
-	border-radius: 20px;
-	margin-right: 10px;
+.dialog_home {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
 }
+
+.material_preview {
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 20px;
+}
+
+.material_details_list {
+    flex-grow: 1;
+}
+
 
 /*Диалог внешний вид*/
 .dialog_title {
@@ -177,7 +192,8 @@
 }
 
 .dialog_backstage {
-	backdrop-filter: blur(4px);
+	background-color: rgba(0, 0, 0, 0.07);
+	backdrop-filter: blur(6px);
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -208,4 +224,54 @@
 	overflow-x: auto;
 	padding: 20px;
 	border-radius: 20px;
+}
+
+.nav_item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 5px 10px;
+}
+
+.nav_item:hover {
+	background-color: #f0f0f0;
+	border-radius: 10px;
+	
+}
+
+.icon_fix {
+	width: 18px;
+	min-width: 18px;
+	height: 18px;
+	text-align: center;
+	line-height: 18px;
+	font-size: 16px;
+	color: #333;
+}
+
+.sitemap_link {
+	min-width: 100px;
+	display: inline-block;
+	color: #1a73e8;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 4px 8px;
+	border-radius: 4px;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+.sitemap_link:hover {
+	background-color: rgba(26, 115, 232, 0.08);
+	color: #0c47a1;
+	text-decoration: none;
+}
+
+.sitemap_link:active {
+	background-color: rgba(26, 115, 232, 0.2);
+}
+
+.sitemap_link:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.3);
 }

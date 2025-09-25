@@ -5,11 +5,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="referrer" content="no-referrer"/>
+	<meta name="referrer" content="no-referrer" />
+
+	<link rel="preload" href="/visual/font/PlumbKaz-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/visual/font/PlumbKaz-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
 
 	<script language="javascript">
-		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
-			window.location.replace("/component/notsupported");
+		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(
+				/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
+			window.location.replace("/component/notsupported.html");
 		}
 	</script>
 
@@ -17,9 +21,37 @@
 	<link rel="stylesheet" href="/stylesheet/main.css">
 	<link rel="stylesheet" href="/stylesheet/content.css">
 	<link rel="stylesheet" href="/stylesheet/table.css">
+	<link rel="stylesheet" href="/stylesheet/resource.css">
 
 	<link rel="icon" type="image/svg" href="/visual/icon/icon_edufile.svg">
 	<title>edufile. Specifications</title>
+
+	<style>
+		.dialog_footer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		.remotebutton {
+			background-color: #e3e3e3;
+			transition: 0.3s;
+			font-family: inherit;
+			font-size: 16px;
+			font-weight: bold;
+			border: none;
+			border-radius: 10px;
+			padding: 5px 15px;
+		}
+
+		.remotebutton:hover {
+			background-color: black;
+			color: white;
+			cursor: pointer;
+		}
+	</style>
 </head>
 
 <body>
@@ -27,15 +59,15 @@
 	<header class="page_header">
 		<div class="page_container">
 			<nav class="page_navigate">
-				<a class="page_navigate_logotype" href="/index">
+				<a class="page_navigate_logotype" href="/index.html">
 					<img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg" alt="logotype_icon">
 				</a>
 				<ul class="page_navigate_menu">
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/content">Бөлімдер</a>
+						<a class="page_navigate_menu_link" href="/fragment/content.html">Бөлімдер</a>
 					</li>
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/about">Жоба туралы</a>
+						<a class="page_navigate_menu_link" href="/fragment/about.html">Жоба туралы</a>
 					</li>
 				</ul>
 			</nav>
@@ -44,7 +76,7 @@
 
 	<section class="page_section">
 		<div class="page_container">
-			<a class="content_tohome_link" href="/fragment/content"><i class="fas fa-arrow-left"></i> Артқа</a>
+			<a class="content_tohome_link" href="/fragment/content.html"><i class="fas fa-arrow-left"></i> Артқа</a>
 			<h1 class="content_title">edufile. Specifications</h1>
 			<p class="content_linktree">басты бетше / бөлімдер / <b>Спецификациялар</b></p>
 			<h3 class="content_subtitle">Бөлім бойынша және Тоқсан бойынша жиынтық бағалаудың спецификациялары.</h3>
@@ -52,15 +84,16 @@
 			<main class="table">
 				<section class="table_header">
 					<div class="table_title">
-						<p class="table_name">Файлдар тізбегі</p>
-						<p class="table_details"><i class="fa-solid fa-circle-info"></i> Басқа мәліметтерді алу және жүктеу үшін файл атауын басыңыз</p>
+						<p class="table_name">Материалдар тізбегі</p>
+						<p class="table_details"><i class="fa-solid fa-circle-info"></i> Басқа мәліметтерді алу және
+							жүктеу үшін файл атауын басыңыз</p>
 					</div>
 					<div class="input-group">
 						<input type="search" placeholder="Тізбектен іздеу...">
 						<img src="/visual/icon/icon_search.svg" alt="search_icon">
 					</div>
 				</section>
-				
+
 				<section class="table_body">
 					<table>
 						<thead>
@@ -72,52 +105,64 @@
 						</thead>
 
 						<tbody>
-							<tr onclick="window.location.href = 'https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/lq-xIQJNAGMZgw';">
-								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_type">Methodological recommendations for Summative Assessment <b>GRADE 2</b></td>
-								<td>Бөлім, Тоқсан</td>
-								<td><b>2 сынып</b></td>
-							</tr>
-
-							<tr onclick="window.location.href = 'https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/gCk3_W2LekQ6Ww';">
-								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_type">Methodological recommendations for Summative Assessment <b>GRADE 3</b></td>
+							<tr class="material-row" data-id="1">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg"
+										alt="format_type">Methodological recommendations for Summative Assessment
+									<b>GRADE 3</b></td>
 								<td>Бөлім, Тоқсан</td>
 								<td><b>3 сынып</b></td>
 							</tr>
 
-							<tr onclick="window.location.href = 'https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/x1hw6LBBO5NO5g';">
-								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_type">Methodological recommendations for Summative Assessment <b>GRADE 4</b></td>
+							<tr class="material-row" data-id="2">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg"
+										alt="format_type">Methodological recommendations for Summative Assessment
+									<b>GRADE 4</b></td>
 								<td>Бөлім, Тоқсан</td>
 								<td><b>4 сынып</b></td>
 							</tr>
 
-							<tr onclick="window.location.href = 'https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/Mg_oAn-ioxrT4Q';">
-								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_type">Specification of Summative Assessment for the UNIT <b>GRADE 5</b> <i>(аудио жоқ)</i></td>
+							<tr class="material-row" data-id="3">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg"
+										alt="format_type">Specification of Summative Assessment for the UNIT <b>GRADE
+										5</b> <i>(аудио жоқ)</i></td>
 								<td>Бөлім</td>
 								<td><b>5 сынып</b></td>
 							</tr>
 
-							<tr onclick="window.location.href = 'https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/anAqpyleEewEFg';">
-								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg" alt="format_type">Specification of Summative Assessment for the TERM <b>GRADE 5</b></td>
+							<tr class="material-row" data-id="4">
+								<td><img class="icon_format" src="/visual/icon/icon_pdf.svg"
+										alt="format_type">Specification of Summative Assessment for the TERM <b>GRADE
+										5</b></td>
 								<td>Тоқсан</td>
 								<td><b>5 сынып</b></td>
 							</tr>
 
-							<tr onclick="window.location.href = 'https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/d/pKyiZAokxaxMLg';">
-								<td><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_type">Specification of Summative Assessment <b>GRADE 6</b></td>
+							<tr class="material-row" data-id="5">
+								<td><img class="icon_format" src="/visual/icon/icon_zip.svg"
+										alt="format_type">Specification of Summative Assessment <b>GRADE 6</b></td>
 								<td>Бөлім, Тоқсан</td>
 								<td><b>6 сынып</b></td>
 							</tr>
 
-							<tr onclick="window.location.href = 'https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/d/8q7kDu8gxTOgfw';">
-								<td><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_type">Specification of Summative Assessment <b>GRADE 7</b></td>
+							<tr class="material-row" data-id="6">
+								<td><img class="icon_format" src="/visual/icon/icon_zip.svg"
+										alt="format_type">Specification of Summative Assessment <b>GRADE 7</b></td>
 								<td>Бөлім, Тоқсан</td>
 								<td><b>7 сынып</b></td>
 							</tr>
 
-							<tr onclick="window.location.href = 'https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/d/wtcyMHyvw37Z3w';">
-								<td><img class="icon_format" src="/visual/icon/icon_zip.svg" alt="format_type">Specification of Summative Assessment <b>GRADE 8</b></td>
+							<tr class="material-row" data-id="7">
+								<td><img class="icon_format" src="/visual/icon/icon_zip.svg"
+										alt="format_type">Specification of Summative Assessment <b>GRADE 8</b></td>
 								<td>Бөлім, Тоқсан</td>
 								<td><b>8 сынып</b></td>
+							</tr>
+
+							<tr class="material-row" data-id="8">
+								<td><img class="icon_format" src="/visual/icon/icon_zip.svg"
+										alt="format_type">Specification of Summative Assessment <b>GRADE 9</b></td>
+								<td>Бөлім, Тоқсан</td>
+								<td><b>9 сынып</b></td>
 							</tr>
 						</tbody>
 					</table>
@@ -133,34 +178,188 @@
 		<div class="page_container">
 			<div class="page_footnote">
 				<div class="page_footnote_tag">
-					<a class="page_footnote_title" href="/index"><b>edufile.</b></a>
-					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі дамуына үлкен үлес қосасыз!</p>
+					<a class="page_footnote_title" href="/index.html"><b>edufile.</b></a>
+					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі
+						дамуына үлкен үлес қосасыз!</p>
 				</div>
 
 				<div class="page_footnote_social">
-					<a class="page_footnote_social_link" href="https://www.youtube.com/channel/UCgsBtFRV--wrICXphD-H3Sg?sub_confirmation=1">
-						<img class="page_footnote_social_icon" src="/visual/icon/icon_youtube.svg" alt="social_icon"><span>YouTube</span>
+					<a class="page_footnote_social_link"
+						href="https://www.youtube.com/channel/UCgsBtFRV--wrICXphD-H3Sg?sub_confirmation=1">
+						<img class="page_footnote_social_icon" src="/visual/icon/icon_youtube.svg"
+							alt="social_icon"><span>YouTube</span>
 					</a>
 					<a class="page_footnote_social_link" href="https://t.me/edufilebot">
-						<img class="page_footnote_social_icon" src="/visual/icon/icon_telegram.svg" alt="social_icon"><span>Telegram-бот</span>
+						<img class="page_footnote_social_icon" src="/visual/icon/icon_telegram.svg"
+							alt="social_icon"><span>Telegram-бот</span>
 					</a>
 				</div>
 
 				<div class="page_footnote_social">
 					<a class="page_footnote_social_link" href="tel:77789517778">
-						<img class="page_footnote_social_icon" src="/visual/icon/icon_whatsapp.svg" alt="social_icon"><span>+7 (778) 951-77-78</span>
+						<img class="page_footnote_social_icon" src="/visual/icon/icon_whatsapp.svg"
+							alt="social_icon"><span>+7 (778) 951-77-78</span>
 					</a>
 					<a class="page_footnote_social_link" href="mailto:diplomatpanda@protonmail.com">
-						<img class="page_footnote_social_icon" src="/visual/icon/icon_mail.svg" alt="social_icon"><span>diplomatpanda@protonmail.com</span>
+						<img class="page_footnote_social_icon" src="/visual/icon/icon_mail.svg"
+							alt="social_icon"><span>diplomatpanda@protonmail.com</span>
 					</a>
 				</div>
 			</div>
 
 			<div class="page_footnote_bottom">
-        <p class="page_footnote_copy">v6.3 <i>(build#0525)</i> &copy;2023-2025 <a class="page_footnote_copy_link" href="/component/developer">Қуаныш Қайратұлы</a> - <a class="page_footnote_copy_link" href="/index">«edufile.»</a> - repository of Educational Files and Platforms</p>
+				<p class="page_footnote_copy">v7.0 <i>(build#0525)</i> &copy;2023-2025 <a
+						class="page_footnote_copy_link" href="/component/developer.html">ninjawithoutkatana</a> - <a
+						class="page_footnote_copy_link" href="/index.html">«edufile.»</a> - Open-source educational
+					platform. This project is licensed under the <a class="page_footnote_copy_link"
+						href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPL v3</a>.</p>
 			</div>
 		</div>
 	</footer>
+
+
+	<div class="material_container">
+		<input type="checkbox" id="open-dialog" class="dialog_toggle" />
+		<label class="dialog_backstage" for="open-dialog"></label>
+		<div class="dialog">
+			<label class="dialog_close" for="open-dialog"></label>
+			<div class="dialog_content">
+				<h1 class="dialog_title"></h1>
+				<div class="dialog_home" style="padding-left: 0;">
+					<div class="material_details_list">
+						<p class="dialog_description"><i class="fa-solid fa-circle-info"></i> <b>Анықтама</b></p>
+						<span class="status green"></span>&nbsp;<span class="status blue"></span>
+						<p class="dialog_description"></p>
+						<p class="dialog_description format_line"><b>Формат:</b><img class="format_icon" src=""
+								alt="format_icon" /><span class="format_text"></span></p>
+					</div>
+				</div>
+				<div class="dialog_footer">
+					<a class="remotebutton" href="" target="_blank">Жүктеу <i class="fas fa-download"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const materials = [{
+				id: 1,
+				title: "Methodological recommendations for Summative Assessment GRADE 3",
+				type: "БЖБ, ТЖБ",
+				class: "3 сынып",
+				format: "PDF",
+				formatIcon: "/visual/icon/icon_pdf.svg",
+				downloadLink: "https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/gCk3_W2LekQ6Ww"
+			},
+			{
+				id: 2,
+				title: "Methodological recommendations for Summative Assessment GRADE 4",
+				type: "БЖБ, ТЖБ",
+				class: "4 сынып",
+				format: "PDF",
+				formatIcon: "/visual/icon/icon_pdf.svg",
+				downloadLink: "https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/x1hw6LBBO5NO5g"
+			},
+			{
+				id: 3,
+				title: "Specification of Summative Assessment for the UNIT GRADE 5 (аудио жоқ)",
+				type: "БЖБ",
+				class: "5 сынып",
+				format: "PDF",
+				formatIcon: "/visual/icon/icon_pdf.svg",
+				downloadLink: "https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/Mg_oAn-ioxrT4Q"
+			},
+			{
+				id: 4,
+				title: "Specification of Summative Assessment for the TERM GRADE 5",
+				type: "ТЖБ",
+				class: "5 сынып",
+				format: "PDF",
+				formatIcon: "/visual/icon/icon_pdf.svg",
+				downloadLink: "https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/i/anAqpyleEewEFg"
+			},
+			{
+				id: 5,
+				title: "Specification of Summative Assessment GRADE 6",
+				type: "БЖБ, ТЖБ",
+				class: "6 сынып",
+				format: "ZIP",
+				formatIcon: "/visual/icon/icon_zip.svg",
+				downloadLink: "https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/d/pKyiZAokxaxMLg"
+			},
+			{
+				id: 6,
+				title: "Specification of Summative Assessment GRADE 7",
+				type: "БЖБ, ТЖБ",
+				class: "7 сынып",
+				format: "ZIP",
+				formatIcon: "/visual/icon/icon_zip.svg",
+				downloadLink: "https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/d/8q7kDu8gxTOgfw"
+			},
+			{
+				id: 7,
+				title: "Specification of Summative Assessment GRADE 8",
+				type: "БЖБ, ТЖБ",
+				class: "8 сынып",
+				format: "ZIP",
+				formatIcon: "/visual/icon/icon_zip.svg",
+				downloadLink: "https://getfile.dokpub.com/yandex/get/https://disk.yandex.com/d/wtcyMHyvw37Z3w"
+			},
+			{
+				id: 8,
+				title: "Specification of Summative Assessment GRADE 9",
+				type: "БЖБ, ТЖБ",
+				class: "9 сынып",
+				format: "ZIP",
+				formatIcon: "/visual/icon/icon_zip.svg",
+				downloadLink: "// Бұл материалға сілтеме берілмеген"
+			}
+		];
+
+		const rows = document.querySelectorAll('.material-row');
+		const dialogToggle = document.getElementById('open-dialog');
+
+		const dialogContent = {
+			title: document.querySelector('.dialog_title'),
+			type: document.querySelector('.status.green'),
+			grade: document.querySelector('.status.blue'),
+			description: document.querySelectorAll('.dialog_description')[1],
+			downloadLink: document.querySelector('.remotebutton'),
+			formatIcon: document.querySelector('.format_icon'),
+			formatText: document.querySelector('.format_text')
+		};
+
+		const typeClassMap = {
+			"БЖБ": "yellow",
+			"ТЖБ": "red",
+			"БЖБ, ТЖБ": "green"
+		};
+
+		rows.forEach(row => {
+			row.addEventListener('click', () => {
+				const id = row.getAttribute('data-id');
+				const material = materials.find(m => m.id == id);
+				if (!material) return;
+
+				dialogContent.title.innerText = 'Материал туралы мәліметтер';
+				dialogContent.type.innerText = material.type;
+				dialogContent.grade.innerText = material.class;
+				dialogContent.description.innerText = material.title;
+				dialogContent.formatText.innerText = material.format;
+				dialogContent.formatIcon.src = material.formatIcon;
+				dialogContent.downloadLink.href = material.downloadLink;
+
+				const typeClass = typeClassMap[material.type] || 'yellow';
+				dialogContent.type.className = 'status';
+				dialogContent.type.classList.add(typeClass);
+
+				dialogToggle.checked = true;
+			});
+		});
+	</script>
+
+
+
 
 </body>
 

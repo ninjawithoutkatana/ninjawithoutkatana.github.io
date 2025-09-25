@@ -6,10 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="preload" href="/visual/font/PlumbKaz-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/visual/font/PlumbKaz-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+
 	<script language="javascript">
 		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(
 				/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) {
-			window.location.replace("/component/notsupported");
+			window.location.replace("/component/notsupported.html");
 		}
 	</script>
 
@@ -17,6 +20,8 @@
 	<link rel="stylesheet" href="/stylesheet/main.css">
 	<link rel="stylesheet" href="/stylesheet/content.css">
 	<link rel="stylesheet" href="/stylesheet/interactive.css">
+	<link rel="stylesheet" href="/stylesheet/feedback.css">
+	<link rel="stylesheet" href="/stylesheet/resource.css">
 	<link rel="icon" type="image/svg" href="/visual/icon/icon_edufile.svg">
 	<title>edufile. Interactive</title>
 </head>
@@ -26,15 +31,15 @@
 	<header class="page_header">
 		<div class="page_container">
 			<nav class="page_navigate">
-				<a class="page_navigate_logotype" href="/index">
+				<a class="page_navigate_logotype" href="/index.html">
 					<img class="page_navigate_logotype_icon" src="/visual/icon/icon_edufile.svg" alt="logotype_icon">
 				</a>
 				<ul class="page_navigate_menu">
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/content">Бөлімдер</a>
+						<a class="page_navigate_menu_link" href="/fragment/content.html">Бөлімдер</a>
 					</li>
 					<li class="page_navigate_menu_item">
-						<a class="page_navigate_menu_link" href="/fragment/about">Жоба туралы</a>
+						<a class="page_navigate_menu_link" href="/fragment/about.html">Жоба туралы</a>
 					</li>
 				</ul>
 			</nav>
@@ -43,7 +48,7 @@
 
 	<section class="page_section">
 		<div class="page_container">
-			<a class="content_tohome_link" href="/fragment/content"><i class="fas fa-arrow-left"></i> Артқа</a>
+			<a class="content_tohome_link" href="/fragment/content.html"><i class="fas fa-arrow-left"></i> Артқа</a>
 			<div class="interactive_main">
 				<div class="interactive_list">
 					<h1 class="content_title">edufile. Interactive Playground</h1>
@@ -51,61 +56,57 @@
 					<h3 class="content_subtitle">Интерактивті ойындар топтамасы, тақырыптар бойынша бірнеше
 						топтарға бөлініп арнайы сұрыпталған.</h3>
 				</div>
-				<img class="interactive_cover" src="/visual/preview/test_image-16x9.png" alt="preview_interactive">
+				<img class="interactive_cover" src="/visual/headline/headline_playground.gif" alt="preview_interactive">
 			</div>
-
 		</div>
-
-
 
 		<div class="page_container">
 			<h1 class="popular_title"><i class="fa-solid fa-fire"></i> Көп жүктелетін ойындар</h1>
 		</div>
-
 		<div class="carousel">
-			<div class="carousel__container">
+			<div class="carousel_container">
 
-				<div class="carousel-item">
-					<img class="carousel-item__img" src="/visual/preview/test_image-16x9.png" alt="item_preview" />
-					<div class="carousel-item__details">
+				<div class="carousel_item" data-card-id="card_1">
+					<img class="carousel_image" src="/visual/preview/pack_adjectives.png" alt="Adjectives preview" />
+					<div class="carousel_details">
 						<div class="controls">
-							<span class="fas fa-download"></span>
+							<a data-item-id="item1" style="font-weight: bold;"><i class="fas fa-heart" style="color: #ff4081;"></i>&nbsp;<span data-like-count>0</span></a>
 						</div>
-						<h5 class="carousel-item__details--title">weather</h5>
-						<h6 class="carousel-item__details--subtitle">31.03.2023</h6>
+						<h5 class="carousel_title_text">Adjectives</h5>
+						<h6 class="carousel_subtitle_text">9 наурыз, 2023</h6>
 					</div>
 				</div>
 
-				<div class="carousel-item">
-					<img class="carousel-item__img" src="/visual/preview/test_image-16x9.png" alt="item_preview" />
-					<div class="carousel-item__details">
+				<div class="carousel_item" data-card-id="card_2">
+					<img class="carousel_image" src="/visual/preview/pack_adverbs.png" alt="Adverbs preview" />
+					<div class="carousel_details">
 						<div class="controls">
-							<span class="fas fa-download"></span>
+							<a data-item-id="item2" style="font-weight: bold;"><i class="fas fa-heart" style="color: #ff4081;"></i>&nbsp;<span data-like-count>0</span></a>
 						</div>
-						<h5 class="carousel-item__details--title">verbs</h5>
-						<h6 class="carousel-item__details--subtitle">31.03.2023</h6>
+						<h5 class="carousel_title_text">Adverbs</h5>
+						<h6 class="carousel_subtitle_text">8 наурыз, 2023</h6>
 					</div>
 				</div>
 
-				<div class="carousel-item">
-					<img class="carousel-item__img" src="/visual/preview/test_image-16x9.png" alt="item_preview" />
-					<div class="carousel-item__details">
+				<div class="carousel_item" data-card-id="card_3">
+					<img class="carousel_image" src="/visual/preview/pack_alphabet.png" alt="Alphabet preview" />
+					<div class="carousel_details">
 						<div class="controls">
-							<span class="fas fa-download"></span>
+							<a data-item-id="item3" style="font-weight: bold;"><i class="fas fa-heart" style="color: #ff4081;"></i>&nbsp;<span data-like-count>0</span></a>
 						</div>
-						<h5 class="carousel-item__details--title">Draw my monster</h5>
-						<h6 class="carousel-item__details--subtitle">19.05.2024</h6>
+						<h5 class="carousel_title_text">Alphabet</h5>
+						<h6 class="carousel_subtitle_text">9 наурыз, 2023</h6>
 					</div>
 				</div>
 
-				<div class="carousel-item">
-					<img class="carousel-item__img" src="/visual/preview/test_image-16x9.png" alt="item_preview" />
-					<div class="carousel-item__details">
+				<div class="carousel_item" data-card-id="card_4">
+					<img class="carousel_image" src="/visual/preview/pack_animals.png" alt="Animals preview" />
+					<div class="carousel_details">
 						<div class="controls">
-							<span class="fas fa-download"></span>
+							<a data-item-id="item4" style="font-weight: bold;"><i class="fas fa-heart" style="color: #ff4081;"></i>&nbsp;<span data-like-count>0</span></a>
 						</div>
-						<h5 class="carousel-item__details--title">Past Simple board game</h5>
-						<h6 class="carousel-item__details--subtitle">19.05.2024</h6>
+						<h5 class="carousel_title_text">Animals</h5>
+						<h6 class="carousel_subtitle_text">10 наурыз, 2023</h6>
 					</div>
 				</div>
 
@@ -116,10 +117,7 @@
 	<section id="blog">
 		<div class="container">
 			<h1 class="popular_title"><i class="fa-solid fa-folder-open"></i> Барлық тақырыптар</h1>
-
-			<script src="/script/interactive.js"></script>
 			<div class="cards">
-
 				<article class="card" id="card_1">
 					<div class="card_preview_container">
 						<img class="card_preview" id="img_1" src="/visual/preview/pack_adjectives.png"
@@ -134,11 +132,9 @@
 							<li class="card_hashtag"><i class="fas fa-hashtag"></i> <i>ойындар</i></li>
 						</ul>
 						<div class="card_meta_list">
-							<a class="card_link" href="/component/error">Жүктеу <i class="fas fa-download"></i></a>
+							<a class="card_link" href="#card_1" data-card-id="card_1">Мәліметтер <i class="fas fa-external-link-square-alt"></i></a>
+							<p data-item-id="item1"><i class="fas fa-heart"></i><span data-like-count>0</span></p>
 						</div>
-
-
-
 					</div>
 				</article>
 
@@ -156,7 +152,8 @@
 							<li class="card_hashtag"><i class="fas fa-hashtag"></i> <i>ойындар</i></li>
 						</ul>
 						<div class="card_meta_list">
-							<a class="card_link" href="/component/error">Толығырақ</a>
+							<a class="card_link" href="#card_2" data-card-id="card_2">Мәліметтер <i class="fas fa-external-link-square-alt"></i></a>
+							<p data-item-id="item2"><i class="fas fa-heart"></i><span data-like-count>0</span></p>
 						</div>
 					</div>
 				</article>
@@ -175,7 +172,8 @@
 							<li class="card_hashtag"><i class="fas fa-hashtag"></i> <i>ойындар</i></li>
 						</ul>
 						<div class="card_meta_list">
-							<a class="card_link" href="/component/error">Толығырақ</a>
+							<a class="card_link" href="#card_3" data-card-id="card_3">Мәліметтер <i class="fas fa-external-link-square-alt"></i></a>
+							<p data-item-id="item3"><i class="fas fa-heart"></i><span data-like-count>0</span></p>
 						</div>
 					</div>
 				</article>
@@ -194,38 +192,20 @@
 							<li class="card_hashtag"><i class="fas fa-hashtag"></i> <i>ойындар</i></li>
 						</ul>
 						<div class="card_meta_list">
-							<a class="card_link" href="/component/error">Толығырақ</a>
-						</div>
-					</div>
-				</article>
-
-				<article class="card" id="card_5">
-					<div class="card_preview_container">
-						<img class="card_preview" id="img_5" src="/visual/preview/test_image-16x9.png"
-							alt="card_preview" />
-					</div>
-					<div class="card_body_list">
-						<h3 class="card_title">Body parts</h3>
-						<p class="card_date"><i class="fa-solid fa-calendar-days"></i><time datetime="2024-05-20">
-								&nbsp; <b>20 мамыр, 2024</b></time></p>
-						<ul class="card_tags_list" role="list">
-							<li class="card_hashtag"><i class="fas fa-hashtag"></i> <i>ағылшын тілі</i></li>
-							<li class="card_hashtag"><i class="fas fa-hashtag"></i> <i>ойындар</i></li>
-						</ul>
-						<div class="card_meta_list">
-							<a class="card_link" href="/component/error">Толығырақ</a>
+							<a class="card_link" href="#card_4" data-card-id="card_4">Мәліметтер <i class="fas fa-external-link-square-alt"></i></a>
+							<p data-item-id="item4"><i class="fas fa-heart"></i><span data-like-count>0</span></p>
 						</div>
 					</div>
 				</article>
 
 			</div>
 
-		</div>
-	</section>
+			<section class="page_section">
+				<div class="page_container">
+					<p class="content_linktree">Тізімнің соңы. Жуырда тізім толығады, күтіңіз.</p>
+				</div>
+			</section>
 
-	<section class="page_section">
-		<div class="page_container">
-			<p class="content_linktree">Тізімнің соңы. Жуырда тізім толығады, күтіңіз.</p>
 		</div>
 	</section>
 
@@ -233,7 +213,7 @@
 		<div class="page_container">
 			<div class="page_footnote">
 				<div class="page_footnote_tag">
-					<a class="page_footnote_title" href="/index"><b>edufile.</b></a>
+					<a class="page_footnote_title" href="/index.html"><b>edufile.</b></a>
 					<p class="page_footnote_subtitle">Қол ұшын созыңыз! Сіз бұл жобаны қолдауыңыз арқылы одан әрі
 						дамуына үлкен үлес қосасыз!</p>
 				</div>
@@ -263,13 +243,160 @@
 			</div>
 
 			<div class="page_footnote_bottom">
-				<p class="page_footnote_copy">v6.3 <i>(build#0525)</i> &copy;2023-2025 <a
-						class="page_footnote_copy_link" href="/component/developer">Қуаныш Қайратұлы</a> -
-					<a class="page_footnote_copy_link" href="/index">«edufile.»</a> - repository of
-					Educational Files and Platforms</p>
+				<p class="page_footnote_copy">v7.0 <i>(build#0525)</i> &copy;2023-2025 <a
+						class="page_footnote_copy_link" href="/component/developer.html">ninjawithoutkatana</a> - <a
+						class="page_footnote_copy_link" href="/index.html">«edufile.»</a> - Open-source educational
+					platform. This project is licensed under the <a class="page_footnote_copy_link"
+						href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPL v3</a>.</p>
 			</div>
 		</div>
 	</footer>
+
+	<div class="material_container">
+		<input type="checkbox" id="open-dialog" class="dialog_toggle" />
+		<label class="dialog_backstage" for="open-dialog"></label>
+		<div class="dialog">
+			<label class="dialog_close" for="open-dialog"></label>
+			<div class="dialog_content">
+				<h1 class="dialog_title">Топтама туралы мәліметтер</h1>
+				<div class="dialog_home">
+					<img class="material_preview" src="" alt="material_preview" />
+					<div class="material_details_list">
+						<h3 class="dialog_title_text"></h3>
+						<p class="dialog_description"><i class="fa-solid fa-circle-info"></i> Анықтама</p>
+						<p class="dialog_description"></p>
+						<a class="download_link" href="" target="_blank"><i class="fas fa-download"></i> Жүктеу</a>
+						<div class="like_placeholder"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const cardsData = [{
+				id: "card_1",
+				title: "Adjectives",
+				description: `<p>
+						Бұл карточка ағылшын тіліндегі сын есімдер туралы ойындарға арналған.
+					</p>
+					<p>
+						<b>Жинақтаманың ішінде 11 ойын түрі бар:</b>
+					</p>
+					<ol>
+						<li>Adjectives new words</li>
+						<li>Ghostbuster</li>
+						<li>Guess the word</li>
+						<li>How are you feeling</li>
+						<li>Opposites: Help Tweety Bird save the good eggs</li>
+						<li>Opposites: Flashcards picture</li>
+						<li>Pick the adjective activities</li>
+						<li>Pluck the daisy</li>
+						<li>Possessive adjectives</li>
+						<li>The book of superlatives</li>
+						<li>Watching the stars</li>
+					</ol>`,
+				previewImg: "/visual/preview/pack_adjectives.png",
+				downloadLink: "/files/pack_adjectives.zip"
+			},
+			{
+				id: "card_2",
+				title: "Adverbs",
+				description: "Бұл карточка ағылшын тіліндегі үстеулер туралы материалдар жинағы.",
+				previewImg: "/visual/preview/pack_adverbs.png",
+				downloadLink: "/files/pack_adverbs.zip"
+			},
+			{
+				id: "card_3",
+				title: "Alphabet",
+				description: "Ағылшын алфавитін үйренуге арналған ойындар мен жаттығулар.",
+				previewImg: "/visual/preview/pack_alphabet.png",
+				downloadLink: "/files/pack_alphabet.zip"
+			},
+			{
+				id: "card_4",
+				title: "Animals",
+				description: "Ағылшын тілінде жануарлар туралы ойындар мен сөздік.",
+				previewImg: "/visual/preview/pack_animals.png",
+				downloadLink: "/files/pack_animals.zip"
+			}
+		];
+
+		function openModalWithCard(cardId) {
+			const cardData = cardsData.find(card => card.id === cardId);
+			if (!cardData) return;
+
+			const modal = document.querySelector('.dialog');
+			if (modal) {
+				modal.style.width = '90vw';
+				modal.style.overflow = 'hidden';
+			}
+
+			const previewImg = document.querySelector('.material_preview');
+			previewImg.src = cardData.previewImg;
+			previewImg.alt = cardData.title;
+			previewImg.style.width = '50%';
+			previewImg.style.height = 'auto';
+
+			const titleText = document.querySelector('.dialog_title_text');
+			titleText.textContent = cardData.title;
+			titleText.style.fontSize = '1.5rem';
+			titleText.style.fontWeight = 'bold';
+			titleText.style.margin = '0';
+
+			const descriptions = document.querySelectorAll('.dialog_description');
+			if (descriptions.length > 1) descriptions[1].innerHTML = cardData.description;
+
+			const downloadLink = document.querySelector('.download_link');
+			downloadLink.href = cardData.downloadLink;
+
+			const itemId = `item${cardId.split('_')[1]}`;
+			const likePlaceholder = document.querySelector('.like_placeholder');
+			likePlaceholder.innerHTML = '';
+
+			const likeDiv = document.createElement('div');
+			likeDiv.setAttribute('data-item-id', itemId);
+
+			const likeBtn = document.createElement('button');
+			likeBtn.setAttribute('data-like-btn', '');
+			likeBtn.innerHTML = '<i class="fas fa-heart"></i> ';
+			likeBtn.style.marginTop = '10px';
+
+			const likeCountSpan = document.createElement('span');
+			likeCountSpan.setAttribute('data-like-count', '');
+			likeCountSpan.innerHTML = '<i class="fas fa-sync-alt"></i>';
+
+			likeBtn.appendChild(likeCountSpan);
+			likeDiv.appendChild(likeBtn);
+			likePlaceholder.appendChild(likeDiv);
+
+			(async function initializeLikes() {
+				await initLikes();
+			})();
+
+			document.getElementById('open-dialog').checked = true;
+		}
+
+		document.querySelectorAll('.carousel_item').forEach(item => {
+			item.addEventListener('click', () => {
+				const cardId = item.getAttribute('data-card-id');
+				if (!cardId) return;
+				openModalWithCard(cardId);
+			});
+		});
+
+		document.querySelectorAll('.card_link').forEach(link => {
+			link.addEventListener('click', e => {
+				e.preventDefault();
+				const cardId = link.getAttribute('data-card-id');
+				if (!cardId) return;
+				openModalWithCard(cardId);
+			});
+		});
+	</script>
+
+	<script src="/script/interactive.js"></script>
+	<script src="/script/feedback.js"></script>
 
 </body>
 
